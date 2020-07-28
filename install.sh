@@ -1,114 +1,94 @@
 #!/usr/bin/env bash
 
-# Install some stuff before others!
 important_casks=(
-  authy
+  iterm2
   dropbox
-  #google-chrome
-  hyper
-  #jetbrains-toolbox
   istat-menus
-  #spotify
   visual-studio-code
-  slack
+  # slack
 )
 
 brews=(
-  xonsh
-  jabba
-  awscli
-  "bash-snippets --without-all-tools --with-cryptocurrency --with-stocks --with-weather"
+  # xonsh
+  # jabba
+  # "bash-snippets --without-all-tools --with-cryptocurrency --with-stocks --with-weather"
   bat
-  #cheat
+
+  # Install GNU core utilities (those that come with macOS are outdated).
   coreutils
-  dfc
+
+  # dfc
+
+  # A modern version of ‘ls’.
   exa
-  findutils
-  "fontconfig --universal"
-  fpp
-  gh
+  # findutils
+  # "fontconfig --universal"
+  # fpp
+  #   gh
   git
-  git-extras
-  git-fresh
-  git-lfs
-  "gnuplot --with-qt"
-  "gnu-sed --with-default-names"
-  go
-  gpg
-  haskell-stack
-  hh
-  #hosts
+  # git-extras
+  # git-fresh
+  # git-lfs
+  # "gnuplot --with-qt"
+  # "gnu-sed --with-default-names"
+  # gpg
+  # hh
   htop
   httpie
-  iftop
-  "imagemagick --with-webp"
-  lighttpd
-  lnav
-  m-cli
-  mackup
-  #macvim
+  # iftop
+  # "imagemagick --with-webp"
+  # lnav
+  # m-cli
+  # mackup
   #mas
-  micro
-  moreutils
-  mtr
+  # micro
+  # moreutils
+  # mtr
   ncdu
-  neofetch
-  nmap  
-  node
-  poppler
-  postgresql
-  pgcli
-  pv
-  python
-  python3
-  osquery
-  ruby
-  scala
-  sbt
-  shellcheck
-  stormssh
-  teleport
-  thefuck
-  tmux
-  tree
-  trash
-  "vim --with-override-system-vi"
-  "wget --with-iri"
-  xsv
+  # neofetch
+  nmap
+  # poppler
+  # osquery
+  # sbt
+  # shellcheck
+  # stormssh
+  # teleport
+  # thefuck
+  # "wget --with-iri"
+  # xsv
   youtube-dl
 )
 
 casks=(
-  aerial
-  adobe-acrobat-pro
+  # aerial
   airdroid
   android-platform-tools
-  background-music
-  cakebrew
-  cleanmymac
+  # background-music
+  # cakebrew
   docker
-  expressvpn
   firefox
-  geekbench
   google-backup-and-sync
   github
-  #handbrake
-  iina
-  istat-server
-  kap
-  launchrocket
-  little-snitch
-  macdown
+  # handbrake
+  # iina
+  # istat-server
+  # kap
+  # launchrocket
+  # little-snitch
+  # macdown
   monitorcontrol
-  #muzzle
-  plex-media-player
-  plex-media-server
-  private-eye
+  # muzzle
+  # plex-media-player
+  # plex-media-server
+  # private-eye
+
+  # Quick Look plugins
   qlcolorcode
   qlmarkdown
   qlstephen
   quicklook-json
   quicklook-csv
+  qlprettypatch
   satellite-eyes
   sidekick
   skype
@@ -120,24 +100,45 @@ casks=(
   xquartz
 )
 
-pips=(
-  pip
-  glances
-  ohmu
-  pythonpy
+  # macdown
+  # muzzle
+  # private-eye
+  # satellite-eyes
+  # sidekick
+  # sloth
+  # steam
+  # synergy
+  # xquartz
+
+  # Gian's additions - from Mac Guide
+  # https://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
+  alfred
+  sublime-text
+  vlc
+
+  tree
 )
 
-gems=(
-  bundler
-  travis
-)
+# pips=(
+#   pip
+#   glances
+#   ohmu
+#   pythonpy
+# )
 
-npms=(
-  fenix-cli
-  gitjk
-  kill-tabs
-  n
-)
+# gems=(
+#   bundler
+#   travis
+# )
+
+# npms=(
+
+#   fenix-cli
+# 
+#   gitjk
+#   kill-tabs
+#   n
+# )
 
 gpg_key='3E219504'
 git_email='pathikritbhowmick@msn.com'
@@ -159,13 +160,13 @@ git_configs=(
 )
 
 vscode=(
-  alanz.vscode-hie-server
-  ms-vsonline.vsonline
-  rebornix.Ruby
-  redhat.java
-  rust-lang.rust
-  scalameta.metals
-  scala-lang.scala
+  # alanz.vscode-hie-server
+  # ms-vsonline.vsonline
+  # rebornix.Ruby
+  # redhat.java
+  # rust-lang.rust
+  # scalameta.metals
+  # scala-lang.scala
 )
 
 fonts=(
@@ -173,7 +174,7 @@ fonts=(
   font-source-code-pro
 )
 
-JDK_VERSION=amazon-corretto@1.8.222-10.1
+# JDK_VERSION=amazon-corretto@1.8.222-10.1
 
 ######################################## End of app list ########################################
 set +e
@@ -205,10 +206,10 @@ function install {
 
 function brew_install_or_upgrade {
   if brew ls --versions "$1" >/dev/null; then
-    if (brew outdated | grep "$1" > /dev/null); then 
+    if (brew outdated | grep "$1" > /dev/null); then
       echo "Upgrading already installed package $1 ..."
       brew upgrade "$1"
-    else 
+    else
       echo "Latest $1 is already installed"
     fi
   else
@@ -241,71 +242,72 @@ install 'brew cask install' "${important_casks[@]}"
 
 prompt "Install packages"
 install 'brew_install_or_upgrade' "${brews[@]}"
-brew link --overwrite ruby
+# brew link --overwrite ruby
 
-prompt "Install JDK=${JDK_VERSION}"
-curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
-jabba install ${JDK_VERSION}
-jabba alias default ${JDK_VERSION}
-java -version
+git config --global user.name "Gianfranco Palumbo"
+# git config --global user.email "gianp@gmail.com"
 
-prompt "Set git defaults"
-for config in "${git_configs[@]}"
-do
-  git config --global ${config}
-done
+# prompt "Install JDK=${JDK_VERSION}"
+# curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 
-if [[ -z "${CI}" ]]; then
-  gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
-  prompt "Export key to Github"
-  ssh-keygen -t rsa -b 4096 -C ${git_email}
-  pbcopy < ~/.ssh/id_rsa.pub
-  open https://github.com/settings/ssh/new
-fi  
+# prompt "Set git defaults"
+# for config in "${git_configs[@]}"
+# do
+#   git config --global ${config}
+# done
 
-prompt "Upgrade bash"
-brew install bash bash-completion2 fzf
-sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
-sudo chsh -s "$(brew --prefix)"/bin/bash
-# Install https://github.com/twolfson/sexy-bash-prompt
-touch ~/.bash_profile #see https://github.com/twolfson/sexy-bash-prompt/issues/51
-(cd /tmp && git clone --depth 1 --config core.autocrlf=false https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
+# if [[ -z "${CI}" ]]; then
+#   gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
+#   prompt "Export key to Github"
+#   ssh-keygen -t rsa -b 4096 -C ${git_email}
+#   pbcopy < ~/.ssh/id_rsa.pub
+#   open https://github.com/settings/ssh/new
+# fi
+
+# prompt "Upgrade bash"
+# brew install bash bash-completion2 fzf
+# sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
+# #sudo chsh -s "$(brew --prefix)"/bin/bash
+# # Install https://github.com/twolfson/sexy-bash-prompt
+# touch ~/.bash_profile #see https://github.com/twolfson/sexy-bash-prompt/issues/51
+# (cd /tmp && git clone --depth 1 --config core.autocrlf=false https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
 
 echo "
-alias del='mv -t ~/.Trash/'
 alias ls='exa -l'
 alias cat=bat
 " >> ~/.bash_profile
 
-prompt "Setting up xonsh"
-sudo bash -c "which xonsh >> /private/etc/shells"
-sudo chsh -s $(which xonsh)
-echo "source-bash --overwrite-aliases ~/.bash_profile" >> ~/.xonshrc
+# prompt "Setting up xonsh"
+# sudo bash -c "which xonsh >> /private/etc/shells"
+# sudo chsh -s $(which xonsh)
+# echo "source-bash --overwrite-aliases ~/.bash_profile" >> ~/.xonshrc
 
-prompt "Install software"
-install 'brew cask install' "${casks[@]}"
+# prompt "Install software"
+# install 'brew cask install' "${casks[@]}"
 
-prompt "Install secondary packages"
-install 'pip3 install --upgrade' "${pips[@]}"
-install 'gem install' "${gems[@]}"
-install 'npm install --global' "${npms[@]}"
+# prompt "Install secondary packages"
+# install 'pip3 install --upgrade' "${pips[@]}"
+# install 'gem install' "${gems[@]}"
+# install 'npm install --global' "${npms[@]}"
+
 install 'code --install-extension' "${vscode[@]}"
-#brew tap caskroom/fonts
-#install 'brew cask install' "${fonts[@]}"
 
-prompt "Update packages"
-pip3 install --upgrade pip setuptools wheel
-if [[ -z "${CI}" ]]; then
-  m update install all
-fi
+brew tap homebrew/cask-fonts
+install 'brew cask install' "${fonts[@]}"
 
-if [[ -z "${CI}" ]]; then
-  prompt "Install software from App Store"
-  mas list
-fi
+# prompt "Update packages"
+# pip3 install --upgrade pip setuptools wheel
+# if [[ -z "${CI}" ]]; then
+#   m update install all
+# fi
+
+# if [[ -z "${CI}" ]]; then
+#   prompt "Install software from App Store"
+#   mas list
+# fi
 
 prompt "Cleanup"
 brew cleanup
 
-echo "Run [mackup restore] after DropBox has done syncing ..."
+echo "Run [mackup restore] after Dropbox has done syncing ..."
 echo "Done!"
