@@ -49,6 +49,7 @@ Via home brew:
 
 ```bash
 brew cask install figma
+brew cask install free-ruler
 ```
 
 ### Productivity apps
@@ -59,7 +60,7 @@ brew cask install figma
   - Also, add sounds 
 - [Grayscale Mode](https://github.com/rkbhochalya/grayscale-mode)
 
-### Work Software development app
+### Software development apps
 
 - VSCode
 - Sublime Merge
