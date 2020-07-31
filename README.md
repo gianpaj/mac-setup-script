@@ -74,8 +74,27 @@ brew cask install free-ruler
 - Xcode
   - Command-line tools
 - iTerm2
-  - Zsh
+  - Zsh ([Guide](https://sourabhbajaj.com/mac-setup/iTerm/zsh.html))
+  ```
+  brew install zsh
+  ```
   - oh-my-zsh
+    ```
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+      ```
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      ```
+    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+      ```
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      ```
+    - [pure](https://github.com/sindresorhus/pure) - Pretty, minimal and fast ZSH prompt
+    ```
+    npm install --global pure-prompt
+    ```
+    - Update `.zshrc`
   - bash [aliases](./bash/.aliases)
 
 e.g.
