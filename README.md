@@ -49,6 +49,7 @@ Via home brew:
 
 ```bash
 brew cask install figma
+brew cask install sketch
 brew cask install free-ruler
 ```
 
@@ -63,7 +64,6 @@ brew cask install free-ruler
 ### Software development apps
 
 - VSCode
-- Sublime Merge
 
   ```bash
     brew cask install sublime-merge
