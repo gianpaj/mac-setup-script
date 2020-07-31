@@ -102,12 +102,11 @@ git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 
 Via home brew:
 
-- Dropbox
-- Spotify
-
-  ```bash
-  brew cask install spotify
-  ```
+```bash
+brew cask install dropbox
+brew cask install spotify
+brew cask install app-cleaner
+```
 
 ### Chrome Extensions
 
