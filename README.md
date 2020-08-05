@@ -154,6 +154,11 @@ kanban-chi.appspot.com##.upgrade
 ### Desktop apps
 
 - iStat Menu 6 (purchased)
+- Giphy Capture
+  - or kap
+      ```
+      brew cask install kap
+      ```
 
 ## macOS configuration
 
