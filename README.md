@@ -51,6 +51,10 @@ Via home brew:
 brew cask install figma
 brew cask install sketch
 brew cask install free-ruler
+# ImageOptim — compress images without losing quality - https://imageoptim.com/mac
+brew cask install imageoptim
+# ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
+brew cask install imagealpha
 ```
 
 ### Productivity apps
