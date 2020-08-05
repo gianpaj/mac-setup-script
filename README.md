@@ -55,7 +55,10 @@ brew cask install free-ruler
 
 ### Productivity apps
 
-- NightOwl
+- [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar 
+  ```
+  brew cask install nightowl
+  ```
 - [Pomodoro](https://github.com/G07cha/pomodoro) (Electron app)
   - Look for similar app but native (or uses less CPU)
   - Also, add sounds 
