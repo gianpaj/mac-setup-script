@@ -110,6 +110,12 @@ e.g.
 git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 ```
 
+#### Git configs
+
+```bash
+git config --system core.ignorecase false
+```
+
 ### VSCode extensions
 
 - GitLens
