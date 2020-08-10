@@ -164,7 +164,7 @@ brew cask install app-cleaner
 
 ```
 ! 27/02/2020 https://github.com
-github.com##.unread.mail-status.js-indicator-modifier
+github.com##.unread.mail-status
 
 ! 06/03/2020 https://twitter.com
 twitter.com##.r-qvutc0.r-3s2u2q.r-1m4drjs.r-kquydp.r-u8s1d.r-1b8eohn.r-ad9z0x.r-1777fci.r-50lct3.r-16dba41.r-1gkfh8e.r-1qd0xha.r-1q142lx.r-6koalj.r-jwli3a.r-1tjplnt.r-rs99b7.r-1phboty.r-sdzlij.r-f6ebdl.r-urgr8i.r-1awozwy.css-901oao
