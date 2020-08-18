@@ -35,10 +35,10 @@
 - Razer Synapse
   - and script to load the app but hide mac menubar icon
 
-```bash
-brew tap homebrew/cask-drivers
-brew cask install razer-synapse
-```
+  ```bash
+  brew tap homebrew/cask-drivers
+  brew cask install razer-synapse
+  ```
 
 - Karabiner Elements
   - to fix the back tick character ` when pressing §
@@ -59,14 +59,14 @@ brew cask install imagealpha
 - Color picker:
   - http://www.northernspysoftware.com/software/colorpicker
   - plus
-    ```
+    ```bash
     brew cask install colorpicker-skalacolor
     ```
 
 - [Linear](https://github.com/mikaa123/linear) - Ruler app with web-development in mind
 
     My bug fix
-    ```
+    ```bash
     git clone git@github.com:gianpaj/linear.git
     git checkout -b upgrade-electron-package origin/upgrade-electron-package
     npm install
@@ -74,7 +74,7 @@ brew cask install imagealpha
     ```
     
     Disable Gatekeeper:
-    ```
+    ```bash
     sudo spctl --master-disable
     ```
  
@@ -82,7 +82,7 @@ brew cask install imagealpha
 ### Productivity apps
 
 - [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar 
-  ```
+  ```bash
   brew cask install nightowl
   ```
 - [Pomodoro](https://github.com/G07cha/pomodoro) (Electron app)
@@ -104,25 +104,25 @@ brew cask install imagealpha
   - Command-line tools
 - iTerm2
   - Zsh ([Guide](https://sourabhbajaj.com/mac-setup/iTerm/zsh.html))
-  ```
-  brew install zsh
-  ```
-  - oh-my-zsh
+    ```bash
+    brew install zsh
     ```
+  - oh-my-zsh
+    ```bash
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-      ```
+      ```bash
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
       ```
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-      ```
+      ```bash
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
     - [pure](https://github.com/sindresorhus/pure) - Pretty, minimal and fast ZSH prompt
-    ```
-    npm install --global pure-prompt
-    ```
+      ```bash
+      npm install --global pure-prompt
+      ```
     - Update `.zshrc`
   - bash [aliases](./bash/.aliases)
 
@@ -184,7 +184,7 @@ brew cask install app-cleaner
 
 #### uBlock filters
 
-```
+```text
 ! 27/02/2020 https://github.com
 github.com##.unread.mail-status
 
@@ -203,9 +203,9 @@ kanban-chi.appspot.com##.upgrade
 - iStat Menu 6 (purchased)
 - Giphy Capture
   - or kap
-      ```
-      brew cask install kap
-      ```
+    ```basg
+    brew cask install kap
+    ```
 
 ## macOS configuration
 
