@@ -56,6 +56,28 @@ brew cask install imageoptim
 # ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
 brew cask install imagealpha
 ```
+- Color picker:
+  - http://www.northernspysoftware.com/software/colorpicker
+  - plus
+    ```
+    brew cask install colorpicker-skalacolor
+    ```
+
+- [Linear](https://github.com/mikaa123/linear) - Ruler app with web-development in mind
+
+    My bug fix
+    ```
+    git clone git@github.com:gianpaj/linear.git
+    git checkout -b upgrade-electron-package origin/upgrade-electron-package
+    npm install
+    npm run package
+    ```
+    
+    Disable Gatekeeper:
+    ```
+    sudo spctl --master-disable
+    ```
+ 
 
 ### Productivity apps
 
