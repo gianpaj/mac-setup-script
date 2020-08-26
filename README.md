@@ -176,6 +176,7 @@ brew cask install app-cleaner
 - [Time Zone Converter - Savvy Time](https://chrome.google.com/webstore/detail/time-zone-converter-savvy/plhnjpnbkmdmooideifhkonobdkgbbof)
   <!-- - [Motion](https://chrome.google.com/webstore/detail/motion/nidganghegonkcecgjgpppihfknjobec) - Never get distracted on the internet again -->
 - [Hide Likes](https://chrome.google.com/webstore/detail/hide-likes/ebamaffgiechnomghfojkmlkaipoadni/related)
+- [Hide Feed](https://chrome.google.com/webstore/detail/hide-feed/nfnpeneopnjggmcfdkhpjefammeonpjk)
 
 #### Web development
 
