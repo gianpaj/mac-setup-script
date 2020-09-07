@@ -177,6 +177,7 @@ brew cask install app-cleaner
   <!-- - [Motion](https://chrome.google.com/webstore/detail/motion/nidganghegonkcecgjgpppihfknjobec) - Never get distracted on the internet again -->
 - [Hide Likes](https://chrome.google.com/webstore/detail/hide-likes/ebamaffgiechnomghfojkmlkaipoadni/related)
 - [Hide Feed](https://chrome.google.com/webstore/detail/hide-feed/nfnpeneopnjggmcfdkhpjefammeonpjk)
+- [xTab](https://chrome.google.com/webstore/detail/xtab/amddgdnlkmohapieeekfknakgdnpbleb) - Limit the maximum number of tabs that can be open at the same time.
 
 #### Web development
 
