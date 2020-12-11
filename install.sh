@@ -24,7 +24,7 @@ brews=(
   # findutils
   # "fontconfig --universal"
   # fpp
-  #   gh
+  # gh
   git
   # git-extras
   # git-fresh
