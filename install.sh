@@ -238,7 +238,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 echo "Install important software ..."
 brew tap homebrew/cask-versions
-install 'brew cask install' "${important_casks[@]}"
+install 'brew install' "${important_casks[@]} --cask"
 
 prompt "Install packages"
 install 'brew_install_or_upgrade' "${brews[@]}"
@@ -283,7 +283,7 @@ alias cat=bat
 # echo "source-bash --overwrite-aliases ~/.bash_profile" >> ~/.xonshrc
 
 # prompt "Install software"
-# install 'brew cask install' "${casks[@]}"
+# install 'brew install' "${casks[@]} --cask"
 
 # prompt "Install secondary packages"
 # install 'pip3 install --upgrade' "${pips[@]}"
@@ -293,7 +293,7 @@ alias cat=bat
 install 'code --install-extension' "${vscode[@]}"
 
 brew tap homebrew/cask-fonts
-install 'brew cask install' "${fonts[@]}"
+install 'brew install' "${fonts[@]} --cask"
 
 # prompt "Update packages"
 # pip3 install --upgrade pip setuptools wheel

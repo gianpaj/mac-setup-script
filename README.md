@@ -37,7 +37,7 @@
 
   ```bash
   brew tap homebrew/cask-drivers
-  brew cask install razer-synapse
+  brew install razer-synapse --cask
   ```
 
 - Karabiner Elements
@@ -48,19 +48,19 @@
 Via home brew:
 
 ```bash
-brew cask install figma
-brew cask install sketch
-brew cask install free-ruler
+brew install figma --cask
+brew install sketch --cask
+brew install free-ruler --cask
 # ImageOptim — compress images without losing quality - https://imageoptim.com/mac
-brew cask install imageoptim
+brew install imageoptim --cask
 # ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
-brew cask install imagealpha
+brew install imagealpha --cask
 ```
 - Color picker:
   - http://www.northernspysoftware.com/software/colorpicker
   - plus
     ```bash
-    brew cask install colorpicker-skalacolor
+    brew install colorpicker-skalacolor --cask
     ```
 
 - [Linear](https://github.com/mikaa123/linear) - Ruler app with web-development in mind
@@ -83,7 +83,7 @@ brew cask install imagealpha
 
 - [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar 
   ```bash
-  brew cask install nightowl
+  brew install nightowl --cask
   ```
 - [Pomodoro](https://github.com/G07cha/pomodoro) (Electron app)
   - Look for similar app but native (or uses less CPU)
@@ -95,7 +95,7 @@ brew cask install imagealpha
 - VSCode
 
   ```bash
-    brew cask install sublime-merge
+    brew install sublime-merge --cask
   ```
 
 - Android Studio
@@ -159,9 +159,9 @@ git config --system core.ignorecase false
 Via home brew:
 
 ```bash
-brew cask install dropbox
-brew cask install spotify
-brew cask install app-cleaner
+brew install dropbox --cask
+brew install spotify --cask
+brew install app-cleaner --cask
 ```
 
 ### Chrome Extensions
@@ -211,7 +211,7 @@ kanban-chi.appspot.com##.upgrade
 - Giphy Capture
   - or kap
     ```basg
-    brew cask install kap
+    brew install kap --cask
     ```
 
 ## macOS configuration
