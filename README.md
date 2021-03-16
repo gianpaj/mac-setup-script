@@ -56,9 +56,11 @@ brew install imageoptim --cask
 # ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
 brew install imagealpha --cask
 ```
+
 - Color picker:
   - http://www.northernspysoftware.com/software/colorpicker
   - plus
+
     ```bash
     brew install colorpicker-skalacolor --cask
     ```
@@ -66,28 +68,29 @@ brew install imagealpha --cask
 - [Linear](https://github.com/mikaa123/linear) - Ruler app with web-development in mind
 
     My bug fix
+
     ```bash
     git clone git@github.com:gianpaj/linear.git
     git checkout -b upgrade-electron-package origin/upgrade-electron-package
     npm install
     npm run package
     ```
-    
+
     Disable Gatekeeper:
+
     ```bash
     sudo spctl --master-disable
     ```
- 
 
 ### Productivity apps
 
-- [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar 
+- [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar
+  
   ```bash
   brew install nightowl --cask
   ```
-- [Pomodoro](https://github.com/G07cha/pomodoro) (Electron app)
-  - Look for similar app but native (or uses less CPU)
-  - Also, add sounds 
+
+- [Horo](https://matthewpalmer.net/horo-free-timer-mac/) (timer/pomorodo menu app)
 - [Grayscale Mode](https://github.com/rkbhochalya/grayscale-mode)
 
 ### Software development apps
@@ -104,25 +107,35 @@ brew install imagealpha --cask
   - Command-line tools
 - iTerm2
   - Zsh ([Guide](https://sourabhbajaj.com/mac-setup/iTerm/zsh.html))
+
     ```bash
     brew install zsh
     ```
+
   - oh-my-zsh
+
     ```bash
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
+
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
       ```bash
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
       ```
+
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
       ```bash
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
+
     - [pure](https://github.com/sindresorhus/pure) - Pretty, minimal and fast ZSH prompt
+
       ```bash
       npm install --global pure-prompt
       ```
+
     - Update `.zshrc`
   - bash [aliases](./bash/.aliases)
 
@@ -210,6 +223,7 @@ kanban-chi.appspot.com##.upgrade
 - iStat Menu 6 (purchased)
 - Giphy Capture
   - or kap
+
     ```basg
     brew install kap --cask
     ```
