@@ -244,6 +244,13 @@ defaults write com.apple.dock tilesize -int 48
 
 
 ###############################################################################
+# Set Sublime Merge Settings                                                  #
+###############################################################################
+
+ln -s "~/Dropbox/Mac/Sublime Merge/Default (OSX).sublime-keymap" "~/Library/Application Support/Sublime Merge/Packages/User"
+ln -s "~/Dropbox/Mac/Sublime Merge/Preferences.sublime-settings" "~/Library/Application Support/Sublime Merge/Packages/User"
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -254,6 +261,7 @@ for app in "Activity Monitor" \
 	"Contacts" \
 	"Dock" \
 	"Finder" \
+	"Sublime Merge" \
 	"Safari" \
 	"SystemUIServer" \
 	"Terminal" \
