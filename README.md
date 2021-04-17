@@ -81,11 +81,15 @@ brew install imagealpha --cask
     ```bash
     sudo spctl --master-disable
     ```
+### Security apps
+
+```bash
+brew install authy
+```
 
 ### Productivity apps
 
 - [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar
-  
   ```bash
   brew install nightowl --cask
   ```
