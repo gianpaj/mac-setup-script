@@ -181,6 +181,12 @@ brew install spotify --cask
 brew install app-cleaner --cask
 ```
 
+### Firefox Extensions
+
+- [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/) (similar to The Great/Marvellous Suspender)
+- [Grammarly](https://addons.mozilla.org/en-GB/firefox/addon/grammarly-1/)
+- [uBlock origin](https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/)
+
 ### Chrome Extensions
 
 - [New Tab Clock](https://chrome.google.com/webstore/detail/new-tab-clock/ljpapphpgkmigobbbakmnfoohclifanm)
