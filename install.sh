@@ -134,7 +134,7 @@ casks=(
 # npms=(
 
 #   fenix-cli
-# 
+#
 #   gitjk
 #   kill-tabs
 #   n
@@ -264,13 +264,12 @@ git config --global user.name "Gianfranco Palumbo"
 #   open https://github.com/settings/ssh/new
 # fi
 
-# prompt "Upgrade bash"
+prompt "Upgrade bash"
 # brew install bash bash-completion2 fzf
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 # sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
 # #sudo chsh -s "$(brew --prefix)"/bin/bash
-# # Install https://github.com/twolfson/sexy-bash-prompt
-# touch ~/.bash_profile #see https://github.com/twolfson/sexy-bash-prompt/issues/51
-# (cd /tmp && git clone --depth 1 --config core.autocrlf=false https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
 
 echo "
 alias ls='exa -l'
