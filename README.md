@@ -58,7 +58,7 @@ brew install imagealpha --cask
 ```
 
 - Color picker:
-  - http://www.northernspysoftware.com/software/colorpicker
+  - <http://www.northernspysoftware.com/software/colorpicker>
   - plus
 
     ```bash
@@ -81,6 +81,7 @@ brew install imagealpha --cask
     ```bash
     sudo spctl --master-disable
     ```
+
 ### Security apps
 
 ```bash
@@ -90,6 +91,7 @@ brew install authy
 ### Productivity apps
 
 - [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar
+
   ```bash
   brew install nightowl --cask
   ```
@@ -180,6 +182,11 @@ brew install dropbox --cask
 brew install spotify --cask
 brew install app-cleaner --cask
 ```
+
+### Firefox Settings
+
+- [Disable zooming with Cmd + Mouse wheel](https://muffinman.io/blog/disable-cmd-mouse-wheel-zoom-in-firefox/)
+`mousewheel.with_meta.action` = `0` disabled from `3` zoom
 
 ### Firefox Extensions
 
