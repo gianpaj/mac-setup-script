@@ -1,0 +1,9 @@
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias top="htop" # alias top and fix high sierra bug
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+
+# requires brew info grep
+alias grep="ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
+
+alias run="npm run"
