@@ -41,7 +41,7 @@
   ```
 
 - Karabiner Elements
-  - to fix the back tick character ` when pressing §
+  - to fix the back tick character \` when pressing §
 
 ### Work desktop apps
 
@@ -143,7 +143,12 @@ brew install authy
       ```
 
     - Update `.zshrc`
-  - bash [aliases](./bash/.aliases)
+  - Load `.zshrc` and `.aliases` from Dropbox
+
+    ```bash
+    ln -s ~/Dropbox/Mac/.zshrc .
+    ln -s ~/Dropbox/Mac/.aliases .
+    ```
 
 e.g.
 
