@@ -115,6 +115,8 @@ casks=(
   # xquartz
 
   # Software development
+
+  postman
   sublime-text
   sublime-merge
   vlc
