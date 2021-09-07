@@ -71,6 +71,7 @@ casks=(
   # Security
 
   authy
+  boxcryptor
 
   # Productivity
   nightowl
