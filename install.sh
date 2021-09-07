@@ -191,6 +191,12 @@ vscode=(
   wayou.vscode-todo-highlight
   # Color Highlight - Highlight web colors in your editor
   naumovs.color-highlight
+  # Sublime Text Keymap and Settings Importer
+  ms-vscode.sublime-keybindings
+
+  eamodio.gitlens
+
+  dbaeumer.vscode-eslint
 )
 
 fonts=(
