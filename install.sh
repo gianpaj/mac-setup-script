@@ -98,7 +98,6 @@ casks=(
   #transmission
   #transmission-remote-gui
   xquartz
-)
 
   # macdown
   # muzzle
@@ -281,8 +280,8 @@ alias cat=bat
 # sudo chsh -s $(which xonsh)
 # echo "source-bash --overwrite-aliases ~/.bash_profile" >> ~/.xonshrc
 
-# prompt "Install software"
-# install 'brew install' "${casks[@]} --cask"
+prompt "Install software"
+install 'brew install' "${casks[@]} --cask"
 
 # prompt "Install secondary packages"
 # install 'pip3 install --upgrade' "${pips[@]}"
