@@ -40,7 +40,7 @@ brews=(
   # lnav
   # m-cli
   # mackup
-  #mas
+  # mas
   # micro
   # moreutils
   # mtr
@@ -56,6 +56,7 @@ brews=(
   # thefuck
   # "wget --with-iri"
   # xsv
+  tree
   youtube-dl
 )
 
