@@ -159,13 +159,24 @@ git_configs=(
 )
 
 vscode=(
-  # alanz.vscode-hie-server
-  # ms-vsonline.vsonline
-  # rebornix.Ruby
-  # redhat.java
-  # rust-lang.rust
-  # scalameta.metals
-  # scala-lang.scala
+  # DeepScan - Detect bugs and quality issues in JavaScript, TypeScript, React and Vue.js more precisely 
+  DeepScan.vscode-deepscan
+  # JavaScript (ES6) code snippets
+  xabikos.JavaScriptSnippets
+  # Prettier - Code formatter
+  esbenp.prettier-vscode
+  # Markdown All in One - keyboard shortcuts, table of contents, auto preview and more
+  yzhang.markdown-all-in-one
+  # markdownlint - Markdown linting and style checking
+  DavidAnson.vscode-markdownlint
+  # npm Intellisense - autocompletes npm modules in import statements
+  christian-kohler.npm-intellisense
+  # Path Intellisense - autocompletes filenames
+  christian-kohler.path-intellisense
+  # TODO Highlight - highlight TODOs, FIXMEs, and any keywords, annotations...
+  wayou.vscode-todo-highlight
+  # Color Highlight - Highlight web colors in your editor
+  naumovs.color-highlight
 )
 
 fonts=(
