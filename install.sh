@@ -155,8 +155,9 @@ casks=(
 #   n
 # )
 
-gpg_key='3E219504'
-git_email='pathikritbhowmick@msn.com'
+# gpg_key='3E219504'
+gian_name='Gianfranco Palumbo'
+git_email='gianpa@gmail.com'
 git_configs=(
   "branch.autoSetupRebase always"
   "color.ui auto"
@@ -169,9 +170,9 @@ git_configs=(
   "rerere.autoUpdate true"
   "remote.origin.prune true"
   "rerere.enabled true"
-  "user.name pathikrit"
+  "user.name ${gian_name}"
   "user.email ${git_email}"
-  "user.signingkey ${gpg_key}"
+  # "user.signingkey ${gpg_key}"
 )
 
 vscode=(
@@ -282,11 +283,11 @@ git config --global user.email "gianpa@gmail.com"
 # prompt "Install JDK=${JDK_VERSION}"
 # curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 
-# prompt "Set git defaults"
-# for config in "${git_configs[@]}"
-# do
-#   git config --global ${config}
-# done
+prompt "Set git defaults"
+for config in "${git_configs[@]}"
+do
+  git config --global ${config}
+done
 
 # if [[ -z "${CI}" ]]; then
 #   gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
