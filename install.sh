@@ -5,7 +5,7 @@ important_casks=(
   dropbox
   istat-menus
   visual-studio-code
-  # slack
+  slack
 )
 
 brews=(
@@ -58,17 +58,28 @@ brews=(
   # xsv
   tree
   youtube-dl
+
+  # Terminal Prompt
+  pure
 )
 
 casks=(
   # aerial
   airdroid
   android-platform-tools
+
+  # Security
+
+  authy
+
+  # Productivity
+  nightowl
+
   # background-music
   # cakebrew
-  docker
+  # docker
   firefox
-  google-backup-and-sync
+  # google-backup-and-sync
   github
   # handbrake
   # iina
@@ -77,6 +88,7 @@ casks=(
   # launchrocket
   # little-snitch
   # macdown
+  microsoft-teams
   monitorcontrol
   # muzzle
   # plex-media-player
@@ -90,33 +102,34 @@ casks=(
   quicklook-json
   quicklook-csv
   qlprettypatch
-  satellite-eyes
-  sidekick
-  skype
-  sloth
-  steam
-  synergy
-  #transmission
-  #transmission-remote-gui
-  xquartz
 
-  # macdown
-  # muzzle
-  # private-eye
   # satellite-eyes
   # sidekick
+  # skype
   # sloth
   # steam
   # synergy
+  # transmission
+  # transmission-remote-gui
   # xquartz
+  zoom
 
   # Gian's additions - from Mac Guide
   # https://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
+
   alfred
   sublime-text
+  sublime-merge
   vlc
 
-  tree
+  # Work
+
+  figma
+  sketch
+  free-ruler
+  imageoptim
+  imagealpha
+  colorpicker-skalacolor
 )
 
 # pips=(
