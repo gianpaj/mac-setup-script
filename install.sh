@@ -89,7 +89,6 @@ casks=(
   # little-snitch
   # macdown
   microsoft-teams
-  monitorcontrol
   # muzzle
   # plex-media-player
   # plex-media-server
