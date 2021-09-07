@@ -255,7 +255,7 @@ install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
 
 git config --global user.name "Gianfranco Palumbo"
-# git config --global user.email "gianp@gmail.com"
+git config --global user.email "gianpa@gmail.com"
 
 # prompt "Install JDK=${JDK_VERSION}"
 # curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
@@ -302,6 +302,7 @@ install 'brew install' "${casks[@]} --cask"
 install 'code --install-extension' "${vscode[@]}"
 
 brew tap homebrew/cask-fonts
+install 'brew install svn'
 install 'brew install' "${fonts[@]} --cask"
 
 # prompt "Update packages"
