@@ -74,6 +74,8 @@ casks=(
   boxcryptor
 
   # Productivity
+  
+  alfred
   nightowl
 
   # background-music
@@ -89,7 +91,6 @@ casks=(
   # launchrocket
   # little-snitch
   # macdown
-  microsoft-teams
   # muzzle
   # plex-media-player
   # plex-media-server
@@ -112,17 +113,18 @@ casks=(
   # transmission
   # transmission-remote-gui
   # xquartz
-  zoom
 
-  # Gian's additions - from Mac Guide
-  # https://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
-
-  alfred
+  # Software development
   sublime-text
   sublime-merge
   vlc
 
   # Work
+
+  microsoft-teams
+  zoom
+
+  # Design
 
   figma
   sketch
