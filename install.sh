@@ -81,7 +81,7 @@ casks=(
   # docker
   firefox
   # google-backup-and-sync
-  github
+  # github
   # handbrake
   # iina
   # istat-server
