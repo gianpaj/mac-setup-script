@@ -61,6 +61,10 @@ brews=(
 
   # Terminal Prompt
   pure
+  # general-purpose command-line fuzzy finder
+  fzf
+
+  jq
 )
 
 casks=(
@@ -77,6 +81,7 @@ casks=(
   
   alfred
   nightowl
+  karabiner-elements
 
   # background-music
   # cakebrew
