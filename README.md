@@ -121,6 +121,11 @@ brew install imagealpha --cask
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
+    - [zsh-completions](https://github.com/gianpaj/mac-setup-script)
+       ```bash
+       git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+       ```
+
     - [pure](https://github.com/sindresorhus/pure) - Pretty, minimal and fast ZSH prompt
 
       ```bash
