@@ -60,17 +60,17 @@ brews=(
   youtube-dl
 
   # Terminal Prompt
+  
   pure
   # general-purpose command-line fuzzy finder
   fzf
 
+  # Software Development
   jq
 )
 
 casks=(
   # aerial
-  airdroid
-  android-platform-tools
 
   # Security
 
@@ -80,8 +80,8 @@ casks=(
   # Productivity
   
   alfred
-  nightowl
   karabiner-elements
+  nightowl
 
   # background-music
   # cakebrew
@@ -104,10 +104,10 @@ casks=(
   # Quick Look plugins
   qlcolorcode
   qlmarkdown
-  qlstephen
-  quicklook-json
-  quicklook-csv
   qlprettypatch
+  qlstephen
+  quicklook-csv
+  quicklook-json
 
   # satellite-eyes
   # sidekick
@@ -119,11 +119,13 @@ casks=(
   # transmission-remote-gui
   # xquartz
 
-  # Software development
+  # Software Development
 
+  android-platform-tools
   postman
-  sublime-text
   sublime-merge
+  sublime-text
+
   vlc
 
   # Work
@@ -131,14 +133,18 @@ casks=(
   microsoft-teams
   zoom
 
+  # PM
+
+  airdroid
+
   # Design
 
-  figma
-  sketch
-  free-ruler
-  imageoptim
-  imagealpha
   colorpicker-skalacolor
+  figma
+  free-ruler
+  imagealpha
+  imageoptim
+  sketch
 )
 
 # pips=(
