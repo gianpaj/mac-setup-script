@@ -335,6 +335,9 @@ brew tap homebrew/cask-fonts
 install 'brew install svn'
 install 'brew install' "${fonts[@]} --cask"
 
+brew tap mongodb/brew
+brew install mongodb-community@4.4
+
 # prompt "Update packages"
 # pip3 install --upgrade pip setuptools wheel
 # if [[ -z "${CI}" ]]; then
