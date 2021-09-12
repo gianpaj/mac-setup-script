@@ -48,6 +48,7 @@ brews=(
   # neofetch
   nmap
   # poppler
+  prettyping
   # osquery
   # sbt
   # shellcheck
