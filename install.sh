@@ -123,6 +123,7 @@ casks=(
   # Software Development
 
   android-platform-tools
+  dbeaver-community
   postman
   sublime-merge
   sublime-text
