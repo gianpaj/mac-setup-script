@@ -88,6 +88,7 @@ casks=(
   
   alfred
   karabiner-elements
+  monitorcontrol
   nightowl
 
   appcleaner
