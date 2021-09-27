@@ -67,7 +67,13 @@ brews=(
   fzf
 
   # Software Development
+  
   jq
+
+  # Audio
+
+  # Route Audio Between Apps
+  blackhole-2ch
 )
 
 casks=(
@@ -84,6 +90,7 @@ casks=(
   karabiner-elements
   nightowl
 
+  appcleaner
   # background-music
   # cakebrew
   # docker
@@ -119,25 +126,27 @@ casks=(
   # transmission
   # transmission-remote-gui
   # xquartz
+  vlc
 
   # Software Development
 
-  android-platform-tools
-  dbeaver-community
   postman
   sublime-merge
   sublime-text
 
-  vlc
+  # Mobile App Development
+
+  airdroid
+  android-platform-tools
+
+  # Back-end Development
+
+  dbeaver-community
 
   # Work
 
   microsoft-teams
   zoom
-
-  # PM
-
-  airdroid
 
   # Design
 
@@ -147,6 +156,10 @@ casks=(
   imagealpha
   imageoptim
   sketch
+
+  # Audio
+
+  audacity
 )
 
 # pips=(
@@ -294,6 +307,8 @@ install 'brew_install_or_upgrade' "${brews[@]}"
 
 git config --global user.name "Gianfranco Palumbo"
 git config --global user.email "gianpa@gmail.com"
+# do not check the status of the repo after each command
+git config --global --add oh-my-zsh.hide-dirty 1
 
 # prompt "Install JDK=${JDK_VERSION}"
 # curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
