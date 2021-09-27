@@ -5,7 +5,7 @@ important_casks=(
   dropbox
   istat-menus
   visual-studio-code
-  # slack
+  slack
 )
 
 brews=(
@@ -40,7 +40,7 @@ brews=(
   # lnav
   # m-cli
   # mackup
-  #mas
+  # mas
   # micro
   # moreutils
   # mtr
@@ -48,6 +48,7 @@ brews=(
   # neofetch
   nmap
   # poppler
+  prettyping
   # osquery
   # sbt
   # shellcheck
@@ -56,19 +57,46 @@ brews=(
   # thefuck
   # "wget --with-iri"
   # xsv
+  tree
   youtube-dl
+
+  # Terminal Prompt
+  
+  pure
+  # general-purpose command-line fuzzy finder
+  fzf
+
+  # Software Development
+  
+  jq
+
+  # Audio
+
+  # Route Audio Between Apps
+  blackhole-2ch
 )
 
 casks=(
   # aerial
-  airdroid
-  android-platform-tools
+
+  # Security
+
+  authy
+  boxcryptor
+
+  # Productivity
+  
+  alfred
+  karabiner-elements
+  nightowl
+
+  appcleaner
   # background-music
   # cakebrew
-  docker
+  # docker
   firefox
-  google-backup-and-sync
-  github
+  # google-backup-and-sync
+  # github
   # handbrake
   # iina
   # istat-server
@@ -76,7 +104,6 @@ casks=(
   # launchrocket
   # little-snitch
   # macdown
-  monitorcontrol
   # muzzle
   # plex-media-player
   # plex-media-server
@@ -85,38 +112,54 @@ casks=(
   # Quick Look plugins
   qlcolorcode
   qlmarkdown
-  qlstephen
-  quicklook-json
-  quicklook-csv
   qlprettypatch
-  satellite-eyes
-  sidekick
-  skype
-  sloth
-  steam
-  synergy
-  #transmission
-  #transmission-remote-gui
-  xquartz
-)
+  qlstephen
+  quicklook-csv
+  quicklook-json
 
-  # macdown
-  # muzzle
-  # private-eye
   # satellite-eyes
   # sidekick
+  # skype
   # sloth
   # steam
   # synergy
+  # transmission
+  # transmission-remote-gui
   # xquartz
-
-  # Gian's additions - from Mac Guide
-  # https://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
-  alfred
-  sublime-text
   vlc
 
-  tree
+  # Software Development
+
+  postman
+  sublime-merge
+  sublime-text
+
+  # Mobile App Development
+
+  airdroid
+  android-platform-tools
+
+  # Back-end Development
+
+  dbeaver-community
+
+  # Work
+
+  microsoft-teams
+  zoom
+
+  # Design
+
+  colorpicker-skalacolor
+  figma
+  free-ruler
+  imagealpha
+  imageoptim
+  sketch
+
+  # Audio
+
+  audacity
 )
 
 # pips=(
@@ -140,8 +183,9 @@ casks=(
 #   n
 # )
 
-gpg_key='3E219504'
-git_email='pathikritbhowmick@msn.com'
+# gpg_key='3E219504'
+gian_name='Gianfranco Palumbo'
+git_email='gianpa@gmail.com'
 git_configs=(
   "branch.autoSetupRebase always"
   "color.ui auto"
@@ -154,19 +198,36 @@ git_configs=(
   "rerere.autoUpdate true"
   "remote.origin.prune true"
   "rerere.enabled true"
-  "user.name pathikrit"
+  "user.name ${gian_name}"
   "user.email ${git_email}"
-  "user.signingkey ${gpg_key}"
+  # "user.signingkey ${gpg_key}"
 )
 
 vscode=(
-  # alanz.vscode-hie-server
-  # ms-vsonline.vsonline
-  # rebornix.Ruby
-  # redhat.java
-  # rust-lang.rust
-  # scalameta.metals
-  # scala-lang.scala
+  # DeepScan - Detect bugs and quality issues in JavaScript, TypeScript, React and Vue.js more precisely 
+  DeepScan.vscode-deepscan
+  # JavaScript (ES6) code snippets
+  xabikos.JavaScriptSnippets
+  # Prettier - Code formatter
+  esbenp.prettier-vscode
+  # Markdown All in One - keyboard shortcuts, table of contents, auto preview and more
+  yzhang.markdown-all-in-one
+  # markdownlint - Markdown linting and style checking
+  DavidAnson.vscode-markdownlint
+  # npm Intellisense - autocompletes npm modules in import statements
+  christian-kohler.npm-intellisense
+  # Path Intellisense - autocompletes filenames
+  christian-kohler.path-intellisense
+  # TODO Highlight - highlight TODOs, FIXMEs, and any keywords, annotations...
+  wayou.vscode-todo-highlight
+  # Color Highlight - Highlight web colors in your editor
+  naumovs.color-highlight
+  # Sublime Text Keymap and Settings Importer
+  ms-vscode.sublime-keybindings
+
+  eamodio.gitlens
+
+  dbaeumer.vscode-eslint
 )
 
 fonts=(
@@ -245,16 +306,18 @@ install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
 
 git config --global user.name "Gianfranco Palumbo"
-# git config --global user.email "gianp@gmail.com"
+git config --global user.email "gianpa@gmail.com"
+# do not check the status of the repo after each command
+git config --global --add oh-my-zsh.hide-dirty 1
 
 # prompt "Install JDK=${JDK_VERSION}"
 # curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 
-# prompt "Set git defaults"
-# for config in "${git_configs[@]}"
-# do
-#   git config --global ${config}
-# done
+prompt "Set git defaults"
+for config in "${git_configs[@]}"
+do
+  git config --global ${config}
+done
 
 # if [[ -z "${CI}" ]]; then
 #   gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
@@ -281,8 +344,8 @@ alias cat=bat
 # sudo chsh -s $(which xonsh)
 # echo "source-bash --overwrite-aliases ~/.bash_profile" >> ~/.xonshrc
 
-# prompt "Install software"
-# install 'brew install' "${casks[@]} --cask"
+prompt "Install software"
+install 'brew install' "${casks[@]} --cask"
 
 # prompt "Install secondary packages"
 # install 'pip3 install --upgrade' "${pips[@]}"
@@ -292,7 +355,11 @@ alias cat=bat
 install 'code --install-extension' "${vscode[@]}"
 
 brew tap homebrew/cask-fonts
+install 'brew install svn'
 install 'brew install' "${fonts[@]} --cask"
+
+brew tap mongodb/brew
+brew install mongodb-community@4.4
 
 # prompt "Update packages"
 # pip3 install --upgrade pip setuptools wheel

@@ -1,6 +1,6 @@
 # Gian's current macOS setup
 
-> as of July 2020
+> as of Sept 2021, Big Sur
 
 ## Initial setup
 
@@ -41,14 +41,13 @@
   ```
 
 - Karabiner Elements
-  - to fix the back tick character ` when pressing §
+  - to fix the back tick character \` when pressing §
 
 ### Work desktop apps
 
 Via home brew:
 
 ```bash
-brew install figma --cask
 brew install sketch --cask
 brew install free-ruler --cask
 # ImageOptim — compress images without losing quality - https://imageoptim.com/mac
@@ -82,42 +81,28 @@ brew install imagealpha --cask
     sudo spctl --master-disable
     ```
 
-### Security apps
-
-```bash
-brew install authy
-```
-
 ### Productivity apps
 
 - [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar
-
-  ```bash
-  brew install nightowl --cask
-  ```
-
 - [Horo](https://matthewpalmer.net/horo-free-timer-mac/) (timer/pomorodo menu app)
-- [Grayscale Mode](https://github.com/rkbhochalya/grayscale-mode)
+<!-- - [Grayscale Mode](https://github.com/rkbhochalya/grayscale-mode) -->
 
 ### Software development apps
 
 - VSCode
-
-  ```bash
-    brew install sublime-merge --cask
-  ```
-
 - Android Studio
   - Android SDK path
 - Xcode
   - Command-line tools
+- nvm (Node.js)
+
+  ```bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+  nvm install --lts
+  ````
 - iTerm2
   - Zsh ([Guide](https://sourabhbajaj.com/mac-setup/iTerm/zsh.html))
-
-    ```bash
-    brew install zsh
-    ```
-
   - oh-my-zsh
 
     ```bash
@@ -136,14 +121,24 @@ brew install authy
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
+    - [zsh-completions](https://github.com/gianpaj/mac-setup-script)
+       ```bash
+       git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+       ```
+
     - [pure](https://github.com/sindresorhus/pure) - Pretty, minimal and fast ZSH prompt
 
       ```bash
-      npm install --global pure-prompt
+      brew install pure
       ```
 
     - Update `.zshrc`
-  - bash [aliases](./bash/.aliases)
+  - Load `.zshrc` and `.aliases` from Dropbox
+
+    ```bash
+    ln -s ~/Dropbox/Mac/.zshrc .
+    ln -s ~/Dropbox/Mac/.aliases .
+    ```
 
 e.g.
 
@@ -175,15 +170,13 @@ git config --system core.ignorecase false
 
 ### General apps
 
-Via home brew:
-
-```bash
-brew install dropbox --cask
-brew install spotify --cask
-brew install app-cleaner --cask
-```
+- Dropbox
+- Spotify
+- [App Cleaner](https://freemacsoft.net/appcleaner/)
 
 ### Firefox Settings
+
+[about:config](about:config)
 
 - [Disable zooming with Cmd + Mouse wheel](https://muffinman.io/blog/disable-cmd-mouse-wheel-zoom-in-firefox/)
 `mousewheel.with_meta.action` = `0` disabled from `3` zoom
@@ -221,19 +214,7 @@ brew install app-cleaner --cask
 
 #### uBlock filters
 
-```text
-! 27/02/2020 https://github.com
-github.com##.unread.mail-status
-
-! 06/03/2020 https://twitter.com
-twitter.com##.r-qvutc0.r-3s2u2q.r-1m4drjs.r-kquydp.r-u8s1d.r-1b8eohn.r-ad9z0x.r-1777fci.r-50lct3.r-16dba41.r-1gkfh8e.r-1qd0xha.r-1q142lx.r-6koalj.r-jwli3a.r-1tjplnt.r-rs99b7.r-1phboty.r-sdzlij.r-f6ebdl.r-urgr8i.r-1awozwy.css-901oao
-
-! 17/06/2020 https://www.google.com
-www.google.com###eob_8
-
-! 07/07/2020 https://kanban-chi.appspot.com
-kanban-chi.appspot.com##.upgrade
-```
+[ublock-filters](./ublock-filters.txt)
 
 ### Desktop apps
 
@@ -241,11 +222,9 @@ kanban-chi.appspot.com##.upgrade
 - Giphy Capture
   - or kap
 
-    ```basg
+    ```bash
     brew install kap --cask
     ```
-
-## macOS configuration
 
 ## Resources
 
