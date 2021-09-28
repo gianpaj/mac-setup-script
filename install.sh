@@ -90,6 +90,7 @@ casks=(
   karabiner-elements
   monitorcontrol
   nightowl
+  remarkable
 
   appcleaner
   # background-music
