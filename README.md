@@ -146,6 +146,15 @@ e.g.
 git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 ```
 
+## Ubuntu linux useful commands
+
+Upgrade all security packages
+
+```bash
+sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'}
+sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'} | xargs sudo apt-get install -y
+```
+
 #### Git configs
 
 ```bash
