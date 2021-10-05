@@ -74,6 +74,12 @@ brews=(
 
   # Route Audio Between Apps
   blackhole-2ch
+
+  # Window management
+
+  koekeishiya/formulae/skhd
+  koekeishiya/formulae/yabai
+  spectacle
 )
 
 casks=(
