@@ -1,3 +1,17 @@
+#unalias md
+
+# use `take`
+#function md() {
+#  mkdir -p "$@" && cd "$@"
+#}
+
+alias renewdhcp="echo 'add State:/Network/Interface/en0/RefreshConfiguration temporary' | sudo scutil"
+
+alias adbscreenshot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screen.png"
+
+
+# https://remysharp.com/2018/08/23/cli-improved
+
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top="htop" # alias top and fix high sierra bug
@@ -6,4 +20,22 @@ alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 # requires brew info grep
 alias grep="ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 
+function tree-git-ignore {
+    # tree respecting gitignore
+
+    local ignored=$(git ls-files -ci --others --directory --exclude-standard)
+    local ignored_filter=$(echo "$ignored" \
+                    | egrep -v "^#.*$|^[[:space:]]*$" \
+                    | sed 's~^/~~' \
+                    | sed 's~/$~~' \
+                    | tr "\\n" "|")
+    tree --prune -I ".git|${ignored_filter: : -1}" "$@"
+}
+
 alias run="npm run"
+alias diff="diff --color=always"
+#alias diff='/usr/local/bin/diff --color -r -c'
+
+# alias ls='exa -l'
+
+alias gclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
