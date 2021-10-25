@@ -164,6 +164,8 @@ casks=(
   imagealpha
   imageoptim
   sketch
+  # color picker
+  pika
 
   # Audio
 
