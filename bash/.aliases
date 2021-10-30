@@ -38,4 +38,4 @@ alias diff="diff --color=always"
 
 # alias ls='exa -l'
 
-alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias gitclean='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
