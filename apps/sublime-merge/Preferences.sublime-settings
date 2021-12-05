@@ -1,0 +1,13 @@
+{
+	"always_show_command_status": false,
+	"diff_style": "auto",
+	"image_diff_style": "side-by-side",
+	"theme": "Merge.sublime-theme",
+	"added_words":
+	[
+		"middleware",
+		"formatter",
+		"Onboarding",
+	],
+	"ignore_diff_white_space": false,
+}

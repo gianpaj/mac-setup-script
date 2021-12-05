@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["command+b"],
+        "command": "toggle_side_bar" 
+    }
+]
