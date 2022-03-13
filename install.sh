@@ -117,6 +117,7 @@ casks=(
   # plex-media-player
   # plex-media-server
   # private-eye
+  lunar
 
   # Quick Look plugins
   qlcolorcode

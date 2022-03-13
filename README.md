@@ -36,8 +36,8 @@
   - and script to load the app but hide mac menubar icon
 
   ```bash
-  brew tap homebrew/cask-drivers
-  brew install razer-synapse --cask
+  curl -O https://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v1.87.dmg
+  ...
   ```
 
 - Karabiner Elements
