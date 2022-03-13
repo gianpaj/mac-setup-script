@@ -48,7 +48,7 @@
 Via home brew:
 
 ```bash
-brew install sketch --cask
+# brew install sketch --cask
 brew install free-ruler --cask
 # ImageOptim — compress images without losing quality - https://imageoptim.com/mac
 brew install imageoptim --cask
@@ -100,7 +100,8 @@ brew install imagealpha --cask
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
   nvm install --lts
-  ````
+  ```
+
 - iTerm2
   - Zsh ([Guide](https://sourabhbajaj.com/mac-setup/iTerm/zsh.html))
   - oh-my-zsh
@@ -153,12 +154,6 @@ Upgrade all security packages
 ```bash
 sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'}
 sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'} | xargs sudo apt-get install -y
-```
-
-#### Git configs
-
-```bash
-git config --system core.ignorecase false
 ```
 
 ### VSCode extensions
@@ -228,6 +223,7 @@ git config --system core.ignorecase false
 ### Desktop apps
 
 - iStat Menu 6 (purchased)
+- [Flow](https://apps.apple.com/ie/app/flow-focus-pomodoro-timer/id1423210932)
 - Giphy Capture
   - or kap
 

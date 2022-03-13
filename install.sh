@@ -24,6 +24,7 @@ brews=(
   # findutils
   # "fontconfig --universal"
   # fpp
+  fd
   # gh
   git
   # git-extras
@@ -208,6 +209,7 @@ git_configs=(
   "rerere.autoUpdate true"
   "remote.origin.prune true"
   "rerere.enabled true"
+  "core.ignorecase true"
   "user.name ${gian_name}"
   "user.email ${git_email}"
   # "user.signingkey ${gpg_key}"
