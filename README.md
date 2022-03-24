@@ -37,11 +37,14 @@
 
   ```bash
   curl -O https://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v1.87.dmg
-  ...
+  # Install
+  sudo chown -R `whoami` /Library/Application\ Support/Razer/
+  source ~/Dropbox/Mac/razer-rz-start.sh
   ```
 
 - Karabiner Elements
   - to fix the back tick character \` when pressing §
+  - `non_us_backslash` to `grave_accent_and_tilde`
 
 ### Work desktop apps
 
@@ -123,6 +126,7 @@ brew install imagealpha --cask
       ```
 
     - [zsh-completions](https://github.com/gianpaj/mac-setup-script)
+
        ```bash
        git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
        ```
