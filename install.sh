@@ -155,6 +155,7 @@ casks=(
 
   # Work
 
+  grammarly-desktop
   microsoft-teams
   zoom
 
