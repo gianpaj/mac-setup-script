@@ -173,6 +173,9 @@ casks=(
   # Audio
 
   audacity
+
+  # Terminal
+  fig
 )
 
 # pips=(
