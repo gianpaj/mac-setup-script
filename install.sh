@@ -98,6 +98,7 @@ casks=(
   monitorcontrol
   nightowl
   remarkable
+  simplenote
 
   appcleaner
   # background-music
