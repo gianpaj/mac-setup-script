@@ -39,3 +39,16 @@ alias diff="diff --color=always"
 # alias ls='exa -l'
 
 alias gitclean='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
+
+alias l='exa --long --git'
+
+function adbgrep() {
+    local pid=$(adb shell ps | grep "$@" | awk '{print $2;}')
+    echo "PID found: $pid"
+    if [ -z "$pid" ]; then
+        echo "Error: no pid found.\n\nOthers found that start with 'com' (not samsung, google, android, etc.):\n---"
+        adb shell ps | grep com | grep -v 'com.samsung\|com.google\|com.android\|android.hardware'
+        return 1
+    fi
+    adb logcat | grep -F " $pid "
+}
