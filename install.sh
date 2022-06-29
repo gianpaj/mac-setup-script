@@ -32,6 +32,7 @@ brews=(
   # git-lfs
   # "gnuplot --with-qt"
   # "gnu-sed --with-default-names"
+  grep
   # gpg
   # hh
   htop
