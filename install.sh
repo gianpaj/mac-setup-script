@@ -14,6 +14,9 @@ brews=(
   # "bash-snippets --without-all-tools --with-cryptocurrency --with-stocks --with-weather"
   bat
 
+  # Remove large files or passwords from Git history like git-filter-branch
+  bfg
+
   # Install GNU core utilities (those that come with macOS are outdated).
   coreutils
 
