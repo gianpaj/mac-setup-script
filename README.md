@@ -32,40 +32,11 @@
 
 ### Hardware apps
 
-- Razer Synapse
-  - and script to load the app but hide mac menubar icon
-
-  ```bash
-  curl -O https://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v1.87.dmg
-  # Install
-  sudo chown -R `whoami` /Library/Application\ Support/Razer/
-  source ~/Dropbox/Mac/razer-rz-start.sh
-  ```
-
 - Karabiner Elements
   - to fix the back tick character \` when pressing §
   - `non_us_backslash` to `grave_accent_and_tilde`
 
 ### Work desktop apps
-
-Via home brew:
-
-```bash
-# brew install sketch --cask
-brew install free-ruler --cask
-# ImageOptim — compress images without losing quality - https://imageoptim.com/mac
-brew install imageoptim --cask
-# ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
-brew install imagealpha --cask
-```
-
-- Color picker:
-  - <http://www.northernspysoftware.com/software/colorpicker>
-  - plus
-
-    ```bash
-    brew install colorpicker-skalacolor --cask
-    ```
 
 - [Linear](https://github.com/mikaa123/linear) - Ruler app with web-development in mind
 
@@ -97,13 +68,7 @@ brew install imagealpha --cask
   - Android SDK path
 - Xcode
   - Command-line tools
-- nvm (Node.js)
-
-  ```bash
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-
-  nvm install --lts
-  ```
+- asdf (Manage multiple runtime versions - Node.js, Python, etc.)
 
 - iTerm2
   - Zsh ([Guide](https://sourabhbajaj.com/mac-setup/iTerm/zsh.html))
@@ -141,9 +106,19 @@ brew install imagealpha --cask
   - Load `.zshrc` and `.aliases` from Dropbox
 
     ```bash
-    ln -s ~/Dropbox/Mac/.zshrc .
-    ln -s ~/Dropbox/Mac/.aliases .
+    ln -s ~/Dropbox/Mac/.zshrc ~
+    ln -s ~/Dropbox/Mac/.aliases ~
     ```
+
+- asdf
+
+  ```bash
+  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  asdf install nodejs lts
+
+  asdf plugin-add python
+  asdf install python latest
+  ```
 
 e.g.
 

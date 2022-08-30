@@ -20,6 +20,9 @@ brews=(
   # jabba
 
   ################################
+  
+  asdf  # https://asdf-vm.com
+
   # "bash-snippets --without-all-tools --with-cryptocurrency --with-stocks --with-weather"
   bat
 
@@ -57,7 +60,7 @@ brews=(
   # poppler       # https://poppler.freedesktop.org/
   postgresql
   # pv            # https://www.ivarch.com/programs/pv.shtml
-  python3
+  # python3
   prettyping
   # osquery
   # sbt
@@ -165,10 +168,12 @@ casks=(
 
   # Design
 
-  colorpicker-skalacolor
+  colorpicker-skalacolor  # http://www.northernspysoftware.com/software/colorpicker
   figma
   free-ruler
+  # ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
   imagealpha
+  # ImageOptim — compress images without losing quality - https://imageoptim.com/mac
   imageoptim
   # sketch
   # color picker
@@ -347,15 +352,14 @@ done
 
 prompt "Upgrade bash"
 # brew install bash bash-completion2 fzf
-brew install fzf
 $(brew --prefix)/opt/fzf/install
 # sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
 # #sudo chsh -s "$(brew --prefix)"/bin/bash
 
-echo "
-alias ls='exa -l'
-alias cat=bat
-" >> ~/.bash_profile
+# echo "
+# alias ls='exa -l'
+# alias cat=bat
+# " >> ~/.bash_profile
 
 # prompt "Setting up xonsh"
 # sudo bash -c "which xonsh >> /private/etc/shells"
@@ -373,11 +377,11 @@ install 'brew install' "${casks[@]} --cask"
 install 'code --install-extension' "${vscode[@]}"
 
 brew tap homebrew/cask-fonts
-install 'brew install svn'
+# install 'brew install svn'
 install 'brew install' "${fonts[@]} --cask"
 
 brew tap mongodb/brew
-brew install mongodb-community@4.4
+brew install mongodb-community@5.0
 
 # prompt "Update packages"
 # pip3 install --upgrade pip setuptools wheel
