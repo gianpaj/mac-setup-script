@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
 
 important_casks=(
+  authy
   iterm2
   dropbox
-  istat-menus
+  # istat-menus
+  # https://github.com/exelban/stats
+  stats
+  spotify
   visual-studio-code
   slack
 )
 
 brews=(
-  # xonsh
+  ##### Install these first ######
+
+  git
+  # xonsh	# https://xon.sh
   # jabba
+
+  ################################
   # "bash-snippets --without-all-tools --with-cryptocurrency --with-stocks --with-weather"
   bat
 
@@ -20,46 +29,40 @@ brews=(
   # Install GNU core utilities (those that come with macOS are outdated).
   coreutils
 
-  # dfc
+  dfc		# https://github.com/rolinh/dfc
 
-  # A modern version of ‘ls’.
-  exa
+  exa		# A modern version of ‘ls’. https://the.exa.website/
   # findutils
   # "fontconfig --universal"
-  # fpp
   fd
-  # gh
-  git
-  # git-extras
-  # git-fresh
+  # git-extras    # for git undo
   # git-lfs
   # "gnuplot --with-qt"
   # "gnu-sed --with-default-names"
   grep
   # gpg
-  # hh
-  htop
-  httpie
-  # iftop
+  # hstr          # https://github.com/dvorka/hstr
+  htop          # https://htop.dev/
+  httpie        # https://httpie.io/
+  iftop         # https://www.ex-parrot.com/~pdw/iftop/
   # "imagemagick --with-webp"
-  # lnav
-  # m-cli
-  # mackup
-  # mas
-  # micro
-  # moreutils
-  # mtr
+  lnav          # https://lnav.org/
+  # m-cli         # https://github.com/rgcr/m-cli
+  # macvim        # https://macvim-dev.github.io/macvim/
+  # micro         # https://github.com/zyedidia/micro
+  # mtr           # https://www.bitwizard.nl/mtr/
+  # neofetch      # https://github.com/dylanaraps/neofetch
   ncdu
-  # neofetch
   nmap
-  # poppler
+  # poppler       # https://poppler.freedesktop.org/
+  postgresql
+  # pv            # https://www.ivarch.com/programs/pv.shtml
+  python3
   prettyping
   # osquery
   # sbt
-  # shellcheck
-  # stormssh
-  # teleport
-  # thefuck
+  # shellcheck	# https://www.shellcheck.net/
+  # thefuck       # https://github.com/nvbn/thefuck
   # "wget --with-iri"
   # xsv
   tree
@@ -92,14 +95,13 @@ casks=(
 
   # Security
 
-  authy
   boxcryptor
 
   # Productivity
   
   alfred
   karabiner-elements
-  monitorcontrol
+  # monitorcontrol
   nightowl
   remarkable
   simplenote
@@ -119,8 +121,6 @@ casks=(
   # little-snitch
   # macdown
   # muzzle
-  # plex-media-player
-  # plex-media-server
   # private-eye
   lunar
 
@@ -134,12 +134,11 @@ casks=(
 
   # satellite-eyes
   # sidekick
-  # skype
   # sloth
   # steam
   # synergy
   # transmission
-  # transmission-remote-gui
+  qbittorrent
   # xquartz
   vlc
 
@@ -151,8 +150,8 @@ casks=(
 
   # Mobile App Development
 
-  airdroid
-  android-platform-tools
+  # vysor
+  # android-platform-tools
 
   # Back-end Development
 
@@ -161,7 +160,7 @@ casks=(
   # Work
 
   grammarly-desktop
-  microsoft-teams
+  # microsoft-teams
   zoom
 
   # Design
@@ -171,7 +170,7 @@ casks=(
   free-ruler
   imagealpha
   imageoptim
-  sketch
+  # sketch
   # color picker
   pika
 
@@ -192,16 +191,13 @@ casks=(
 
 # gems=(
 #   bundler
-#   travis
 # )
 
 # npms=(
 
-#   fenix-cli
 #
 #   gitjk
-#   kill-tabs
-#   n
+#   n	# https://github.com/tj/n
 # )
 
 # gpg_key='3E219504'
@@ -397,5 +393,4 @@ brew install mongodb-community@4.4
 prompt "Cleanup"
 brew cleanup
 
-echo "Run [mackup restore] after Dropbox has done syncing ..."
 echo "Done!"
