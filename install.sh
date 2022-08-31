@@ -377,7 +377,7 @@ install 'brew install' "${casks[@]} --cask"
 install 'code --install-extension' "${vscode[@]}"
 
 brew tap homebrew/cask-fonts
-# install 'brew install svn'
+install 'brew install svn' # for font-source-code-pro
 install 'brew install' "${fonts[@]} --cask"
 
 brew tap mongodb/brew
