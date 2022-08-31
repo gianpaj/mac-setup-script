@@ -109,6 +109,9 @@ casks=(
   remarkable
   simplenote
 
+  # Hardware
+  logi-options-plus
+
   appcleaner
   # background-music
   # cakebrew
@@ -325,6 +328,7 @@ brew tap homebrew/cask-versions
 install 'brew install' "${important_casks[@]} --cask"
 
 prompt "Install packages"
+brew tap homebrew/cask-versions # for logi-options-plus
 install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
 
