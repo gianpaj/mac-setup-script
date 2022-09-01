@@ -78,7 +78,7 @@ brews=(
   fzf
 
   # Software Development
-  
+
   jq
 
   # Audio
@@ -110,6 +110,7 @@ casks=(
   simplenote
 
   # Hardware
+
   logi-options-plus
 
   appcleaner
@@ -188,6 +189,9 @@ casks=(
 
   # Terminal
   fig
+
+  # Communication
+  telegram
 )
 
 # pips=(
