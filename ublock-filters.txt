@@ -27,8 +27,8 @@ www.facebook.com##a[href*="/pages/"] > span > span
 www.facebook.com##a[href*="/groups/"] > span > span
 www.facebook.com##a[href*="/watch/"] > span > span
 
-! 2020-09-25 https://www.youtube.com
-www.youtube.com###notification-count
+! 2022-09-04 https://www.youtube.com
+www.youtube.com##.yt-spec-icon-badge-shape__badge
 
 ! 2020-09-28 https://jira.cartrawler.com
 jira.cartrawler.com###tempo-issue-view-panel
