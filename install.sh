@@ -91,6 +91,10 @@ brews=(
   koekeishiya/formulae/skhd
   koekeishiya/formulae/yabai
   spectacle
+
+  # Security
+
+  tailscale
 )
 
 casks=(
