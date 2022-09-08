@@ -108,7 +108,7 @@ casks=(
   
   alfred
   karabiner-elements
-  # monitorcontrol
+  lunar
   nightowl
   remarkable
   simplenote
@@ -133,7 +133,6 @@ casks=(
   # macdown
   # muzzle
   # private-eye
-  lunar
 
   # Quick Look plugins
   qlcolorcode
