@@ -215,24 +215,28 @@ casks=(
 #   n	# https://github.com/tj/n
 # )
 
+
 # gpg_key='3E219504'
 gian_name='Gianfranco Palumbo'
 git_email='gianpa@gmail.com'
 git_configs=(
+  # do not check the status of the repo after each command
+  "--add oh-my-zsh.hide-dirty 1"
   "branch.autoSetupRebase always"
   "color.ui auto"
   "core.autocrlf input"
+  "core.ignorecase true"
   "credential.helper osxkeychain"
+  "init.defaultBranch master"
   "merge.ff false"
   "pull.rebase true"
   "push.default simple"
   "rebase.autostash true"
-  "rerere.autoUpdate true"
   "remote.origin.prune true"
+  "rerere.autoUpdate true"
   "rerere.enabled true"
-  "core.ignorecase true"
-  "user.name ${gian_name}"
   "user.email ${git_email}"
+  "user.name ${gian_name}"
   # "user.signingkey ${gpg_key}"
 )
 
@@ -338,11 +342,6 @@ prompt "Install packages"
 brew tap homebrew/cask-versions # for logi-options-plus
 install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
-
-git config --global user.name "Gianfranco Palumbo"
-git config --global user.email "gianpa@gmail.com"
-# do not check the status of the repo after each command
-git config --global --add oh-my-zsh.hide-dirty 1
 
 # prompt "Install JDK=${JDK_VERSION}"
 # curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
