@@ -142,6 +142,8 @@ casks=(
   quicklook-csv
   quicklook-json
 
+  the-unarchiver
+
   # satellite-eyes
   # sidekick
   # sloth
