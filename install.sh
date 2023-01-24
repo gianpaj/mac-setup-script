@@ -4,9 +4,10 @@ important_casks=(
   authy
   iterm2
   dropbox
-  # istat-menus
   # https://github.com/exelban/stats
   stats
+  # https://github.com/sfsam/Itsycal/
+  itsycal
   spotify
   visual-studio-code
   slack
