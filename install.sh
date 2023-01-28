@@ -116,6 +116,7 @@ casks=(
 
   # Hardware
 
+  elgato-camera-hub
   logi-options-plus
 
   appcleaner
