@@ -17,7 +17,6 @@ brews=(
   ##### Install these first ######
 
   git
-  # xonsh	# https://xon.sh
   # jabba
 
   ################################
@@ -70,7 +69,6 @@ brews=(
   # "wget --with-iri"
   # xsv
   tree
-  youtube-dl
 
   # Terminal Prompt
   
@@ -81,6 +79,7 @@ brews=(
   # Software Development
 
   jq
+  runjs
 
   # Audio
 
@@ -89,8 +88,8 @@ brews=(
 
   # Window management
 
-  koekeishiya/formulae/skhd
-  koekeishiya/formulae/yabai
+  # koekeishiya/formulae/skhd
+  # koekeishiya/formulae/yabai
   spectacle
 
   # Security
