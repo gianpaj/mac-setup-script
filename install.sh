@@ -165,6 +165,8 @@ casks=(
 
   # vysor
   # android-platform-tools
+  # Xcode Dev Cleaner
+  devcleaner
 
   # Back-end Development
 
