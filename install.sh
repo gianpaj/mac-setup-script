@@ -4,24 +4,22 @@ important_casks=(
   authy
   iterm2
   dropbox
-  # https://github.com/exelban/stats
-  stats
-  # https://github.com/sfsam/Itsycal/
-  itsycal
-  spotify
   visual-studio-code
   slack
+  stats   # https://github.com/exelban/stats
+  itsycal # https://github.com/sfsam/Itsycal/
+  spotify
 )
 
 brews=(
   ##### Install these first ######
 
   git
-  # jabba
+  jabba # java version manager
 
   ################################
-  
-  asdf  # https://asdf-vm.com
+
+  asdf # https://asdf-vm.com
 
   # "bash-snippets --without-all-tools --with-cryptocurrency --with-stocks --with-weather"
   bat
@@ -32,24 +30,24 @@ brews=(
   # Install GNU core utilities (those that come with macOS are outdated).
   coreutils
 
-  dfc		# https://github.com/rolinh/dfc
+  dfc # https://github.com/rolinh/dfc
 
-  exa		# A modern version of ‘ls’. https://the.exa.website/
+  exa # A modern version of ‘ls’. https://the.exa.website/
   # findutils
   # "fontconfig --universal"
   fd
   # git-extras    # for git undo
-  # git-lfs
+  git-lfs
   # "gnuplot --with-qt"
   # "gnu-sed --with-default-names"
   grep
   # gpg
   # hstr          # https://github.com/dvorka/hstr
-  htop          # https://htop.dev/
-  httpie        # https://httpie.io/
-  iftop         # https://www.ex-parrot.com/~pdw/iftop/
+  htop   # https://htop.dev/
+  httpie # https://httpie.io/
+  iftop  # https://www.ex-parrot.com/~pdw/iftop/
   # "imagemagick --with-webp"
-  lnav          # https://lnav.org/
+  # lnav          # https://lnav.org/
   # m-cli         # https://github.com/rgcr/m-cli
   # macvim        # https://macvim-dev.github.io/macvim/
   # micro         # https://github.com/zyedidia/micro
@@ -71,7 +69,7 @@ brews=(
   tree
 
   # Terminal Prompt
-  
+
   pure
   # general-purpose command-line fuzzy finder
   fzf
@@ -102,21 +100,14 @@ casks=(
 
   # Security
 
-  boxcryptor
-
   # Productivity
-  
+
   alfred
   karabiner-elements
   lunar
   nightowl
   remarkable
   simplenote
-
-  # Hardware
-
-  elgato-camera-hub
-  logi-options-plus
 
   appcleaner
   # background-music
@@ -151,7 +142,8 @@ casks=(
   # steam
   # synergy
   # transmission
-  qbittorrent
+
+  # qbittorrent#@HOME
   # xquartz
   vlc
 
@@ -163,8 +155,9 @@ casks=(
 
   # Mobile App Development
 
-  # vysor
-  # android-platform-tools
+  # vysor #@WORK
+  # android-platform-tools #@WORK
+  # android-studio #@WORK
   # Xcode Dev Cleaner
   devcleaner
 
@@ -175,20 +168,15 @@ casks=(
   # Work
 
   grammarly-desktop
-  # microsoft-teams
   zoom
 
   # Design
 
-  colorpicker-skalacolor  # http://www.northernspysoftware.com/software/colorpicker
+  colorpicker-skalacolor # http://www.northernspysoftware.com/software/colorpicker
   figma
   free-ruler
-  # ImageAlpha — image minifier (like JPEG with transparency!) - https://pngmini.com
-  imagealpha
-  # ImageOptim — compress images without losing quality - https://imageoptim.com/mac
-  imageoptim
-  # sketch
-  # color picker
+  imagealpha # image minifier (like JPEG with transparency!) - https://pngmini.com
+  imageoptim # compress images without losing quality - https://imageoptim.com/mac
   pika
 
   # Audio
@@ -200,6 +188,12 @@ casks=(
 
   # Communication
   telegram
+)
+
+# Hardware
+drivers=(
+  elgato-camera-hub
+  logi-options-plus
 )
 
 # pips=(
@@ -220,7 +214,7 @@ casks=(
 #   n	# https://github.com/tj/n
 # )
 
-
+# Git configs
 # gpg_key='3E219504'
 gian_name='Gianfranco Palumbo'
 git_email='gianpa@gmail.com'
@@ -246,7 +240,7 @@ git_configs=(
 )
 
 vscode=(
-  # DeepScan - Detect bugs and quality issues in JavaScript, TypeScript, React and Vue.js more precisely 
+  # DeepScan - Detect bugs and quality issues in JavaScript, TypeScript, React and Vue.js more precisely
   DeepScan.vscode-deepscan
   # JavaScript (ES6) code snippets
   xabikos.JavaScriptSnippets
@@ -277,8 +271,6 @@ fonts=(
   font-source-code-pro
 )
 
-# JDK_VERSION=amazon-corretto@1.8.222-10.1
-
 ######################################## End of app list ########################################
 set +e
 set -x
@@ -292,15 +284,14 @@ function prompt {
 function install {
   cmd=$1
   shift
-  for pkg in "$@";
-  do
+  for pkg in "$@"; do
     exec="$cmd $pkg"
     #prompt "Execute: $exec"
-    if ${exec} ; then
+    if ${exec}; then
       echo "Installed $pkg"
     else
       echo "Failed to execute: $exec"
-      if [[ ! -z "${CI}" ]]; then
+      if [[ -n "${CI}" ]]; then
         exit 1
       fi
     fi
@@ -309,7 +300,7 @@ function install {
 
 function brew_install_or_upgrade {
   if brew ls --versions "$1" >/dev/null; then
-    if (brew outdated | grep "$1" > /dev/null); then
+    if (brew outdated | grep "$1" >/dev/null); then
       echo "Upgrading already installed package $1 ..."
       brew upgrade "$1"
     else
@@ -323,7 +314,11 @@ function brew_install_or_upgrade {
 if [[ -z "${CI}" ]]; then
   sudo -v # Ask for the administrator password upfront
   # Keep-alive: update existing `sudo` time stamp until script has finished
-  while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+  while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+  done 2>/dev/null &
 fi
 
 if test ! "$(command -v brew)"; then
@@ -344,17 +339,17 @@ brew tap homebrew/cask-versions
 install 'brew install' "${important_casks[@]} --cask"
 
 prompt "Install packages"
-brew tap homebrew/cask-versions # for logi-options-plus
+brew tap homebrew/cask-versions # for logi-options-plus and elgato-camera-hub
 install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
 
-# prompt "Install JDK=${JDK_VERSION}"
-# curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+prompt "Install drivers"
+brew tap homebrew/cask-drivers
+install 'brew_install_or_upgrade' "${drivers[@]}"
 
 prompt "Set git defaults"
-for config in "${git_configs[@]}"
-do
-  git config --global ${config}
+for config in "${git_configs[@]}"; do
+  git config --global "${config}"
 done
 
 # if [[ -z "${CI}" ]]; then
@@ -378,7 +373,7 @@ $(brew --prefix)/opt/fzf/install
 
 # prompt "Setting up xonsh"
 # sudo bash -c "which xonsh >> /private/etc/shells"
-# sudo chsh -s $(which xonsh)
+# sudo chsh -s "$(which xonsh)"
 # echo "source-bash --overwrite-aliases ~/.bash_profile" >> ~/.xonshrc
 
 prompt "Install software"
@@ -405,11 +400,17 @@ brew install mongodb-community@5.0
 # fi
 
 # if [[ -z "${CI}" ]]; then
-#   prompt "Install software from App Store"
+#   prompt  "Install following software from the App Store"
 #   mas list
 # fi
 
 prompt "Cleanup"
 brew cleanup
+
+# Install Node
+
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs lts
+asdf global nodejs lts
 
 echo "Done!"

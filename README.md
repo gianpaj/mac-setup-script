@@ -4,6 +4,17 @@
 
 ## Initial setup
 
+Dead simple script to setup my new Mac:
+
+```shell
+cd ~/Downloads
+curl -sL https://raw.githubusercontent.com/gianpaj/mac-setup-script/master/defaults.sh | bash
+curl -O https://raw.githubusercontent.com/gianpaj/mac-setup-script/master/install.sh
+chmod +x install.sh
+./install.sh
+./install.sh >> install_log.txt
+```
+
 > Taken from <https://github.com/pathikrit/mac-setup-script>
 
 1. Install [brew](https://brew.sh/)
@@ -98,9 +109,7 @@
 
     - [pure](https://github.com/sindresorhus/pure) - Pretty, minimal and fast ZSH prompt
 
-      ```bash
-      brew install pure
-      ```
+      (already installed in `install.sh`)
 
     - Update `.zshrc`
   - Load `.zshrc` and `.aliases` from Dropbox
@@ -113,9 +122,6 @@
 - asdf
 
   ```bash
-  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-  asdf install nodejs lts
-
   asdf plugin-add python
   asdf install python latest
   ```
@@ -206,14 +212,13 @@ sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'prin
 
 ### Desktop apps
 
-- iStat Menu 6 (purchased)
-- [Flow](https://apps.apple.com/ie/app/flow-focus-pomodoro-timer/id1423210932)
+<!-- - [Flow](https://apps.apple.com/ie/app/flow-focus-pomodoro-timer/id1423210932) -->
 - Giphy Capture
-  - or kap
+- or kap
 
-    ```bash
-    brew install kap --cask
-    ```
+  ```bash
+  brew install kap --cask
+  ```
 
 ## Resources
 
