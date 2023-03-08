@@ -27,7 +27,7 @@
     "Blue Component" : 0.63137254901960782,
     "Green Component" : 0.63137254901960782
   },
-  "Normal Font" : "SourceCodeProRoman-Regular 13",
+  "Normal Font" : "SourceCodeProRoman-Regular 14",
   "Ansi 5 Color" : {
     "Red Component" : 0.82745098039215681,
     "Color Space" : "sRGB",
@@ -73,10 +73,11 @@
     "Green Component" : 0.96470588235294119
   },
   "Foreground Color" : {
-    "Red Component" : 0.51372549019607838,
+    "Red Component" : 0.61795913055539131,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.58823529411764708,
-    "Green Component" : 0.58039215686274515
+    "Blue Component" : 0.709716796875,
+    "Alpha Component" : 1,
+    "Green Component" : 0.70005809515714656
   },
   "Working Directory" : "\/Users\/gpalumbo",
   "Blinking Cursor" : false,
@@ -105,7 +106,7 @@
   },
   "Title Components" : 512,
   "Custom Command" : "No",
-  "ASCII Anti Aliased" : false,
+  "ASCII Anti Aliased" : true,
   "Non Ascii Font" : "Monaco 12",
   "Vertical Spacing" : 1,
   "Use Bold Font" : true,
@@ -239,10 +240,6 @@
       "Action" : 10,
       "Text" : "[1;2D"
     },
-    "0xf703-0x280000" : {
-      "Action" : 11,
-      "Text" : "0x1b 0x1b 0x5b 0x43"
-    },
     "0xf700-0x240000" : {
       "Action" : 10,
       "Text" : "[1;5A"
@@ -270,10 +267,6 @@
     "0xf701-0x260000" : {
       "Action" : 10,
       "Text" : "[1;6B"
-    },
-    "0xf702-0x280000" : {
-      "Action" : 11,
-      "Text" : "0x1b 0x1b 0x5b 0x44"
     },
     "0xf72b-0x20000" : {
       "Action" : 10,
@@ -331,6 +324,7 @@
     "Blue Component" : 0.63137254901960782,
     "Green Component" : 0.63137254901960782
   },
+  "ASCII Ligatures" : false,
   "Name" : "Default",
   "Cursor Text Color" : {
     "Red Component" : 0.027450980392156862,
@@ -338,7 +332,7 @@
     "Blue Component" : 0.25882352941176473,
     "Green Component" : 0.21176470588235294
   },
-  "Minimum Contrast" : 0.26575520833333333,
+  "Minimum Contrast" : 0.64485677083333337,
   "Shortcut" : "",
   "Open Toolbelt" : false,
   "Triggers" : [
