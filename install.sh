@@ -149,6 +149,7 @@ casks=(
 
   # Software Development
 
+  mongodbsh
   postman
   sublime-merge
   sublime-text

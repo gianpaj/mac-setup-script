@@ -27,7 +27,7 @@
     "Blue Component" : 0.63137254901960782,
     "Green Component" : 0.63137254901960782
   },
-  "Normal Font" : "SourceCodeProRoman-Regular 14",
+  "Normal Font" : "SourceCodeProRoman-Regular 13",
   "Ansi 5 Color" : {
     "Red Component" : 0.82745098039215681,
     "Color Space" : "sRGB",
@@ -105,6 +105,7 @@
     "Green Component" : 0.44313725490196076
   },
   "Title Components" : 512,
+  "Brighten Bold Text" : false,
   "Custom Command" : "No",
   "ASCII Anti Aliased" : true,
   "Non Ascii Font" : "Monaco 12",
@@ -332,7 +333,7 @@
     "Blue Component" : 0.25882352941176473,
     "Green Component" : 0.21176470588235294
   },
-  "Minimum Contrast" : 0.64485677083333337,
+  "Minimum Contrast" : 0.50449218750000002,
   "Shortcut" : "",
   "Open Toolbelt" : false,
   "Triggers" : [
