@@ -1,0 +1,4 @@
+{
+	"font_size": 14,
+	"folder_exclude_patterns": ["node_modules", ".git", ".Trash", ".Trash-*", "Pods"],
+}

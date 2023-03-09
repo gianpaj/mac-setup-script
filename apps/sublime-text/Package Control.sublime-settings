@@ -1,0 +1,21 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Alignment",
+		"EsFormatter",
+		"FileDiffs",
+		"Git",
+		"Highlight",
+		"JsFormat",
+		"Package Control",
+		"Require Node.js Modules Helper",
+		"SublimeCodeIntel",
+		"SublimeJava",
+		"SublimeLinter"
+	],
+	"repositories":
+	[
+		"https://github.com/chrislongo/TidyJSON"
+	]
+}
