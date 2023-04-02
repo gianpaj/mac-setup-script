@@ -41,11 +41,16 @@ chmod +x install.sh
 
 ## Applications
 
-### Hardware apps
+### Hardware
 
 - Karabiner Elements
   - to fix the back tick character \` when pressing §
   - `non_us_backslash` to `grave_accent_and_tilde`
+
+- Alfred workflows
+  - SwitchAudioSource (to switch between audio devices)
+
+    ![Alfred SwitchAudioSource wo](Alfred-SwitchAudioSource.png)
 
 ### Work desktop apps
 

@@ -84,6 +84,9 @@ brews=(
   # Route Audio Between Apps
   blackhole-2ch
 
+  # for Alfred workflow
+  switchaudio-osx
+
   # Window management
 
   # koekeishiya/formulae/skhd
@@ -103,11 +106,14 @@ casks=(
   # Productivity
 
   alfred
-  karabiner-elements
-  lunar
   nightowl
   remarkable
   simplenote
+
+  # Hardware
+
+  lunar
+  karabiner-elements
 
   appcleaner
   # background-music
