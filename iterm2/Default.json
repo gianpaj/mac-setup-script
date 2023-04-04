@@ -105,12 +105,12 @@
     "Green Component" : 0.44313725490196076
   },
   "Title Components" : 512,
-  "Brighten Bold Text" : false,
+  "Brighten Bold Text" : true,
   "Custom Command" : "No",
   "ASCII Anti Aliased" : true,
   "Non Ascii Font" : "Monaco 12",
   "Vertical Spacing" : 1,
-  "Use Bold Font" : true,
+  "Use Bold Font" : false,
   "Option Key Sends" : 2,
   "Selected Text Color" : {
     "Red Component" : 0.57647058823529407,
