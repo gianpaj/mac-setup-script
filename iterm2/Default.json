@@ -344,7 +344,7 @@
     "Blue Component" : 0.25882352941176473,
     "Green Component" : 0.21176470588235294
   },
-  "Minimum Contrast" : 0.64485677083333337,
+  "Minimum Contrast" : 0.39833984374999998,
   "Open Toolbelt" : false,
   "Shortcut" : "",
   "Triggers" : [
@@ -381,7 +381,7 @@
     "Blue Component" : 0.59607843137254901,
     "Green Component" : 0.63137254901960782
   },
-  "Normal Font" : "SourceCodeProRoman-Regular 14",
+  "Normal Font" : "SourceCodeProRoman-Regular 13",
   "Ansi 2 Color" : {
     "Red Component" : 0.52156862745098043,
     "Color Space" : "sRGB",
