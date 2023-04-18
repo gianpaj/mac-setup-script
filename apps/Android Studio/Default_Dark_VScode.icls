@@ -1,0 +1,21 @@
+<scheme name="Darcula Gian" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2022-07-22T11:44:22</property>
+    <property name="ide">AndroidStudio</property>
+    <property name="ideVersion">2021.2.1.15</property>
+    <property name="modified">2022-07-22T11:45:08</property>
+    <property name="originalScheme">Darcula Gian</property>
+  </metaInfo>
+  <colors>
+    <option name="GUTTER_BACKGROUND" value="1e1e1e" />
+  </colors>
+  <attributes>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="d4d4d4" />
+        <option name="BACKGROUND" value="1e1e1e" />
+        <option name="EFFECT_TYPE" value="5" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
