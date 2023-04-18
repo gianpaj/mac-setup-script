@@ -1,0 +1,8 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"font_size": 15,
+	"folder_exclude_patterns": ["node_modules", ".git", ".Trash", ".Trash-*", "Pods"],
+}
