@@ -115,6 +115,10 @@ casks=(
   lunar
   karabiner-elements
 
+  # Desktop tools
+
+  hiddenbar
+
   appcleaner
   # background-music
   # cakebrew
