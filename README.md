@@ -50,7 +50,11 @@ chmod +x install.sh
 - Alfred workflows
   - SwitchAudioSource (to switch between audio devices)
 
-    ![Alfred SwitchAudioSource wo](Alfred-SwitchAudioSource.png)
+    ![Alfred Switch AudioSource wo](Alfred-SwitchAudioSource.png)
+
+  - [Switch Appearance](https://alfred.app/workflows/alfredapp/switch-appearance/) – Change between Light and Dark Mode
+
+    ![Alfred-Switch Appearance Workflow](Alfred-SwitchAppearanceWorkflow.png)
 
 ### Work desktop apps
 
