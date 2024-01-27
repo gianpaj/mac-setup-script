@@ -68,8 +68,10 @@ brews=(
   # xsv
   tree
 
-  # Terminal Prompt
+  # An open-source cross-platform alternative to AirDrop
+  localsend
 
+  # Terminal Prompt
   pure
   # general-purpose command-line fuzzy finder
   fzf
@@ -345,12 +347,12 @@ else
 fi
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-echo "Install important software ..."
-brew tap homebrew/cask-versions
+echo "Install cask ..."
+brew tap homebrew/cask-versions # for logi-options-plus and elgato-camera-hub
+brew tap localsend/localsend
 install 'brew install' "${important_casks[@]} --cask"
 
 prompt "Install packages"
-brew tap homebrew/cask-versions # for logi-options-plus and elgato-camera-hub
 install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
 
