@@ -9,6 +9,7 @@ important_casks=(
   stats   # https://github.com/exelban/stats
   itsycal # https://github.com/sfsam/Itsycal/
   spotify
+  zed
 )
 
 brews=(
@@ -77,7 +78,6 @@ brews=(
   fzf
 
   # Software Development
-
   jq
   runjs
 
