@@ -1,0 +1,35 @@
+{
+  "entries": {
+    "tap": {
+      "lencx/chatgpt": {
+        "revision": "fac5a4399ed553424be5388fe5eb24d5e5c0e98c",
+        "options": {
+          "clone_target": "https://github.com/lencx/chatgpt.git"
+        }
+      }
+    },
+    "cask": {
+      "chatgpt": {
+        "version": "1.0.0",
+        "options": {
+          "args": {
+            "no-quarantine": true
+          },
+          "full_name": "chatgpt"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "ventura": {
+        "HOMEBREW_VERSION": "4.2.5",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "api",
+        "CLT": "15.1.0.0.1.1700200546",
+        "Xcode": "15.2",
+        "macOS": "13.6.4"
+      }
+    }
+  }
+}
