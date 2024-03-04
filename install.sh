@@ -80,7 +80,6 @@ brews=(
   # Software Development
   jq
   # runjs
-  surge
 
   # Audio
 
@@ -221,12 +220,12 @@ drivers=(
 #   bundler
 # )
 
-# npms=(
-
+npms=(
+  surge
 #
 #   gitjk
 #   n	# https://github.com/tj/n
-# )
+)
 
 # Git configs
 # gpg_key='3E219504'
@@ -396,7 +395,7 @@ install 'brew install' "${casks[@]} --cask"
 # prompt "Install secondary packages"
 # install 'pip3 install --upgrade' "${pips[@]}"
 # install 'gem install' "${gems[@]}"
-# install 'npm install --global' "${npms[@]}"
+install 'npm install --global' "${npms[@]}"
 
 install 'code --install-extension' "${vscode[@]}"
 
