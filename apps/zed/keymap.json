@@ -12,5 +12,11 @@
       "cmd-8": ["pane::ActivateItem", 7],
       "cmd-9": "pane::ActivateLastItem"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-b": "workspace::ToggleRightDock"
+    }
   }
 ]
