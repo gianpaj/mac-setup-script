@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "One Dark",
   "base_keymap": "SublimeText",
   "ui_font_size": 15,
   "buffer_font_size": 15,
@@ -19,5 +20,9 @@
   },
   "project_panel": {
     "dock": "right"
-  }
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "show_whitespaces": "selection"
 }
