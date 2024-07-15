@@ -7,13 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "auto_update": false,
   "theme": "One Dark",
   "base_keymap": "SublimeText",
   "ui_font_size": 15,
   "buffer_font_size": 15,
   "tab_size": 2,
   "file_types": {
-    "CSS": ["scss"]
+    "JavaScript": ["marko"],
+    "Ruby": ["Fastfile"],
+    "C": ["m"]
   },
   "collaboration_panel": {
     "dock": "left"

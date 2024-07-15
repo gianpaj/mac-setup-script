@@ -18,5 +18,11 @@
     "bindings": {
       "cmd-b": "workspace::ToggleRightDock"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-d": "editor::DuplicateLineDown"
+    }
   }
 ]
