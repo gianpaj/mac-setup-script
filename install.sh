@@ -42,6 +42,7 @@ brews=(
   # "gnuplot --with-qt"
   # "gnu-sed --with-default-names"
   grep
+  ripgrep
   # gpg
   # hstr          # https://github.com/dvorka/hstr
   htop   # https://htop.dev/
