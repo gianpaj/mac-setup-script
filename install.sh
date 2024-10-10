@@ -190,7 +190,7 @@ casks=(
   figma
   free-ruler
   imagealpha # image minifier (like JPEG with transparency!) - https://pngmini.com
-  # imageoptim now using https://squoosh.app
+  imageoptim # using https://squoosh.app for single images and lossy compression
   pika # picker app
 
   # Audio
