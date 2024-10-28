@@ -7,7 +7,40 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "inline_completions": {
+    "disabled_globs": [".env", "exercises/**/*.rs"]
+  },
+  "vim_mode": false,
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "show_inline_completions": true,
   "auto_update": false,
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://100.126.22.13:11434",
+      "low_speed_timeout_in_seconds": 120,
+      "available_models": [
+        {
+          "name": "llama3.2:3b",
+          "display_name": "llama3.2 3b",
+          "max_tokens": 131072
+        },
+        {
+          "name": "llama3.2:1b",
+          "display_name": "llama3.2 1b",
+          "max_tokens": 131072
+        }
+      ]
+    }
+  },
   "theme": "One Dark",
   "base_keymap": "SublimeText",
   "ui_font_size": 15,
