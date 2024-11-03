@@ -7,7 +7,7 @@ important_casks=(
   visual-studio-code
   slack
   stats   # https://github.com/exelban/stats
-  itsycal # https://github.com/sfsam/Itsycal/
+  # itsycal # https://github.com/sfsam/Itsycal/
   spotify
   zed
 )
