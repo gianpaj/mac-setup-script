@@ -405,7 +405,7 @@ install 'brew install svn' # for font-source-code-pro
 install 'brew install' "${fonts[@]} --cask"
 
 brew tap mongodb/brew
-brew install mongodb-community@5.0
+brew install mongodb-community@6.0
 
 # prompt "Update packages"
 # pip3 install --upgrade pip setuptools wheel
