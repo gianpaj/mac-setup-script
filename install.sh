@@ -33,7 +33,7 @@ brews=(
 
   dfc # https://github.com/rolinh/dfc
 
-  exa # A modern version of ‘ls’. https://the.exa.website/
+  eza # Modern, maintained replacement for `ls`. https://github.com/eza-community/eza
   # findutils
   # "fontconfig --universal"
   fd
