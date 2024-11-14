@@ -25,7 +25,8 @@
   },
   "language_models": {
     "ollama": {
-      "api_url": "http://100.126.22.13:11434",
+      "api_url": "http://192.168.1.161:11434",
+      // "api_url": "http://100.126.22.13:11434",
       "low_speed_timeout_in_seconds": 120,
       "available_models": [
         {
@@ -44,12 +45,13 @@
   "theme": "One Dark",
   "base_keymap": "SublimeText",
   "ui_font_size": 15,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
   "tab_size": 2,
   "file_types": {
     "JavaScript": ["marko"],
     "Ruby": ["Fastfile"],
-    "C": ["m"]
+    "C": ["m"],
+    "Shell Script": [".env.*"]
   },
   "collaboration_panel": {
     "dock": "left"
