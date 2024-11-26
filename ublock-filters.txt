@@ -1,39 +1,15 @@
-! 06/03/2020 https://twitter.com
-twitter.com##.r-qvutc0.r-3s2u2q.r-1m4drjs.r-kquydp.r-u8s1d.r-1b8eohn.r-ad9z0x.r-1777fci.r-50lct3.r-16dba41.r-1gkfh8e.r-1qd0xha.r-1q142lx.r-6koalj.r-jwli3a.r-1tjplnt.r-rs99b7.r-1phboty.r-sdzlij.r-f6ebdl.r-urgr8i.r-1awozwy.css-901oao
+! 27/02/2020 https://github.com
+github.com##.unread.mail-status
 
 ! 17/06/2020 https://www.google.com
 www.google.com###eob_8
-
-! 07/07/2020 https://kanban-chi.appspot.com
-kanban-chi.appspot.com##.upgrade
-
-twitter.com##div:has(>div > h3 > span:has-text(Trends for you)) 
-twitter.com##div:has(>div > h3 > span:has-text(Trends for you)) + div
-twitter.com##div:has(>div > h3 > span:has-text(What’s happening)) 
-twitter.com##div:has(>div > h3 > span:has-text(What’s happening)) + div
-
-! 26/08/2020 https://twitter.com
-twitter.com##.r-qvutc0.r-3s2u2q.r-1m4drjs.r-kquydp.r-u8s1d.r-rjfia.r-5wjisa.r-1b8eohn.r-ad9z0x.r-1777fci.r-50lct3.r-16dba41.r-1gkfh8e.r-1qd0xha.r-1q142lx.r-6koalj.r-jwli3a.r-1tjplnt.r-rs99b7.r-1phboty.r-sdzlij.r-11mg6pl.r-urgr8i.r-1awozwy.css-901oao
 
 ! 2020-09-23 https://www.npmjs.com
 www.npmjs.com##.a6ff2de1
 www.npmjs.com##.z-999.left-0.top-0.fixed._8a62ca63
 
-! 2020-09-24 https://www.facebook.com
-www.facebook.com##a[href*="/pages/"] > span > span
-www.facebook.com##a[href*="/groups/"] > span > span
-www.facebook.com##a[href*="/watch/"] > span > span
-
-! 2022-09-04 https://www.youtube.com
-www.youtube.com##.yt-spec-icon-badge-shape__badge
-
-! 2020-09-28 https://jira.cartrawler.com
-jira.cartrawler.com###tempo-issue-view-panel
-jira.cartrawler.com###git-issue-webpanel
-jira.cartrawler.com###viewissue-export
-jira.cartrawler.com##.aui-header-primary > .aui-nav > li:has-text(Git)
-jira.cartrawler.com##.aui-sidebar-group-tier-one.aui-sidebar-group > .aui-nav > li:has-text(Timesheets)
-jira.cartrawler.com##.aui-sidebar-group-tier-one.aui-sidebar-group > .aui-nav > li:has-text(Git Commits)
+! 2020-09-25 https://www.youtube.com
+www.youtube.com###notification-count
 
 ! 2020-10-17 https://www.linkedin.com
 www.linkedin.com###ember55 > .notification-badge--show.notification-badge
@@ -45,8 +21,11 @@ www.linkedin.com###ember53 > .notification-badge--show.notification-badge
 ! 2020-11-27 https://talky.io
 talky.io##.bcMPWx.sc-AxjAm
 
-! 2021-03-30 https://jira.cartrawler.com
-jira.cartrawler.com###collaboratorsmodule
-
 ! 2023-06-22 https://github.com
 github.com##.AppHeader-button.AppHeader-button--hasIndicator::before
+
+! 2024-01-31 https://seekingalpha.com
+seekingalpha.com##.al_hu.g_x
+
+! Nov 26, 2024 https://github.com
+github.com##div.react-code-size-details-in-header:nth-of-type(2)
