@@ -60,3 +60,31 @@ alias git-pretty="git log --graph --oneline --all --decorate"
 VSCODE=code
 
 alias pn=pnpm
+
+# function p: Automatically detects and uses a Node.js package manager
+# Checks for lock files to determine whether to use pnpm, yarn, bun or npm (default)
+# Searches up to 2 parent directories for lock files.
+# TODO: either check that works only in turbo pack monorepos (apps/ folder) and check it doesn't go up to the root if it's new repo or if there's no lock file.
+# Usage: p <command>
+# Example: p install - Will use pnpm/yarn/bun/npm install depending on lock file
+p(){
+    declare pm="npm"
+    declare dir="."
+
+    # Check current and up to 2 parent directories
+    for i in {1..3}; do
+        if [ -f "$dir/pnpm-lock.yaml" ]; then
+            pm="pnpm"
+            break
+        elif [ -f "$dir/yarn.lock" ]; then
+            pm="yarn"
+            break
+        elif [ -f "$dir/bun.lock" ]; then
+            pm="bun"
+            break
+        fi
+        dir="$dir/.."
+    done
+
+    "$pm" "$@"
+}
