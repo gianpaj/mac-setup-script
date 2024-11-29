@@ -121,11 +121,25 @@ chmod +x install.sh
       (already installed in `install.sh`)
 
     - Update `.zshrc`
-  - Load `.zshrc` and `.aliases` from Dropbox
+  - Load `.zshrc` from Dropbox
 
     ```bash
-    ln -s ~/Dropbox/Mac/.zshrc ~
-    ln -s ~/Dropbox/Mac/.aliases ~
+    cd ~
+    ln -s ~/Dropbox/Mac/.zshrc .zshrc
+
+    # results in
+    $ l .zshrc
+    lrwxr-xr-x - gianpaj 30 Aug  2022 .zshrc -> /Users/gianpaj/Dropbox/Mac/.zshrc
+    ```
+  - Load `.aliases` from Git repo
+
+    ```bash
+    cd ~
+    ln -s ~/github/gianpaj/mac-setup-script/bash/.aliases .aliases
+
+    # results in
+    $ l .aliases
+    lrwxr-xr-x - gianpaj 29 Nov 12:11 -M .aliases -> /Users/gianpaj/github/gianpaj/mac-setup-script/bash/.aliases
     ```
 
 - asdf

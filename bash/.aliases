@@ -1,11 +1,6 @@
-#unalias md
-
-# use `take`
-#function md() {
-#  mkdir -p "$@" && cd "$@"
-#}
-
 alias renewdhcp="echo 'add State:/Network/Interface/en0/RefreshConfiguration temporary' | sudo scutil"
+
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 alias adbscreenshot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screen.png"
 
@@ -32,15 +27,19 @@ function tree-git-ignore {
     tree --prune -I ".git|${ignored_filter: : -1}" "$@"
 }
 
-alias run="npm run"
+alias run="bun run"
+alias start="bun run dev || bun run start"
+alias dev=start
+# run dev or run start
+
+alias npx="bunx"
 alias diff="diff --color=always"
 #alias diff='/usr/local/bin/diff --color -r -c'
 
-# alias ls='exa -l'
-
 alias gitclean='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
 
-alias l='exa --long --git'
+alias ll='eza --long --git -a'
+alias l='eza --long --git'
 
 function adbgrep() {
     local pid=$(adb shell ps | grep "$@" | awk '{print $2;}')
@@ -52,3 +51,12 @@ function adbgrep() {
     fi
     adb logcat | grep -F " $pid "
 }
+
+# http://una.github.io/keyboard-ninja-slides/#/5/8
+alias git-pretty="git log --graph --oneline --all --decorate"
+
+# from https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/vscode/vscode.plugin.zsh
+
+VSCODE=code
+
+alias pn=pnpm
