@@ -79,7 +79,7 @@ p(){
         elif [ -f "$dir/yarn.lock" ]; then
             pm="yarn"
             break
-        elif [ -f "$dir/bun.lock" ]; then
+        elif [ -f "$dir/bun.lockb" ]; then
             pm="bun"
             break
         fi
