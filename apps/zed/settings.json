@@ -51,7 +51,7 @@
     "JavaScript": ["marko"],
     "Ruby": ["Fastfile"],
     "C": ["m"],
-    "Shell Script": [".env.*", ".aliases"]
+    "Shell Script": [".aliases"]
   },
   "collaboration_panel": {
     "dock": "left"
