@@ -81,6 +81,10 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# Fix for https://www.reddit.com/r/logitech/comments/ylo5z6/logitech_mx_master_3s_lagging_on_macos_ventura
+# https://stackoverflow.com/questions/24380159/corebluetooth-and-wifi-interference
+sudo defaults write /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt Hybrid
+
 # Disable auto corrections
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false      # Disable automatic capitalization
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false    # Disable smart dashes
