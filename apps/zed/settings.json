@@ -11,15 +11,15 @@
     "disabled_globs": [".env", "exercises/**/*.rs"]
   },
   "vim_mode": false,
-  "features": {
-    "inline_completion_provider": "supermaven"
-  },
+  // "features": {
+  //   "inline_completion_provider": "supermaven"
+  // },
   "show_inline_completions": true,
   "auto_update": false,
   "assistant": {
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
     },
     "version": "2"
   },
@@ -44,7 +44,7 @@
   },
   "theme": "One Dark",
   "base_keymap": "SublimeText",
-  "ui_font_size": 15,
+  "ui_font_size": 16,
   "buffer_font_size": 14,
   "tab_size": 2,
   "file_types": {
