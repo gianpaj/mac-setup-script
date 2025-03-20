@@ -13,5 +13,10 @@
     "prefix": "cle",
     "body": ["console.error($1);", "$0"],
     "description": "Log error to the console"
+  },
+  "Dir to console": {
+    "prefix": "cld",
+    "body": ["console.dir($1);", "$0"],
+    "description": "Dir to the console"
   }
 }

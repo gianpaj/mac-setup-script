@@ -7,45 +7,90 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "inline_completions": {
+  "ssh_connections": [
+    {
+      "host": "192.168.1.162",
+      "username": "gianpa",
+      "projects": [
+        {
+          "paths": ["~/tmp/ultravox"]
+        }
+      ]
+    },
+  ],
+  "edit_predictions": {
     "disabled_globs": [".env", "exercises/**/*.rs"]
   },
   "vim_mode": false,
-  // "features": {
-  //   "inline_completion_provider": "supermaven"
-  // },
-  "show_inline_completions": true,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "show_edit_predictions": true,
   "auto_update": false,
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://192.168.1.161:11434",
-      // "api_url": "http://100.126.22.13:11434",
-      "low_speed_timeout_in_seconds": 120,
-      "available_models": [
-        {
-          "name": "llama3.2:3b",
-          "display_name": "llama3.2 3b",
-          "max_tokens": 131072
-        },
-        {
-          "name": "llama3.2:1b",
-          "display_name": "llama3.2 1b",
-          "max_tokens": 131072
-        }
-      ]
-    }
-  },
+  // "formatter": {
+  //   "language_server": {
+  //     "name": "biome"
+  //   }
+  // },
+  // "language_models": {
+  //   "openai": {
+  //     "api_url": "https://api.x.ai/v1",
+  //     "available_models": [
+  //       {
+  //         "name": "grok-beta",
+  //         "display_name": "X.ai Grok (Beta)",
+  //         "max_tokens": 131072
+  //       }
+  //     ],
+  //     "version": "1"
+  //   }
+  // },
+  // "language_models": {
+  //   // "openai": {
+  //   //   "version": "1",
+  //   //   "available_models": [
+  //   //     {
+  //   //       "provider": "openai",
+  //   //       "name": "gpt-4o-mini",
+  //   //       "max_tokens": 128000
+  //   //     },
+  //   //     {
+  //   //       "name": "o1",
+  //   //       "display_name": "o1",
+  //   //       "max_tokens": 128000,
+  //   //       "max_completion_tokens": 20000
+  //   //     }
+  //   //   ]
+  //   // },
+  //   "ollama": {
+  //     "api_url": "http://192.168.1.161:11434",
+  //     // "api_url": "http://100.126.22.13:11434",
+  //     "low_speed_timeout_in_seconds": 120,
+  //     "available_models": [
+  //       {
+  //         "name": "llama3.2:3b",
+  //         "display_name": "llama3.2 3b",
+  //         "max_tokens": 131072
+  //       },
+  //       {
+  //         "name": "llama3.2:1b",
+  //         "display_name": "llama3.2 1b",
+  //         "max_tokens": 131072
+  //       }
+  //     ]
+  //   }
+  // },
   "theme": "One Dark",
   "base_keymap": "SublimeText",
   "ui_font_size": 16,
-  "buffer_font_size": 14,
+  "buffer_font_size": 13.0,
   "tab_size": 2,
   "file_types": {
     "JavaScript": ["marko"],
@@ -62,5 +107,26 @@
   "tab_bar": {
     "show_nav_history_buttons": false
   },
-  "show_whitespaces": "selection"
+  "show_whitespaces": "selection",
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  },
+  // "lsp": {
+  //   "deno": {
+  //     "settings": {
+  //       "deno": {
+  //         "enable": true
+  //       }
+  //     }
+  //   }
+  // },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff"]
+    }
+  }
 }
