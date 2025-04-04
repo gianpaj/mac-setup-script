@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Battery_barChart_position</key>
+	<integer>1</integer>
+	<key>Battery_bar_chart_box</key>
+	<true/>
+	<key>Battery_bar_chart_color</key>
+	<string>system</string>
+	<key>Battery_bar_chart_frame</key>
+	<false/>
+	<key>Battery_bar_chart_label</key>
+	<false/>
+	<key>Battery_battery_additional</key>
+	<string>none</string>
+	<key>Battery_battery_color</key>
+	<false/>
+	<key>Battery_battery_lowPowerMode</key>
+	<false/>
+	<key>Battery_battery_position</key>
+	<integer>0</integer>
+	<key>Battery_label_position</key>
+	<integer>2</integer>
+	<key>Battery_mini_position</key>
+	<integer>3</integer>
+	<key>Battery_notifications_high</key>
+	<string>Disabled</string>
+	<key>Battery_state</key>
+	<true/>
+	<key>Battery_timeFormat</key>
+	<string>short</string>
+	<key>Battery_widget</key>
+	<string>battery</string>
+	<key>Bluetooth_sensors_size</key>
+	<false/>
+	<key>Bluetooth_state</key>
+	<false/>
+	<key>CPU_barChart_position</key>
+	<integer>3</integer>
+	<key>CPU_label_position</key>
+	<integer>1</integer>
+	<key>CPU_lineChart_position</key>
+	<integer>0</integer>
+	<key>CPU_line_chart_box</key>
+	<false/>
+	<key>CPU_line_chart_color</key>
+	<string>monochrome</string>
+	<key>CPU_line_chart_frame</key>
+	<false/>
+	<key>CPU_line_chart_historyCount</key>
+	<integer>60</integer>
+	<key>CPU_line_chart_label</key>
+	<true/>
+	<key>CPU_line_chart_value</key>
+	<false/>
+	<key>CPU_line_chart_valueColor</key>
+	<false/>
+	<key>CPU_mini_label</key>
+	<false/>
+	<key>CPU_mini_position</key>
+	<integer>2</integer>
+	<key>CPU_oneView</key>
+	<true/>
+	<key>CPU_pieChart_position</key>
+	<integer>4</integer>
+	<key>CPU_state</key>
+	<true/>
+	<key>CPU_tachometer_position</key>
+	<integer>5</integer>
+	<key>CPU_updateInterval</key>
+	<integer>1</integer>
+	<key>CPU_widget</key>
+	<string>line_chart</string>
+	<key>Clock_label_position</key>
+	<integer>0</integer>
+	<key>Clock_list</key>
+	<data>
+	W3siZW5hYmxlZCI6dHJ1ZSwiZm9ybWF0IjoieXl5eS1NTS1kZCBISDptbTpzcyIsInR6
+	IjoibG9jYWwiLCJpZCI6IjlBNkQ1RTBGLUY2MTAtNEQ5Qy1BODcwLTE3Nzg1OTUyRjg4
+	RCIsIm5hbWUiOiJMb2NhbCB0aW1lIn0seyJpZCI6IjQ3NjEwRDE3LUY0NzktNEMzMC1C
+	MkYwLThBRUM2ODMwNEQzRiIsImZvcm1hdCI6Inl5eXktTU0tZGQgSEg6bW06c3MiLCJ0
+	eiI6IjIiLCJlbmFibGVkIjpmYWxzZSwibmFtZSI6IlVrcmFpbmUifSx7Im5hbWUiOiJO
+	ZXcgWW9yayIsImZvcm1hdCI6Inl5eXktTU0tZGQgSEg6bW06c3MiLCJ0eiI6Ii01Iiwi
+	ZW5hYmxlZCI6ZmFsc2UsImlkIjoiMTkzNDJDNzUtQkYwRi00MDc4LTlFRUQtQTFBMTQ5
+	OUY0NjJEIn0seyJ0eiI6IjAiLCJpZCI6IjREM0NDM0YwLTY0QzEtNDAxRi05MDU1LURB
+	NDc1RTAzNUFBMCIsIm5hbWUiOiJEdWJsaW4iLCJmb3JtYXQiOiJ5eXl5LU1NLWRkIEhI
+	Om1tOnNzIiwiZW5hYmxlZCI6ZmFsc2V9LHsidHoiOiItNSIsImZvcm1hdCI6Inl5eXkt
+	TU0tZGQgSEg6bW06c3MiLCJuYW1lIjoiRWN1YWRvciIsImlkIjoiNDgxMERBRDItRTIy
+	QS00NEFGLUEwQUItQTVDQTNBRkMzQjZEIiwiZW5hYmxlZCI6ZmFsc2V9LHsibmFtZSI6
+	IlNhbHZhZG9yIiwiaWQiOiJFREEzRTBDMi01QUI4LTRERTktODNFOC00MTkzOUZDQzQ0
+	MUYiLCJlbmFibGVkIjpmYWxzZSwiZm9ybWF0IjoieXl5eS1NTS1kZCBISDptbTpzcyIs
+	InR6IjoiLTMifV0=
+	</data>
+	<key>Clock_oneView</key>
+	<false/>
+	<key>Clock_sensors_monospacedFont</key>
+	<false/>
+	<key>Clock_sensors_position</key>
+	<integer>1</integer>
+	<key>Clock_stack_position</key>
+	<integer>1</integer>
+	<key>Clock_state</key>
+	<true/>
+	<key>Clock_widget</key>
+	<string>label</string>
+	<key>CombinedModules</key>
+	<false/>
+	<key>Disk_state</key>
+	<false/>
+	<key>GPU_barChart_position</key>
+	<integer>2</integer>
+	<key>GPU_label_position</key>
+	<integer>1</integer>
+	<key>GPU_lineChart_position</key>
+	<integer>3</integer>
+	<key>GPU_mini_position</key>
+	<integer>0</integer>
+	<key>GPU_state</key>
+	<false/>
+	<key>GPU_tachometer_position</key>
+	<integer>4</integer>
+	<key>GPU_widget</key>
+	<string>mini</string>
+	<key>LaunchAtLoginNext</key>
+	<true/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/github/gianpaj/mac-setup-script/apps/stats</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{800, 448}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
+	<key>NSStatusItem Preferred Position Battery</key>
+	<real>209</real>
+	<key>NSStatusItem Preferred Position Battery_battery</key>
+	<real>198</real>
+	<key>NSStatusItem Preferred Position CPU</key>
+	<real>275</real>
+	<key>NSStatusItem Preferred Position Clock_label</key>
+	<real>176</real>
+	<key>NSStatusItem Preferred Position Network</key>
+	<real>335</real>
+	<key>NSStatusItem Preferred Position RAM_bar_chart</key>
+	<real>240</real>
+	<key>NSStatusItem Restore Position Clock_sensors</key>
+	<integer>652</integer>
+	<key>NSStatusItem Restore Position GPU_mini</key>
+	<integer>401</integer>
+	<key>NSStatusItem Restore Position Network_network_chart</key>
+	<integer>5487</integer>
+	<key>NSStatusItem Restore Position Network_speed</key>
+	<integer>5455</integer>
+	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>492 498 800 448 0 0 2048 1127 </string>
+	<key>Network_label_position</key>
+	<integer>3</integer>
+	<key>Network_networkChart_position</key>
+	<integer>0</integer>
+	<key>Network_network_chart_box</key>
+	<false/>
+	<key>Network_network_chart_frame</key>
+	<false/>
+	<key>Network_network_chart_label</key>
+	<false/>
+	<key>Network_oneView</key>
+	<true/>
+	<key>Network_processes</key>
+	<integer>5</integer>
+	<key>Network_publicIPRefreshInterval</key>
+	<string>hour</string>
+	<key>Network_speed_icon</key>
+	<string>none</string>
+	<key>Network_speed_monochrome</key>
+	<false/>
+	<key>Network_speed_position</key>
+	<integer>1</integer>
+	<key>Network_speed_reverseOrder</key>
+	<false/>
+	<key>Network_speed_units</key>
+	<true/>
+	<key>Network_speed_value</key>
+	<true/>
+	<key>Network_speed_valueColor</key>
+	<false/>
+	<key>Network_state</key>
+	<true/>
+	<key>Network_state_position</key>
+	<integer>2</integer>
+	<key>Network_usageReset</key>
+	<string>Once per week</string>
+	<key>Network_widget</key>
+	<string>speed,network_chart</string>
+	<key>RAM_barChart_position</key>
+	<integer>0</integer>
+	<key>RAM_bar_chart_box</key>
+	<false/>
+	<key>RAM_bar_chart_color</key>
+	<string>system</string>
+	<key>RAM_bar_chart_frame</key>
+	<true/>
+	<key>RAM_bar_chart_label</key>
+	<true/>
+	<key>RAM_label_position</key>
+	<integer>2</integer>
+	<key>RAM_lineChart_position</key>
+	<integer>3</integer>
+	<key>RAM_memory_position</key>
+	<integer>4</integer>
+	<key>RAM_mini_label</key>
+	<true/>
+	<key>RAM_mini_position</key>
+	<integer>1</integer>
+	<key>RAM_oneView</key>
+	<false/>
+	<key>RAM_pieChart_position</key>
+	<integer>5</integer>
+	<key>RAM_splitValue</key>
+	<true/>
+	<key>RAM_state</key>
+	<true/>
+	<key>RAM_tachometer_position</key>
+	<integer>6</integer>
+	<key>RAM_updateInterval</key>
+	<integer>2</integer>
+	<key>RAM_updateTopInterval</key>
+	<integer>2</integer>
+	<key>RAM_widget</key>
+	<string>bar_chart</string>
+	<key>ble_dc-d9-4a-5c-de-f8</key>
+	<true/>
+	<key>clock_19342C75-BF0F-4078-9EED-A1A1499F462D_popupState</key>
+	<true/>
+	<key>clock_47610D17-F479-4C30-B2F0-8AEC68304D3F_popupState</key>
+	<true/>
+	<key>clock_4D3CC3F0-64C1-401F-9055-DA475E035AA0_popupState</key>
+	<true/>
+	<key>runAtLoginInitialized</key>
+	<true/>
+	<key>setupProcess</key>
+	<true/>
+	<key>stack_New York_index</key>
+	<integer>1</integer>
+	<key>stack_Ukraine_index</key>
+	<integer>2</integer>
+	<key>support_ts</key>
+	<integer>1743758156</integer>
+	<key>telemetry</key>
+	<true/>
+	<key>telemetry_id</key>
+	<string>98BB0D7F-9BBB-4FB7-822E-BE3E5D057F6B</string>
+	<key>update-interval</key>
+	<string>Once per week</string>
+	<key>updater_check_ts</key>
+	<integer>1743275040</integer>
+	<key>version</key>
+	<string>2.11.36</string>
+</dict>
+</plist>
