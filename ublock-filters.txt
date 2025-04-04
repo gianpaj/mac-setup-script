@@ -1,19 +1,9 @@
-! 27/02/2020 https://github.com
-github.com##.unread.mail-status
-
-! 17/06/2020 https://www.google.com
-www.google.com###eob_8
-
 ! 2020-09-23 https://www.npmjs.com
 www.npmjs.com##.a6ff2de1
 www.npmjs.com##.z-999.left-0.top-0.fixed._8a62ca63
 
 ! 2020-09-25 https://www.youtube.com
 www.youtube.com###notification-count
-
-! 2020-10-17 https://www.linkedin.com
-www.linkedin.com###ember55 > .notification-badge--show.notification-badge
-www.linkedin.com###ember53 > .notification-badge--show.notification-badge
 
 ! 2020-10-20 newrelic.com
 @@||nr-data.net^$script,domain=newrelic.com
@@ -24,8 +14,14 @@ talky.io##.bcMPWx.sc-AxjAm
 ! 2023-06-22 https://github.com
 github.com##.AppHeader-button.AppHeader-button--hasIndicator::before
 
-! 2024-01-31 https://seekingalpha.com
-seekingalpha.com##.al_hu.g_x
+! 2024-03-22 https://stackoverflow.com
+stackoverflow.com###review-button > .s-activity-indicator__danger.s-activity-indicator
 
-! Nov 26, 2024 https://github.com
-github.com##div.react-code-size-details-in-header:nth-of-type(2)
+! 15 Jul 2024 https://www.linkedin.com
+www.linkedin.com##.msg-gai-smart-action__button.ember-view.artdeco-button--tertiary.artdeco-button--2.artdeco-button--muted.artdeco-button
+
+! 19 Feb 2025 https://mail.google.com
+mail.google.com##.wKxlIc
+
+! 27 Feb 2025 https://x.com
+x.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.r-3pj75a.r-1qi8awa.r-2yi16.r-1x0uki6.r-lrvibr.r-rs99b7.r-1phboty.r-sdzlij.css-175oi2r
