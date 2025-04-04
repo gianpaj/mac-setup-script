@@ -190,6 +190,7 @@ casks=(
   #imagealpha # image minifier (like JPEG with transparency!) - https://pngmini.com
   imageoptim # using https://squoosh.app for single images and lossy compression
   pika # picker app
+  shottr
 
   # Audio
   audacity
