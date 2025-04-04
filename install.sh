@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 important_casks=(
-  authy
   iterm2
   dropbox
   visual-studio-code
@@ -349,7 +348,7 @@ fi
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 echo "Install cask ..."
-brew tap homebrew/cask-versions # for logi-options-plus and elgato-camera-hub
+#brew tap homebrew/cask-versions # for logi-options-plus and elgato-camera-hub
 brew tap localsend/localsend
 install 'brew install' "${important_casks[@]} --cask"
 
