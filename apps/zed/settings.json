@@ -17,8 +17,30 @@
         }
       ]
     },
+    {
+      "host": "100.126.22.13",
+      "username": "gianpa",
+      "projects": [
+        {
+          "paths": ["~/tmp/orpheus-fastapi"]
+        },
+        {
+          "paths": ["~/tmp/orpheus-tts-local"]
+        }
+      ]
+    },
+    {
+      "host": "94.101.98.206",
+      "username": "ubuntu",
+      "projects": [
+        {
+          "paths": ["~/tts"]
+        }
+      ]
+    }
   ],
   "edit_predictions": {
+    "mode": "subtle",
     "disabled_globs": [".env", "exercises/**/*.rs"]
   },
   "vim_mode": false,
@@ -30,7 +52,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
@@ -108,13 +130,13 @@
     "show_nav_history_buttons": false
   },
   "show_whitespaces": "selection",
-  "lsp": {
-    "biome": {
-      "settings": {
-        "require_config_file": true
-      }
-    }
-  },
+  // "lsp": {
+  //   "biome": {
+  //     "settings": {
+  //       "require_config_file": true
+  //     }
+  //   }
+  // },
   // "lsp": {
   //   "deno": {
   //     "settings": {
