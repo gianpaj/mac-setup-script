@@ -93,7 +93,7 @@ brews=(
 
   # koekeishiya/formulae/skhd
   # koekeishiya/formulae/yabai
-  spectacle
+  # spectacle
 
   # Security
 
@@ -109,7 +109,6 @@ casks=(
 
   alfred
   nightowl
-  remarkable
   simplenote
 
   # Hardware
@@ -161,7 +160,6 @@ casks=(
 
   # Software Development
 
-  mongodbsh
   postman
   sublime-merge
   sublime-text
@@ -185,19 +183,15 @@ casks=(
 
   # Design
 
-  colorpicker-skalacolor # http://www.northernspysoftware.com/software/colorpicker
   figma
   free-ruler
-  imagealpha # image minifier (like JPEG with transparency!) - https://pngmini.com
+  #imagealpha # image minifier (like JPEG with transparency!) - https://pngmini.com
   imageoptim # using https://squoosh.app for single images and lossy compression
   pika # picker app
 
   # Audio
 
   audacity
-
-  # Terminal
-  fig
 
   # Communication
   telegram
@@ -206,7 +200,7 @@ casks=(
 # Hardware
 drivers=(
   elgato-camera-hub
-  logi-options-plus
+  # logi-options-plus
 )
 
 # pips=(
@@ -221,7 +215,7 @@ drivers=(
 # )
 
 npms=(
-  surge
+#   surge
 #
 #   gitjk
 #   n	# https://github.com/tj/n
@@ -357,7 +351,7 @@ install 'brew_install_or_upgrade' "${brews[@]}"
 # brew link --overwrite ruby
 
 prompt "Install drivers"
-brew tap homebrew/cask-drivers
+#brew tap `homebrew/cask-drivers`
 install 'brew_install_or_upgrade' "${drivers[@]}"
 
 prompt "Set git defaults"
@@ -395,16 +389,14 @@ install 'brew install' "${casks[@]} --cask"
 # prompt "Install secondary packages"
 # install 'pip3 install --upgrade' "${pips[@]}"
 # install 'gem install' "${gems[@]}"
-install 'npm install --global' "${npms[@]}"
 
 install 'code --install-extension' "${vscode[@]}"
 
-brew tap homebrew/cask-fonts
 install 'brew install svn' # for font-source-code-pro
 install 'brew install' "${fonts[@]} --cask"
 
 brew tap mongodb/brew
-brew install mongodb-community@6.0
+brew install mongodb-community@7.0
 
 # prompt "Update packages"
 # pip3 install --upgrade pip setuptools wheel
@@ -412,9 +404,16 @@ brew install mongodb-community@6.0
 #   m update install all
 # fi
 
+# remarkable
+# Giphy Capture
+mac_apps=(
+  1276493162
+  668208984
+)
+
 # if [[ -z "${CI}" ]]; then
-#   prompt  "Install following software from the App Store"
-#   mas list
+prompt  "Install following software from the App Store"
+mas install "${mac_apps[@]}"
 # fi
 
 prompt "Cleanup"
@@ -425,5 +424,7 @@ brew cleanup
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs lts
 asdf global nodejs lts
+
+install 'npm install --global' "${npms[@]}"
 
 echo "Done!"

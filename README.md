@@ -131,6 +131,7 @@ chmod +x install.sh
     $ l .zshrc
     lrwxr-xr-x - gianpaj 30 Aug  2022 .zshrc -> /Users/gianpaj/Dropbox/Mac/.zshrc
     ```
+
   - Load `.aliases` from Git repo
 
     ```bash
@@ -187,9 +188,6 @@ sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'prin
 - [App Cleaner](https://freemacsoft.net/appcleaner/)
 - Window and Keyboard managers (skhd and yabai)
   - <https://blog.dsubachev.com/install-a-tiling-window-manager-on-your-mac/>
-- Spectacle (window manager)
-
-![Spectacle configuration](./Spectacle-config.png)
 
 ### Firefox Settings
 
