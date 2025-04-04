@@ -150,7 +150,15 @@ chmod +x install.sh
   asdf install python latest
   ```
 
-e.g.
+- zed config
+
+  ```bash
+  ln -s ~/github/gianpaj/mac-setup-script/apps/zed/settings.json ~/.config/zed/settings.json
+  ln -s ~/github/gianpaj/mac-setup-script/apps/zed/keymap.json ~/.config/zed/keymap.json
+  ln -s ~/github/gianpaj/mac-setup-script/apps/zed/snippets.json ~/.config/zed/snippets.json
+  ```
+
+### Clean merged branches
 
 ```bash
 git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d

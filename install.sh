@@ -193,7 +193,11 @@ casks=(
 
   audacity
 
+  # Terminal
+  starship
+
   # Communication
+
   telegram
 )
 
