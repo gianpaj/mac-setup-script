@@ -190,8 +190,8 @@ casks=(
   pika # picker app
 
   # Audio
-
   audacity
+  ffmpeg
 
   # Terminal
   starship
