@@ -108,6 +108,7 @@ casks=(
   # Productivity
 
   alfred
+  chatgpt
   nightowl
   simplenote
 
