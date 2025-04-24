@@ -50,6 +50,12 @@
   "show_edit_predictions": true,
   "auto_update": false,
   "assistant": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
+    "default_profile": "ask",
+    "always_allow_tool_actions": false,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-latest"

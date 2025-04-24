@@ -124,7 +124,7 @@ casks=(
   appcleaner
   # background-music
   # cakebrew
-  # docker
+  docker-desktop
   firefox
   # google-backup-and-sync
   # github
@@ -164,6 +164,7 @@ casks=(
   postman
   sublime-merge
   sublime-text
+  pnpm
 
   # Mobile App Development
 
@@ -431,5 +432,7 @@ asdf install nodejs lts
 asdf global nodejs lts
 
 install 'npm install --global' "${npms[@]}"
+
+curl -fsSL https://bun.sh/install | bash
 
 echo "Done!"

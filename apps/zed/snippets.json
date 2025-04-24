@@ -16,7 +16,7 @@
   },
   "Dir to console": {
     "prefix": "cld",
-    "body": ["console.dir($1);", "$0"],
+    "body": ["console.dir($1, { depth: null });", "$0"],
     "description": "Dir to the console"
   }
 }
