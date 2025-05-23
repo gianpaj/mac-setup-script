@@ -49,16 +49,16 @@
   },
   "show_edit_predictions": true,
   "auto_update": false,
-  "assistant": {
+  "agent": {
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
     },
     "default_profile": "ask",
     "always_allow_tool_actions": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
@@ -156,5 +156,13 @@
     "Python": {
       "language_servers": ["ruff"]
     }
+  },
+  "git": {
+    "gutter_debounce": 100,
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 500
+    },
+    "hunk_style": "staged_hollow"
   }
 }
