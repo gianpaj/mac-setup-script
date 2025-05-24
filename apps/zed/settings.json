@@ -45,14 +45,14 @@
   },
   "vim_mode": false,
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
     "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-7-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
     },
     "default_profile": "ask",
     "always_allow_tool_actions": false,
@@ -72,8 +72,8 @@
   //     "api_url": "https://api.x.ai/v1",
   //     "available_models": [
   //       {
-  //         "name": "grok-beta",
-  //         "display_name": "X.ai Grok (Beta)",
+  //         "name": "grok-3-mini-beta",
+  //         "display_name": "X.ai Grok 3 mini (Beta)",
   //         "max_tokens": 131072
   //       }
   //     ],
