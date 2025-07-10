@@ -45,22 +45,21 @@
   },
   "vim_mode": false,
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4"
     },
-    "default_profile": "ask",
-    "always_allow_tool_actions": false,
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4"
+    }
   },
   // "formatter": {
   //   "language_server": {
