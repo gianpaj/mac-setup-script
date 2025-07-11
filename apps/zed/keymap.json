@@ -20,6 +20,12 @@
     }
   },
   {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
     "context": "Editor",
     "bindings": {
       "cmd-shift-d": "editor::DuplicateLineDown"

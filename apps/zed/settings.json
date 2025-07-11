@@ -13,6 +13,12 @@
       "username": "gianpa",
       "projects": [
         {
+          "paths": ["/home/gianpaj"]
+        },
+        {
+          "paths": ["/home/ubuntu/c2c-next"]
+        },
+        {
           "paths": ["~/tmp/ultravox"]
         }
       ]
@@ -37,6 +43,42 @@
           "paths": ["~/tts"]
         }
       ]
+    },
+    {
+      "host": "jetson",
+      "projects": [
+        {
+          "paths": ["/home/gianpaj"]
+        },
+        {
+          "paths": ["/home/gianpaj/jetson-containers"]
+        },
+        {
+          "paths": ["/home/gianpaj/tmp"]
+        },
+        {
+          "paths": ["/ssd/jetson-containers"]
+        }
+      ]
+    },
+    {
+      "host": "gianpaj-jetson",
+      "username": "gianpaj",
+      "projects": [
+        {
+          "paths": ["/ssd"]
+        },
+        {
+          "paths": ["/ssd/jetson-containers"]
+        },
+        {
+          "paths": ["/ssd/tmp"]
+        }
+      ]
+    },
+    {
+      "host": "staging.bring4you.com",
+      "projects": []
     }
   ],
   "edit_predictions": {
@@ -46,6 +88,7 @@
   "vim_mode": false,
   "features": {
     "edit_prediction_provider": "zed"
+    // "edit_prediction_provider": "copilot"
   },
   "show_edit_predictions": true,
   "auto_update": false,
@@ -135,6 +178,8 @@
     "show_nav_history_buttons": false
   },
   "show_whitespaces": "selection",
+  // https://github.com/zed-industries/zed/pull/31432 - Nope. Same as Cmd + .
+  "inline_code_actions": false,
   // "lsp": {
   //   "biome": {
   //     "settings": {
@@ -153,7 +198,7 @@
   // },
   "languages": {
     "Python": {
-      "language_servers": ["ruff"]
+      "language_servers": ["ruff", "..."]
     }
   },
   "git": {
