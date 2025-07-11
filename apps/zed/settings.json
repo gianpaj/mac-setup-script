@@ -97,11 +97,11 @@
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
     },
-    "default_profile": "write",
+    "default_profile": "minimal",
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
     }
   },
   // "formatter": {
@@ -118,8 +118,7 @@
   //         "display_name": "X.ai Grok 3 mini (Beta)",
   //         "max_tokens": 131072
   //       }
-  //     ],
-  //     "version": "1"
+  //     ]
   //   }
   // },
   // "language_models": {
