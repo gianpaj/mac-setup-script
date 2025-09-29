@@ -94,8 +94,8 @@
   "auto_update": false,
   "agent": {
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
     },
     "default_profile": "minimal",
     "always_allow_tool_actions": true,
