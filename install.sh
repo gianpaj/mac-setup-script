@@ -109,6 +109,7 @@ casks=(
 
   alfred
   chatgpt
+  keycastr # visual overlay of keystroke
   nightowl
   simplenote
 
