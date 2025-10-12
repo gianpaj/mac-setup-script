@@ -95,13 +95,13 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-5-latest"
     },
-    "default_profile": "minimal",
+    "default_profile": "ask",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-5-latest"
     }
   },
   // "formatter": {
@@ -201,6 +201,7 @@
     }
   },
   "git": {
+    "blame": { "show_avatar": true },
     "gutter_debounce": 100,
     "inline_blame": {
       "enabled": true,
