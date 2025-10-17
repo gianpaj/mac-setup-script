@@ -44,9 +44,9 @@ brews=(
   ripgrep
   # gpg
   # hstr          # https://github.com/dvorka/hstr
-  htop   # https://htop.dev/
-  httpie # https://httpie.io/
-  iftop  # https://www.ex-parrot.com/~pdw/iftop/
+  btop            # https://github.com/aristocratos/btop
+  httpie          # https://httpie.io/
+  iftop           # https://www.ex-parrot.com/~pdw/iftop/
   # "imagemagick --with-webp"
   # lnav          # https://lnav.org/
   # m-cli         # https://github.com/rgcr/m-cli
