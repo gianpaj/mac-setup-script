@@ -97,7 +97,7 @@
       "provider": "anthropic",
       "model": "claude-sonnet-4-5-latest"
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
@@ -121,41 +121,38 @@
   //     ]
   //   }
   // },
-  // "language_models": {
-  //   // "openai": {
-  //   //   "version": "1",
-  //   //   "available_models": [
-  //   //     {
-  //   //       "provider": "openai",
-  //   //       "name": "gpt-4o-mini",
-  //   //       "max_tokens": 128000
-  //   //     },
-  //   //     {
-  //   //       "name": "o1",
-  //   //       "display_name": "o1",
-  //   //       "max_tokens": 128000,
-  //   //       "max_completion_tokens": 20000
-  //   //     }
-  //   //   ]
-  //   // },
-  //   "ollama": {
-  //     "api_url": "http://192.168.1.161:11434",
-  //     // "api_url": "http://100.126.22.13:11434",
-  //     "low_speed_timeout_in_seconds": 120,
-  //     "available_models": [
-  //       {
-  //         "name": "llama3.2:3b",
-  //         "display_name": "llama3.2 3b",
-  //         "max_tokens": 131072
-  //       },
-  //       {
-  //         "name": "llama3.2:1b",
-  //         "display_name": "llama3.2 1b",
-  //         "max_tokens": 131072
-  //       }
-  //     ]
-  //   }
-  // },
+  "language_models": {
+    // "openai": {
+    //   "version": "1",
+    //   "available_models": [
+    //     {
+    //       "provider": "openai",
+    //       "name": "gpt-4o-mini",
+    //       "max_tokens": 128000
+    //     },
+    //     {
+    //       "name": "o1",
+    //       "display_name": "o1",
+    //       "max_tokens": 128000,
+    //       "max_completion_tokens": 20000
+    //     }
+    //   ]
+    // },
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      // "api_url": "http://100.126.22.13:11434",
+      "available_models": [
+        {
+          "name": "qwen3:8b",
+          "display_name": "qwen3:8b",
+          "max_tokens": 40960,
+          "supports_tools": true,
+          "supports_thinking": true,
+          "supports_images": true
+        }
+      ]
+    }
+  },
   "theme": "One Dark",
   "base_keymap": "SublimeText",
   "ui_font_size": 16,
@@ -179,13 +176,13 @@
   "show_whitespaces": "selection",
   // https://github.com/zed-industries/zed/pull/31432 - Nope. Same as Cmd + .
   "inline_code_actions": false,
-  // "lsp": {
-  //   "biome": {
-  //     "settings": {
-  //       "require_config_file": true
-  //     }
-  //   }
-  // },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  },
   // "lsp": {
   //   "deno": {
   //     "settings": {
