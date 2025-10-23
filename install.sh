@@ -93,7 +93,7 @@ brews=(
 
   # koekeishiya/formulae/skhd
   # koekeishiya/formulae/yabai
-  # spectacle
+  rectangle
 
   # Security
 
