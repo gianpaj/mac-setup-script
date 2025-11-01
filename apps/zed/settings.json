@@ -7,6 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "agent_servers": {
+    "claude": {
+      "default_mode": "acceptEdits"
+    }
+  },
   "ssh_connections": [
     {
       "host": "192.168.1.162",
@@ -87,8 +92,7 @@
   },
   "vim_mode": false,
   "features": {
-    "edit_prediction_provider": "zed"
-    // "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot"
   },
   "show_edit_predictions": true,
   "auto_update": false,
