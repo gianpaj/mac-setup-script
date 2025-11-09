@@ -92,7 +92,7 @@
   },
   "vim_mode": false,
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "show_edit_predictions": true,
   "auto_update": false,
@@ -108,40 +108,7 @@
       "model": "claude-sonnet-4-5-latest"
     }
   },
-  // "formatter": {
-  //   "language_server": {
-  //     "name": "biome"
-  //   }
-  // },
-  // "language_models": {
-  //   "openai": {
-  //     "api_url": "https://api.x.ai/v1",
-  //     "available_models": [
-  //       {
-  //         "name": "grok-3-mini-beta",
-  //         "display_name": "X.ai Grok 3 mini (Beta)",
-  //         "max_tokens": 131072
-  //       }
-  //     ]
-  //   }
-  // },
   "language_models": {
-    // "openai": {
-    //   "version": "1",
-    //   "available_models": [
-    //     {
-    //       "provider": "openai",
-    //       "name": "gpt-4o-mini",
-    //       "max_tokens": 128000
-    //     },
-    //     {
-    //       "name": "o1",
-    //       "display_name": "o1",
-    //       "max_tokens": 128000,
-    //       "max_completion_tokens": 20000
-    //     }
-    //   ]
-    // },
     "ollama": {
       "api_url": "http://localhost:11434",
       // "api_url": "http://100.126.22.13:11434",
@@ -196,6 +163,13 @@
   //     }
   //   }
   // },
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": false,
+      "settings": {}
+    },
+  },
   "languages": {
     "Python": {
       "language_servers": ["ruff", "..."]
