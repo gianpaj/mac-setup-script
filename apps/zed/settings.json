@@ -16,74 +16,118 @@
     {
       "host": "192.168.1.162",
       "username": "gianpa",
+      "args": [],
       "projects": [
         {
-          "paths": ["/home/gianpaj"]
+          "paths": [
+            "/home/gianpaj"
+          ]
         },
         {
-          "paths": ["/home/ubuntu/c2c-next"]
+          "paths": [
+            "/home/ubuntu/c2c-next"
+          ]
         },
         {
-          "paths": ["~/tmp/ultravox"]
+          "paths": [
+            "~/tmp/ultravox"
+          ]
         }
       ]
     },
     {
       "host": "100.126.22.13",
       "username": "gianpa",
+      "args": [],
       "projects": [
         {
-          "paths": ["~/tmp/orpheus-fastapi"]
+          "paths": [
+            "~/tmp/orpheus-fastapi"
+          ]
         },
         {
-          "paths": ["~/tmp/orpheus-tts-local"]
+          "paths": [
+            "~/tmp/orpheus-tts-local"
+          ]
         }
       ]
     },
     {
       "host": "94.101.98.206",
       "username": "ubuntu",
+      "args": [],
       "projects": [
         {
-          "paths": ["~/tts"]
+          "paths": [
+            "~/tts"
+          ]
         }
       ]
     },
     {
       "host": "jetson",
+      "args": [],
       "projects": [
         {
-          "paths": ["/home/gianpaj"]
+          "paths": [
+            "/home/gianpaj"
+          ]
         },
         {
-          "paths": ["/home/gianpaj/jetson-containers"]
+          "paths": [
+            "/home/gianpaj/jetson-containers"
+          ]
         },
         {
-          "paths": ["/home/gianpaj/tmp"]
+          "paths": [
+            "/home/gianpaj/tmp"
+          ]
         },
         {
-          "paths": ["/ssd/jetson-containers"]
+          "paths": [
+            "/ssd/jetson-containers"
+          ]
         }
       ]
     },
     {
       "host": "gianpaj-jetson",
       "username": "gianpaj",
+      "args": [],
       "projects": [
         {
-          "paths": ["/ssd"]
+          "paths": [
+            "/ssd"
+          ]
         },
         {
-          "paths": ["/ssd/jetson-containers"]
+          "paths": [
+            "/ssd/jetson-containers"
+          ]
         },
         {
-          "paths": ["/ssd/tmp"]
+          "paths": [
+            "/ssd/tmp"
+          ]
         }
       ]
     },
     {
       "host": "staging.bring4you.com",
+      "args": [],
       "projects": []
+    },
+    {
+      "host": "canis.uberspace.de",
+      "username": "gianpaj",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/gianpaj"
+          ]
+        }
+      ]
     }
   ],
   "edit_predictions": {
@@ -139,6 +183,8 @@
     "dock": "left"
   },
   "project_panel": {
+    "hide_root": true,
+    "hide_hidden": false,
     "dock": "right"
   },
   "tab_bar": {
