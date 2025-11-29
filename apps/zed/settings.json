@@ -19,19 +19,13 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/gianpaj"
-          ]
+          "paths": ["/home/gianpaj"]
         },
         {
-          "paths": [
-            "/home/ubuntu/c2c-next"
-          ]
+          "paths": ["/home/ubuntu/c2c-next"]
         },
         {
-          "paths": [
-            "~/tmp/ultravox"
-          ]
+          "paths": ["~/tmp/ultravox"]
         }
       ]
     },
@@ -41,14 +35,10 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "~/tmp/orpheus-fastapi"
-          ]
+          "paths": ["~/tmp/orpheus-fastapi"]
         },
         {
-          "paths": [
-            "~/tmp/orpheus-tts-local"
-          ]
+          "paths": ["~/tmp/orpheus-tts-local"]
         }
       ]
     },
@@ -58,9 +48,7 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "~/tts"
-          ]
+          "paths": ["~/tts"]
         }
       ]
     },
@@ -69,24 +57,16 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/gianpaj"
-          ]
+          "paths": ["/home/gianpaj"]
         },
         {
-          "paths": [
-            "/home/gianpaj/jetson-containers"
-          ]
+          "paths": ["/home/gianpaj/jetson-containers"]
         },
         {
-          "paths": [
-            "/home/gianpaj/tmp"
-          ]
+          "paths": ["/home/gianpaj/tmp"]
         },
         {
-          "paths": [
-            "/ssd/jetson-containers"
-          ]
+          "paths": ["/ssd/jetson-containers"]
         }
       ]
     },
@@ -96,19 +76,13 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/ssd"
-          ]
+          "paths": ["/ssd"]
         },
         {
-          "paths": [
-            "/ssd/jetson-containers"
-          ]
+          "paths": ["/ssd/jetson-containers"]
         },
         {
-          "paths": [
-            "/ssd/tmp"
-          ]
+          "paths": ["/ssd/tmp"]
         }
       ]
     },
@@ -123,16 +97,18 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/gianpaj"
-          ]
+          "paths": ["/home/gianpaj"]
         }
       ]
     }
   ],
   "edit_predictions": {
     "mode": "subtle",
-    "disabled_globs": [".env", "exercises/**/*.rs"]
+    "disabled_globs": [".env", "exercises/**/*.rs"],
+    "codestral": {
+      "model": "codestral-latest",
+      "max_tokens": 150
+    }
   },
   "vim_mode": false,
   "features": {
@@ -177,6 +153,7 @@
     "JavaScript": ["marko"],
     "Ruby": ["Fastfile"],
     "C": ["m"],
+    "Git Ignore": [".vercelignore"],
     "Shell Script": [".aliases"]
   },
   "collaboration_panel": {
