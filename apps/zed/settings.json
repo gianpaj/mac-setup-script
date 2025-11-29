@@ -211,7 +211,6 @@
   // },
   "context_servers": {
     "mcp-server-context7": {
-      "source": "extension",
       "enabled": false,
       "settings": {}
     },
