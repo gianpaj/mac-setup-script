@@ -10,25 +10,55 @@
       "cmd-6": ["pane::ActivateItem", 5],
       "cmd-7": ["pane::ActivateItem", 6],
       "cmd-8": ["pane::ActivateItem", 7],
-      "cmd-9": "pane::ActivateLastItem"
-    }
+      "cmd-9": "pane::ActivateLastItem",
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-b": "workspace::ToggleRightDock"
-    }
+      "cmd-b": "workspace::ToggleRightDock",
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-shift-b": "workspace::ToggleLeftDock"
-    }
+      "cmd-shift-b": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "cmd-shift-d": "editor::DuplicateLineDown"
-    }
-  }
+      "cmd-shift-d": "editor::DuplicateLineDown",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-left": "editor::SelectSmallerSyntaxNode",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-right": "editor::SelectLargerSyntaxNode",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "": "editor::SelectToPreviousSubwordStart",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "": "editor::SelectToNextWordEnd",
+    },
+  },
+  {
+    "context": "MessageEditor > Editor",
+    "bindings": {
+      "cmd-v": "agent::PasteRaw",
+    },
+  },
 ]

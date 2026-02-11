@@ -9,124 +9,107 @@
 {
   "agent_servers": {
     "claude": {
-      "default_mode": "acceptEdits"
-    }
+      "default_mode": "acceptEdits",
+    },
   },
   "ssh_connections": [
-    {
-      "host": "192.168.1.162",
-      "username": "gianpa",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["/home/gianpaj"]
-        },
-        {
-          "paths": ["/home/ubuntu/c2c-next"]
-        },
-        {
-          "paths": ["~/tmp/ultravox"]
-        }
-      ]
-    },
-    {
-      "host": "100.126.22.13",
-      "username": "gianpa",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["~/tmp/orpheus-fastapi"]
-        },
-        {
-          "paths": ["~/tmp/orpheus-tts-local"]
-        }
-      ]
-    },
-    {
-      "host": "94.101.98.206",
-      "username": "ubuntu",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["~/tts"]
-        }
-      ]
-    },
     {
       "host": "jetson",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/gianpaj"]
+          "paths": ["/home/gianpaj/tmp"],
         },
         {
-          "paths": ["/home/gianpaj/jetson-containers"]
+          "paths": ["/ssd/jetson-containers"],
         },
-        {
-          "paths": ["/home/gianpaj/tmp"]
-        },
-        {
-          "paths": ["/ssd/jetson-containers"]
-        }
-      ]
-    },
-    {
-      "host": "gianpaj-jetson",
-      "username": "gianpaj",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["/ssd"]
-        },
-        {
-          "paths": ["/ssd/jetson-containers"]
-        },
-        {
-          "paths": ["/ssd/tmp"]
-        }
-      ]
+      ],
     },
     {
       "host": "staging.bring4you.com",
       "args": [],
-      "projects": []
-    },
-    {
-      "host": "canis.uberspace.de",
-      "username": "gianpaj",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["/home/gianpaj"]
-        }
-      ]
+      "projects": [],
     }
   ],
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
     "disabled_globs": [".env", "exercises/**/*.rs"],
-    "codestral": {
-      "model": "codestral-latest",
-      "max_tokens": 150
-    }
   },
   "vim_mode": false,
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "anthropic",
+        "model": "claude-haiku-4-5-latest",
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-5-latest",
+      },
+      {
+        "provider": "x_ai",
+        "model": "grok-4-1-fast-reasoning",
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-5-thinking-latest",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-haiku-4.5",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.5",
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6-latest",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.2-codex",
+      },
+    ],
+    "profiles": {
+      "write-no-md-files": {
+        "name": "Write-no-md-files",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true,
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {},
+      },
+    },
     "inline_assistant_model": {
-      "provider": "anthropic",
-      "model": "claude-haiku-4-5-latest"
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
     },
     "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-5-latest"
-    }
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.5",
+    },
   },
   "language_models": {
     "ollama": {
@@ -139,10 +122,10 @@
           "max_tokens": 40960,
           "supports_tools": true,
           "supports_thinking": true,
-          "supports_images": true
-        }
-      ]
-    }
+          "supports_images": true,
+        },
+      ],
+    },
   },
   "theme": "One Dark",
   "base_keymap": "SublimeText",
@@ -157,15 +140,15 @@
     "Shell Script": [".aliases"]
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "project_panel": {
     "hide_root": true,
     "hide_hidden": false,
-    "dock": "right"
+    "dock": "right",
   },
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "show_whitespaces": "selection",
   // https://github.com/zed-industries/zed/pull/31432 - Nope. Same as Cmd + .
@@ -173,9 +156,9 @@
   "lsp": {
     "biome": {
       "settings": {
-        "require_config_file": true
-      }
-    }
+        "require_config_file": true,
+      },
+    },
   },
   // "lsp": {
   //   "deno": {
@@ -187,23 +170,37 @@
   //   }
   // },
   "context_servers": {
-    "mcp-server-context7": {
+    "chrome-devtools": {
       "enabled": false,
-      "settings": {}
+      "command": "npx",
+      "args": [
+        "chrome-devtools-mcp@latest",
+        "--yes",
+        "--browser-url=http://127.0.0.1:9222",
+      ],
+    },
+    "ck": {
+      "enabled": false,
+      "command": "ck",
+      "args": ["--serve"],
+    },
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {},
     },
   },
   "languages": {
     "Python": {
-      "language_servers": ["ruff", "..."]
-    }
+      "language_servers": ["ruff", "..."],
+    },
   },
   "git": {
     "blame": { "show_avatar": true },
     "gutter_debounce": 100,
     "inline_blame": {
       "enabled": true,
-      "delay_ms": 500
+      "delay_ms": 500,
     },
-    "hunk_style": "staged_hollow"
-  }
+    "hunk_style": "staged_hollow",
+  },
 }

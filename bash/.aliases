@@ -92,4 +92,3 @@ p(){
     "$pm" "$@"
 }
 
-alias claude="~/.claude/local/claude"
