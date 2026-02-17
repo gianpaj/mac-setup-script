@@ -179,15 +179,22 @@
         "--browser-url=http://127.0.0.1:9222",
       ],
     },
-    "ck": {
-      "enabled": false,
-      "command": "ck",
-      "args": ["--serve"],
-    },
     "mcp-server-context7": {
       "enabled": true,
       "settings": {},
     },
+    "mcp-server-supabase": {
+      "enabled": false,
+      "settings": {
+        "supabase_access_token": "sbp_e903d57eb1aea9700eb285cb7228c8a2604a92ec",
+        "read_only": true,
+        "project_ref": "bfaqdyadcpaetelvpbva"
+      }
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y ", "chrome-devtools-mcp@latest"]
+    }
   },
   "languages": {
     "Python": {

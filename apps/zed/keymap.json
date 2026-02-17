@@ -61,4 +61,21 @@
       "cmd-v": "agent::PasteRaw",
     },
   },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ]
+    }
+  }
 ]
