@@ -29,7 +29,7 @@
       "host": "staging.bring4you.com",
       "args": [],
       "projects": [],
-    }
+    },
   ],
   "edit_predictions": {
     "provider": "zed",
@@ -72,6 +72,10 @@
       {
         "provider": "copilot_chat",
         "model": "gpt-5.2-codex",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.6",
       },
     ],
     "profiles": {
@@ -137,7 +141,7 @@
     "Ruby": ["Fastfile"],
     "C": ["m"],
     "Git Ignore": [".vercelignore"],
-    "Shell Script": [".aliases"]
+    "Shell Script": [".aliases"],
   },
   "collaboration_panel": {
     "dock": "left",
