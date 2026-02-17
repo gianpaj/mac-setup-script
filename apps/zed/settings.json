@@ -50,12 +50,16 @@
         "model": "claude-opus-4-5-latest",
       },
       {
-        "provider": "x_ai",
-        "model": "grok-4-1-fast-reasoning",
+        "provider": "anthropic",
+        "model": "claude-opus-4-5-thinking-latest",
       },
       {
         "provider": "anthropic",
-        "model": "claude-opus-4-5-thinking-latest",
+        "model": "claude-opus-4-6-latest",
+      },
+      {
+        "provider": "x_ai",
+        "model": "grok-4-1-fast-reasoning",
       },
       {
         "provider": "copilot_chat",
@@ -66,16 +70,12 @@
         "model": "claude-opus-4.5",
       },
       {
-        "provider": "anthropic",
-        "model": "claude-opus-4-6-latest",
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.6",
       },
       {
         "provider": "copilot_chat",
         "model": "gpt-5.2-codex",
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-opus-4.6",
       },
     ],
     "profiles": {
@@ -192,13 +192,9 @@
       "settings": {
         "supabase_access_token": "sbp_e903d57eb1aea9700eb285cb7228c8a2604a92ec",
         "read_only": true,
-        "project_ref": "bfaqdyadcpaetelvpbva"
-      }
+        "project_ref": "bfaqdyadcpaetelvpbva",
+      },
     },
-    "chrome-devtools": {
-      "command": "npx",
-      "args": ["-y ", "chrome-devtools-mcp@latest"]
-    }
   },
   "languages": {
     "Python": {
