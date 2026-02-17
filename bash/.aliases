@@ -62,7 +62,7 @@ alias git-pretty="git log --graph --oneline --all --decorate"
 
 VSCODE=code
 
-alias pn=pnpm
+alias pn=p
 
 # function p: Automatically detects and uses a Node.js package manager
 # Checks for lock files to determine whether to use pnpm, yarn, bun or npm (default)
