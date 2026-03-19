@@ -149,6 +149,9 @@ casks=(
 
   the-unarchiver
 
+  # customizing which browser to start
+  finicky
+
   # satellite-eyes
   # sidekick
   # sloth
