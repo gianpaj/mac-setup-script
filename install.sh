@@ -108,6 +108,7 @@ casks=(
   # Productivity
 
   alfred
+  bartender # menu bar icon organiser
   chatgpt
   keycastr # visual overlay of keystroke
   nightowl

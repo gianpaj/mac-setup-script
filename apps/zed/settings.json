@@ -7,8 +7,19 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/dist",
+    "**/.next",
+    "**/build",
+  ],
   "agent_servers": {
-    "claude": {
+    "codex-acp": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
       "default_mode": "acceptEdits",
     },
   },
@@ -40,93 +51,88 @@
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+      "enable_thinking": false,
+    },
+    "profiles": {},
+    "default_profile": "minimal",
+    "tool_permissions": {
+      "tools": {
+        "move_path": {
+          "default": "allow",
+          "always_allow": [
+            {
+              "pattern": "^sexyvoice/docs/"
+            }
+          ]
+        },
+        "fetch": {
+          "default": "allow",
+        },
+        "create_directory": {
+          "default": "allow",
+          "always_allow": [
+            {
+              "pattern": "^sexyvoice/supabase/",
+            },
+          ],
+        },
+        "terminal": {
+          "default": "allow",
+        },
+      },
+    },
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-latest",
+      "enable_thinking": false,
+    },
+    "thread_summary_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.6",
+    },
     "favorite_models": [
       {
-        "provider": "anthropic",
-        "model": "claude-haiku-4-5-latest",
-      },
-      {
-        "provider": "anthropic",
-        "model": "claude-opus-4-5-latest",
-      },
-      {
-        "provider": "anthropic",
-        "model": "claude-opus-4-5-thinking-latest",
-      },
-      {
-        "provider": "anthropic",
-        "model": "claude-opus-4-6-latest",
-      },
-      {
-        "provider": "x_ai",
-        "model": "grok-4-1-fast-reasoning",
+        "provider": "copilot_chat",
+        "model": "gpt-5.4",
+        "enable_thinking": false
       },
       {
         "provider": "copilot_chat",
         "model": "claude-haiku-4.5",
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-opus-4.5",
+        "enable_thinking": false
       },
       {
         "provider": "copilot_chat",
         "model": "claude-opus-4.6",
+        "enable_thinking": false
       },
       {
-        "provider": "copilot_chat",
-        "model": "gpt-5.2-codex",
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-5-1m-context-latest",
+        "enable_thinking": false
       },
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-6-latest",
+        "enable_thinking": false
+      }
     ],
-    "profiles": {
-      "write-no-md-files": {
-        "name": "Write-no-md-files",
-        "tools": {
-          "copy_path": true,
-          "create_directory": true,
-          "delete_path": true,
-          "diagnostics": true,
-          "edit_file": true,
-          "fetch": true,
-          "list_directory": true,
-          "project_notifications": false,
-          "move_path": true,
-          "now": true,
-          "find_path": true,
-          "read_file": true,
-          "open": true,
-          "grep": true,
-          "terminal": true,
-          "thinking": true,
-          "web_search": true,
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {},
-      },
-    },
-    "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
-    },
-    "default_profile": "write",
-    "always_allow_tool_actions": true,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-opus-4.5",
-    },
+    "model_parameters": [],
   },
   "language_models": {
     "ollama": {
       "api_url": "http://localhost:11434",
-      // "api_url": "http://100.126.22.13:11434",
       "available_models": [
         {
-          "name": "qwen3:8b",
-          "display_name": "qwen3:8b",
-          "max_tokens": 40960,
+          "name": "liquid/lfm2-24b-a2b",
+          "display_name": "liquid/lfm2-24b-a2b",
+          "max_tokens": 32768,
           "supports_tools": true,
           "supports_thinking": true,
-          "supports_images": true,
+          "supports_images": false,
         },
       ],
     },
@@ -184,7 +190,7 @@
       ],
     },
     "mcp-server-context7": {
-      "enabled": true,
+      "enabled": false,
       "settings": {},
     },
     "mcp-server-supabase": {

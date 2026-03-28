@@ -92,3 +92,5 @@ p(){
     "$pm" "$@"
 }
 
+
+alias cc="claude --dangerously-skip-permissions"
