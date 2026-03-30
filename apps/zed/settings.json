@@ -51,13 +51,15 @@
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
+    "show_turn_stats": true,
+    "single_file_review": true,
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "claude-haiku-4.5",
       "enable_thinking": false,
     },
     "profiles": {},
-    "default_profile": "minimal",
+    "default_profile": "write",
     "tool_permissions": {
       "tools": {
         "move_path": {
