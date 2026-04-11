@@ -29,6 +29,9 @@
       "args": [],
       "projects": [
         {
+          "paths": ["/home/gianpaj"],
+        },
+        {
           "paths": ["/home/gianpaj/tmp"],
         },
         {
@@ -54,32 +57,22 @@
     "show_turn_stats": true,
     "single_file_review": true,
     "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
+      "provider": "openai",
+      "model": "gpt-5.4",
       "enable_thinking": false,
     },
     "profiles": {},
     "default_profile": "write",
     "tool_permissions": {
       "tools": {
-        "move_path": {
+        "mcp:mcp-server-context7:query-docs": {
           "default": "allow",
-          "always_allow": [
-            {
-              "pattern": "^sexyvoice/docs/"
-            }
-          ]
+        },
+        "mcp:mcp-server-context7:resolve-library-id": {
+          "default": "allow",
         },
         "fetch": {
           "default": "allow",
-        },
-        "create_directory": {
-          "default": "allow",
-          "always_allow": [
-            {
-              "pattern": "^sexyvoice/supabase/",
-            },
-          ],
         },
         "terminal": {
           "default": "allow",
@@ -99,28 +92,28 @@
       {
         "provider": "copilot_chat",
         "model": "gpt-5.4",
-        "enable_thinking": false
+        "enable_thinking": true,
       },
       {
         "provider": "copilot_chat",
         "model": "claude-haiku-4.5",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "copilot_chat",
         "model": "claude-opus-4.6",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "anthropic",
         "model": "claude-sonnet-4-5-1m-context-latest",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "anthropic",
         "model": "claude-sonnet-4-6-latest",
-        "enable_thinking": false
-      }
+        "enable_thinking": false,
+      },
     ],
     "model_parameters": [],
   },
@@ -182,15 +175,6 @@
   //   }
   // },
   "context_servers": {
-    "chrome-devtools": {
-      "enabled": false,
-      "command": "npx",
-      "args": [
-        "chrome-devtools-mcp@latest",
-        "--yes",
-        "--browser-url=http://127.0.0.1:9222",
-      ],
-    },
     "mcp-server-context7": {
       "enabled": false,
       "settings": {},
