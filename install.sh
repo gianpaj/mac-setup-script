@@ -108,7 +108,6 @@ casks=(
   # Productivity
 
   alfred
-  bartender # menu bar icon organiser
   chatgpt
   keycastr # visual overlay of keystroke
   nightowl
@@ -121,7 +120,7 @@ casks=(
 
   # Desktop tools
 
-  hiddenbar
+  only-switch # menu bar icon organiser, hide desktop icons and more
 
   appcleaner
   # background-music
