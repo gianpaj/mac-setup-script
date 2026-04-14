@@ -80,9 +80,10 @@
       },
     },
     "default_model": {
+      "effort": "high",
       "provider": "anthropic",
-      "model": "claude-haiku-4-5-latest",
-      "enable_thinking": false,
+      "model": "claude-sonnet-4-6-latest",
+      "enable_thinking": true,
     },
     "thread_summary_model": {
       "provider": "copilot_chat",
