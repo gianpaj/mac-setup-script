@@ -1,6 +1,6 @@
 # Gian's current macOS setup
 
-> as of Sept 2021, Big Sur
+> as of Apr 2026, Sequoia 15
 
 ## Initial setup
 
@@ -77,9 +77,7 @@ chmod +x install.sh
 
 ### Productivity apps
 
-- [NightOwl](https://nightowl.kramser.xyz/) - Toggle the Dark mode via the Menu Bar
 - [Horo](https://matthewpalmer.net/horo-free-timer-mac/) (timer/pomorodo menu app)
-<!-- - [Grayscale Mode](https://github.com/rkbhochalya/grayscale-mode) -->
 
 ### Software development apps
 
@@ -173,7 +171,7 @@ sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'prin
 sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'} | xargs sudo apt-get install -y
 ```
 
-### VSCode extensions
+<!--### VSCode extensions
 
 - GitLens
 - Sublime Text Keymap and Settings
@@ -187,7 +185,7 @@ sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'prin
 - [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense) - autocompletes npm modules in import statements
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) - autocompletes filenames
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) - highlight TODOs, FIXMEs, and any keywords, annotations...
-- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight) - Highlight web colors in your editor
+- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight) - Highlight web colors in your editor-->
 
 ### General apps
 

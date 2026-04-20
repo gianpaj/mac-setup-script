@@ -110,7 +110,6 @@ casks=(
   alfred
   chatgpt
   keycastr # visual overlay of keystroke
-  nightowl
   simplenote
 
   # Hardware
@@ -257,6 +256,7 @@ git_configs=(
   # "user.signingkey ${gpg_key}"
 )
 
+# NOT USING
 vscode=(
   # DeepScan - Detect bugs and quality issues in JavaScript, TypeScript, React and Vue.js more precisely
   DeepScan.vscode-deepscan
@@ -401,7 +401,7 @@ install 'brew install' "${casks[@]} --cask"
 # install 'pip3 install --upgrade' "${pips[@]}"
 # install 'gem install' "${gems[@]}"
 
-install 'code --install-extension' "${vscode[@]}"
+# install 'code --install-extension' "${vscode[@]}"
 
 install 'brew install svn' # for font-source-code-pro
 install 'brew install' "${fonts[@]} --cask"
