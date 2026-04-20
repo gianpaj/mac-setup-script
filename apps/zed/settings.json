@@ -13,6 +13,7 @@
     "**/dist",
     "**/.next",
     "**/build",
+    "**/.claude/**/*",
   ],
   "agent_servers": {
     "codex-acp": {
@@ -81,9 +82,9 @@
     },
     "default_model": {
       "effort": "high",
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-6-latest",
-      "enable_thinking": true,
+      "provider": "copilot_chat",
+      "model": "gpt-5.4",
+      "enable_thinking": false,
     },
     "thread_summary_model": {
       "provider": "copilot_chat",
@@ -115,6 +116,11 @@
         "model": "claude-sonnet-4-6-latest",
         "enable_thinking": false,
       },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6-latest",
+        "enable_thinking": false,
+      },
     ],
     "model_parameters": [],
   },
@@ -135,7 +141,7 @@
   },
   "theme": "One Dark",
   "base_keymap": "SublimeText",
-  "ui_font_size": 16,
+  "ui_font_size": 15,
   "buffer_font_size": 13.0,
   "tab_size": 2,
   "file_types": {
@@ -165,16 +171,14 @@
         "require_config_file": true,
       },
     },
+    // "deno": {
+    //   "settings": {
+    //     "deno": {
+    //       "enable": true,
+    //     },
+    //   },
+    // },
   },
-  // "lsp": {
-  //   "deno": {
-  //     "settings": {
-  //       "deno": {
-  //         "enable": true
-  //       }
-  //     }
-  //   }
-  // },
   "context_servers": {
     "mcp-server-context7": {
       "enabled": false,
