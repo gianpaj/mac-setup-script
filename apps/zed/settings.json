@@ -77,6 +77,12 @@
     "default_profile": "write",
     "tool_permissions": {
       "tools": {
+        "copy_path": {
+          "default": "allow",
+        },
+        "create_directory": {
+          "default": "allow",
+        },
         "mcp:mcp-server-context7:query-docs": {
           "default": "allow",
         },
