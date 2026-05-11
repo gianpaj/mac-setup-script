@@ -79,7 +79,7 @@ brews=(
 
   # Software Development
   jq
-  # runjs
+  worktrunk
 
   # Audio
 
@@ -439,5 +439,7 @@ asdf global nodejs lts
 install 'npm install --global' "${npms[@]}"
 
 curl -fsSL https://bun.sh/install | bash
+
+brew install worktrunk -y zsh
 
 echo "Done!"
