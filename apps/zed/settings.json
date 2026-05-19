@@ -54,6 +54,11 @@
       "args": [],
       "projects": [],
     },
+    {
+      "host": "gianrtx",
+      "args": [],
+      "projects": [],
+    },
   ],
   "edit_predictions": {
     "provider": "zed",
@@ -99,8 +104,8 @@
     },
     "default_model": {
       "effort": "high",
-      "provider": "copilot_chat",
-      "model": "gpt-5.4",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
       "enable_thinking": true,
     },
     "thread_summary_model": {
@@ -141,20 +146,26 @@
         "effort": "high"
       },
       {
-        "provider": "openai",
+        "provider": "openai-subscribed",
         "model": "gpt-5.5",
-        "enable_thinking": false
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "ollama",
+        "model": "qwen3.5:9b",
+        "enable_thinking": true
       }
     ],
     "model_parameters": [],
   },
   "language_models": {
     "ollama": {
-      "api_url": "http://localhost:11434",
+      "api_url": "http://192.168.1.163:11434",
       "available_models": [
         {
-          "name": "liquid/lfm2-24b-a2b",
-          "display_name": "liquid/lfm2-24b-a2b",
+          "name": "qwen3.5:9b",
+          "display_name": "qwen3.5:9b",
           "max_tokens": 32768,
           "supports_tools": true,
           "supports_thinking": true,
