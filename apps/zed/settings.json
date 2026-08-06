@@ -21,14 +21,35 @@
     "**/dist",
     "**/.next",
     "**/build",
-    ".agents/",
     ".claude/",
   ],
   "agent_servers": {
+    "cursor": {
+      "default_config_options": {
+        "model": "default",
+        "mode": "agent"
+      },
+      "type": "registry"
+    },
     "codex-acp": {
       "type": "registry",
     },
     "claude-acp": {
+      "favorite_config_option_values": {
+        "effort": [
+          "xhigh"
+        ],
+        "model": [
+          "opus[1m]"
+        ],
+        "mode": ["auto"],
+      },
+      "default_config_options": {
+        "fast": false,
+        "model": "opus[1m]",
+        "mode": "auto",
+        "effort": "xhigh",
+      },
       "type": "registry",
       "default_mode": "acceptEdits",
     },
@@ -45,6 +66,9 @@
           "paths": ["/home/gianpaj/tmp"],
         },
         {
+          "paths": ["/ssd/home/./"],
+        },
+        {
           "paths": ["/ssd/jetson-containers"],
         },
       ],
@@ -57,7 +81,11 @@
     {
       "host": "gianrtx",
       "args": [],
-      "projects": [],
+      "projects": [
+        {
+          "paths": ["/home/gianpaj"],
+        },
+      ],
     },
   ],
   "edit_predictions": {
@@ -69,19 +97,26 @@
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
+    "auto_compact": {
+      "threshold": "90%"
+    },
+    "commit_message_instructions": "Use the Conventional Commits format with body: <type>(<scope>): <description>.",
     "sidebar_side": "left",
     "dock": "right",
     "show_turn_stats": true,
     "single_file_review": true,
     "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
-      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-sol",
+      "enable_thinking": false,
     },
     "profiles": {},
     "default_profile": "write",
     "tool_permissions": {
       "tools": {
+        "skill": {
+          "default": "allow",
+        },
         "copy_path": {
           "default": "allow",
         },
@@ -105,7 +140,7 @@
     "default_model": {
       "effort": "high",
       "provider": "openai-subscribed",
-      "model": "gpt-5.5",
+      "model": "gpt-5.6-sol",
       "enable_thinking": true,
     },
     "thread_summary_model": {
@@ -113,12 +148,6 @@
       "model": "claude-sonnet-4.6",
     },
     "favorite_models": [
-      {
-        "provider": "copilot_chat",
-        "model": "gpt-5.4",
-        "enable_thinking": true,
-        "effort": "high"
-      },
       {
         "provider": "copilot_chat",
         "model": "claude-haiku-4.5",
@@ -146,15 +175,15 @@
         "effort": "high"
       },
       {
-        "provider": "openai-subscribed",
-        "model": "gpt-5.5",
-        "enable_thinking": true,
-        "effort": "high"
-      },
-      {
         "provider": "ollama",
         "model": "qwen3.5:9b",
         "enable_thinking": true
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-sol",
+        "enable_thinking": true,
+        "effort": "high"
       }
     ],
     "model_parameters": [],
@@ -229,6 +258,9 @@
     },
   },
   "languages": {
+    "Markdown": {
+      "show_edit_predictions": false,
+    },
     "Python": {
       "language_servers": ["ruff", "..."],
     },
