@@ -146,6 +146,7 @@ chmod +x install.sh
   ```bash
   asdf plugin-add python
   asdf install python latest
+  ln -s ~/github/gianpaj/mac-setup-script/.default-npm-packages ~/.default-npm-packages
   ```
 
 - zed config

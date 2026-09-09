@@ -1,0 +1,6 @@
+vercel
+portless
+cspell
+agent-browser
+@commitlint/cli
+@commitlint/config-conventional

@@ -11,6 +11,7 @@ alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top="htop" # alias top and fix high sierra bug
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias duwrite="ncdu --color dark -x --exclude .git --exclude node_modules"
 
 # get my public ip address :)
 alias my_public_ipv4='dig @resolver1.opendns.com A myip.opendns.com +short -4'
@@ -97,7 +98,7 @@ p(){
 
 alias pi="p i"
 
-alias cc="claude --dangerously-skip-permissions"
+alias cc="claude"
 
 alias ccp='CLAUDE_CONFIG_DIR=~/.claude-personal cc'
 alias ccw='CLAUDE_CONFIG_DIR=~/.claude-work cc'
