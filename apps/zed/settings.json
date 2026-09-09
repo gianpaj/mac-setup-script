@@ -7,51 +7,52 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "formatter": "language_server",
+  "format_on_save": "on",
   "diff_view_style": "unified",
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
     "dock": "left",
   },
   "git_panel": {
+    "group_by": "status",
     "dock": "right",
   },
   "file_scan_exclusions": [
     "**/.git",
-    "**/node_modules",
     "**/dist",
     "**/.next",
     "**/build",
-    ".claude/",
+    ".claude/"
   ],
   "agent_servers": {
+    "antigravity-acp": {
+      "default_config_options": {
+        "model": "gemini-3.8-flash-high"
+      },
+      "type": "registry"
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "effort": "xhigh",
+        "model": "fable[1m]"
+      },
+      "type": "registry"
+    },
     "cursor": {
       "default_config_options": {
-        "model": "default",
+        "effort": "xhigh",
+        "fast": "false",
+        "model": "composer-2.5",
         "mode": "agent"
       },
       "type": "registry"
     },
     "codex-acp": {
       "type": "registry",
-    },
-    "claude-acp": {
-      "favorite_config_option_values": {
-        "effort": [
-          "xhigh"
-        ],
-        "model": [
-          "opus[1m]"
-        ],
-        "mode": ["auto"],
-      },
-      "default_config_options": {
-        "fast": false,
-        "model": "opus[1m]",
-        "mode": "auto",
-        "effort": "xhigh",
-      },
-      "type": "registry",
-      "default_mode": "acceptEdits",
     },
   },
   "ssh_connections": [
@@ -60,38 +61,56 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/gianpaj"],
+          "paths": [
+            "/home/gianpaj"
+          ]
         },
         {
-          "paths": ["/home/gianpaj/tmp"],
+          "paths": [
+            "/home/gianpaj/tmp"
+          ]
         },
         {
-          "paths": ["/ssd/home/./"],
+          "paths": [
+            "/ssd/home/./"
+          ]
         },
         {
-          "paths": ["/ssd/jetson-containers"],
-        },
-      ],
+          "paths": [
+            "/ssd/jetson-containers"
+          ]
+        }
+      ]
     },
     {
       "host": "staging.bring4you.com",
       "args": [],
-      "projects": [],
+      "projects": []
     },
     {
       "host": "gianrtx",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/gianpaj"],
+          "paths": [
+            "/home/gianpaj"
+          ]
         },
-      ],
-    },
+        {
+          "paths": [
+            "/home/gianpaj/github/gianpaj/sexyvoice/./"
+          ]
+        }
+      ]
+    }
   ],
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "copilot",
     "mode": "subtle",
-    "disabled_globs": [".env", "exercises/**/*.rs"],
+    "disabled_globs": [
+      ".env",
+      "exercises/**/*.rs"
+    ],
   },
   "vim_mode": false,
   "show_edit_predictions": true,
@@ -120,6 +139,7 @@
     "profiles": {},
     "default_profile": "write",
     "tool_permissions": {
+      "default": "allow",
       "tools": {
         "skill": {
           "default": "allow",
@@ -145,9 +165,9 @@
       },
     },
     "default_model": {
-      "effort": "high",
+      "effort": "medium",
       "provider": "openai-subscribed",
-      "model": "gpt-5.6-sol",
+      "model": "gpt-6-astra",
       "enable_thinking": true,
     },
     "thread_summary_model": {
@@ -190,7 +210,19 @@
         "provider": "openai-subscribed",
         "model": "gpt-5.6-sol",
         "enable_thinking": true,
-        "effort": "high"
+        "effort": "xhigh"
+      },
+      {
+        "provider": "google",
+        "model": "gemini-3.7-flash",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-6-astra",
+        "enable_thinking": true,
+        "effort": "medium"
       }
     ],
     "model_parameters": [],
@@ -216,11 +248,21 @@
   "buffer_font_size": 13.0,
   "tab_size": 2,
   "file_types": {
-    "JavaScript": ["marko"],
-    "Ruby": ["Fastfile"],
-    "C": ["m"],
-    "Git Ignore": [".vercelignore"],
-    "Shell Script": [".aliases"],
+    "JavaScript": [
+      "marko"
+    ],
+    "Ruby": [
+      "Fastfile"
+    ],
+    "C": [
+      "m"
+    ],
+    "Git Ignore": [
+      ".vercelignore"
+    ],
+    "Shell Script": [
+      ".aliases"
+    ],
   },
   "collaboration_panel": {
     "dock": "left",
@@ -269,11 +311,16 @@
       "show_edit_predictions": false,
     },
     "Python": {
-      "language_servers": ["ruff", "..."],
+      "language_servers": [
+        "ruff",
+        "..."
+      ],
     },
   },
   "git": {
-    "blame": { "show_avatar": true },
+    "blame": {
+      "show_avatar": true
+    },
     "gutter_debounce": 100,
     "inline_blame": {
       "enabled": true,
