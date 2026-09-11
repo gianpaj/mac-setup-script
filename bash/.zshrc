@@ -93,8 +93,11 @@ if $IS_MAC; then
     # Android development
     export ANDROID_HOME=$HOME/Library/Android/sdk
     export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-    export JAVA_HOME="$(/usr/libexec/java_home)"
-    export JDK_HOME="$(/usr/libexec/java_home)"
+    if java_home="$(/usr/libexec/java_home 2>/dev/null)"; then
+        export JAVA_HOME="$java_home"
+        export JDK_HOME="$java_home"
+    fi
+    unset java_home
 fi
 
 # # To enable shims and autocompletions
