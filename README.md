@@ -31,13 +31,41 @@ chmod +x install.sh
     bash defaults.sh
     ```
 
-4. Install apps
+4. Exclude generated data from Spotlight
+
+    ```bash
+    bash spotlight-exclusions.sh
+    ```
+
+5. Install apps
 
     ```bash
     bash install.sh
     ```
 
-5. Reboot
+6. Reboot
+
+## Spotlight exclusions
+
+Run `spotlight-exclusions.sh` to stop Spotlight from indexing code,
+developer caches, and virtual machine data. The script creates a
+`.metadata_never_index` file in each directory that exists. It needs no
+administrator privileges and is safe to run more than once.
+
+The script excludes these directories:
+
+- `~/github`
+- `~/freelance`
+- `~/tmp`
+- `~/esp`
+- `~/Library/Developer`
+- `~/Library/Application Support/Zed`
+- `~/Library/Application Support/Claude`
+- `~/Library/Containers/com.docker.docker/Data`
+- `~/Library/Group Containers/*.orbstack/data`
+
+Spotlight and Finder search omit files under these directories. This does not
+delete files, free disk space, or affect search inside development tools.
 
 ## Applications
 
