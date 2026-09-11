@@ -31,10 +31,8 @@ function tree-git-ignore {
     tree --prune -I ".git|${ignored_filter: : -1}" "$@"
 }
 
+# bun has auto complete
 alias run="bun run"
-alias start="bun run dev || bun run start"
-alias dev=start
-# run dev or run start
 
 alias npx="bunx"
 alias diff="diff --color=always"
