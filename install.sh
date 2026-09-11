@@ -81,6 +81,7 @@ brews=(
   jq
   worktrunk
   getsentry/tools/sentry-cli
+  envrc
 
   # Audio
 

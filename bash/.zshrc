@@ -233,5 +233,7 @@ export PATH="$HOME/.darkbloom/bin:$PATH"
 # gcloud-cli
 export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
 
+# runs .envrc to select the account by folder. used for Supabase account switching
+eval "$(direnv hook zsh)"
 
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
