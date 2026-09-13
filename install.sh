@@ -289,6 +289,7 @@ vscode=(
 fonts=(
   font-fira-code
   font-source-code-pro
+  font-jetbrains-mono-nerd-font
 )
 
 ######################################## End of app list ########################################
