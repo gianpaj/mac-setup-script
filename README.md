@@ -169,6 +169,17 @@ delete files, free disk space, or affect search inside development tools.
     lrwxr-xr-x - gianpaj 29 Nov 12:11 -M .aliases -> /Users/gianpaj/github/gianpaj/mac-setup-script/bash/.aliases
     ```
 
+  - Load `~/.config/starship.toml`
+
+    ```bash
+    cd ~
+    ln -s ~/github/gianpaj/mac-setup-script/bash/starship.toml ~/.config/starship.toml
+
+    # results in
+    $ l ~/.config/starship.toml
+    lrwxr-xr-x@ - gianpaj 13 Sep 18:49 -N /Users/gianpaj/.config/starship.toml -> /Users/gianpaj/github/gianpaj/mac-setup-script/bash/starship.toml
+    ```
+
 - asdf
 
   ```bash
