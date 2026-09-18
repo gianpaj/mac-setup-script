@@ -1,5 +1,28 @@
 # Ubuntu Setup Script
 
+## Automatic suspend
+
+[autosuspend.conf](autosuspend.conf) suspends the server after 30 minutes without
+activity detected by the configured CPU, GPU, network, connection, and job checks.
+Review the network interfaces, ports, and thresholds for your machine before installing.
+
+From the repository root:
+
+```sh
+sudo ./ubuntu/install-autosuspend.sh
+```
+
+The installer enables the service at boot, installs the config at
+`/etc/autosuspend.conf`, and installs the GPU helper at
+`/usr/local/bin/autosuspend-gpu-busy`. Running it again overwrites those files.
+
+Check status and logs:
+
+```sh
+systemctl status autosuspend.service
+journalctl -u autosuspend.service -f
+```
+
 ## Essentials
 
 ```sh

@@ -1,0 +1,24 @@
+#!/bin/sh
+# autosuspend ExternalCommand check.
+#   exit 0 -> GPU is busy, block suspend
+#   exit 1 -> GPU is idle
+#
+# Deliberately utilization-based, not "is a CUDA context resident". Ollama keeps
+# a model parked in VRAM after a request (and forever with keep_alive=-1), so
+# treating a resident process as busy would pin the machine awake permanently.
+# In-flight Ollama requests are covered by the ActiveConnection check on 11434.
+#
+# To also count any resident CUDA process as busy, uncomment:
+#   [ -n "$(nvidia-smi --query-compute-apps=pid --format=csv,noheader)" ] && exit 0
+
+command -v nvidia-smi >/dev/null 2>&1 || exit 1
+
+# Highest utilization across all GPUs; missing/unreadable value counts as idle.
+util=$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits \
+       2>/dev/null | sort -rn | head -1)
+
+case "$util" in
+    ''|*[!0-9]*) exit 1 ;;
+esac
+
+[ "$util" -ge 10 ]
