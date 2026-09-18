@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "markdown_preview": {
+    "font_size": 14.0
+  },
   "sticky_scroll": {
     "enabled": true
   },
@@ -22,6 +25,7 @@
     "dock": "right",
   },
   "file_scan_exclusions": [
+    "**/.delta",
     "**/.git",
     "**/dist",
     "**/.next",
@@ -37,8 +41,8 @@
     },
     "claude-acp": {
       "default_config_options": {
-        "effort": "xhigh",
-        "model": "fable[1m]"
+        "effort": "high",
+        "model": "opus[1m]"
       },
       "type": "registry"
     },
@@ -110,7 +114,7 @@
     }
   ],
   "edit_predictions": {
-    "provider": "copilot",
+    "provider": "mercury",
     "mode": "subtle",
     "disabled_globs": [
       ".env",
@@ -218,14 +222,14 @@
         "effort": "xhigh"
       },
       {
-        "provider": "google",
-        "model": "gemini-3.7-flash",
+        "provider": "openai-subscribed",
+        "model": "gpt-6-astra",
         "enable_thinking": true,
         "effort": "medium"
       },
       {
-        "provider": "openai-subscribed",
-        "model": "gpt-6-astra",
+        "provider": "google",
+        "model": "gemini-3.8-flash",
         "enable_thinking": true,
         "effort": "medium"
       }
@@ -233,6 +237,10 @@
     "model_parameters": [],
   },
   "language_models": {
+    "opencode": {
+      "show_zen_models": false,
+      "show_go_models": false
+    },
     "ollama": {
       "api_url": "http://192.168.1.163:11434",
       "available_models": [
