@@ -57,6 +57,7 @@ nano ~/.config/systemd/user/openclaw-gateway.service.d/gog-env.conf
 ```
 
 Put this inside `gog-env.conf`
+
 ```sh
 [Service]
 Environment=GOG_KEYRING_BACKEND=file
@@ -65,6 +66,7 @@ Environment=HOME=/home/USERHOME
 ```
 
 Then reload and restart:
+
 ```sh
 systemctl --user daemon-reload
 systemctl --user restart openclaw-gateway.service
@@ -93,3 +95,33 @@ sudo apt install -y python3 python3-pip
 ```sh
 sudo apt autoremove
 ```
+
+## Codex
+
+For Codex to run on your always-on Ubuntu server (`gianrtx.local`), so you can start and continue work from its terminal, your Mac, or your phone.
+
+| Piece              | Name and purpose                                                             | Configuration                                                                                     |
+| ------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Ubuntu backend     | Codex app-server — runs agents and tools against Ubuntu’s files              | Currently v0.155.0, launched through the Mac’s SSH connection                                     |
+| Ubuntu terminal    | Codex CLI — terminal interface to the backend                                | Run `codex`; `codex --remote unix://` explicitly connects to the shared server                    |
+| Mac                | Codex desktop SSH connection — accesses Ubuntu’s backend over SSH            | Already configured as `gianrtx.local`; its Restart action successfully updated the running server |
+| Phone              | Remote Control — connects a paired mobile client to a host                   | Documented route: pair with the Mac, then access its Ubuntu SSH projects                          |
+| Persistent service | CLI-managed app-server daemon — manages the backend independently of the Mac | Optional migration for experimenting with direct phone access                                     |
+
+Your working setup: Ubuntu CLI + Mac desktop app over SSH, both using the Ubuntu app-server v0.155.0.
+
+For documented phone access: enable Remote Control in the Mac app’s connection settings and pair your phone. The Mac must stay awake and connected. [Official setup instructions](https://learn.chatgpt.com/docs/remote-connections)
+
+For direct phone → Ubuntu access without the Mac: your CLI exposes experimental support. Disconnect the Mac and close active Codex sessions, stop the existing SSH-launched backend, then run:
+
+```sh
+# Launch the managed app-server with remote control enabled
+codex app-server daemon bootstrap --remote-control
+
+codex app-server daemon version
+
+# Create and print a short-lived manual pairing code
+codex remote-control pair
+```
+
+Use the resulting code if your phone app offers manual pairing.
