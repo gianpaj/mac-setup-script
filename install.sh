@@ -80,7 +80,7 @@ brews=(
   # Software Development
   jq
   worktrunk
-  getsentry/tools/sentry-cli
+  getsentry/tools/sentry
   envrc
 
   # Audio
@@ -358,7 +358,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 echo "Install cask ..."
 #brew tap homebrew/cask-versions # for logi-options-plus and elgato-camera-hub
 brew tap localsend/localsend
-brew tap getsentry/tools
 install 'brew install' "${important_casks[@]} --cask"
 
 prompt "Install packages"
