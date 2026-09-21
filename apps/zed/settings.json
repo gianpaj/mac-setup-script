@@ -112,6 +112,17 @@
           ]
         }
       ]
+    },
+    {
+      "host": "gianrtx.local",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/gianpaj/github/confetti-labs"
+          ]
+        }
+      ]
     }
   ],
   "edit_predictions": {
