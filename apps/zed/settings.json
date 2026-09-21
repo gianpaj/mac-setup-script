@@ -35,6 +35,7 @@
   "agent_servers": {
     "antigravity-acp": {
       "default_config_options": {
+        "mode": "yolo",
         "model": "gemini-3.8-flash-high"
       },
       "type": "registry"
@@ -42,7 +43,7 @@
     "claude-acp": {
       "default_config_options": {
         "effort": "high",
-        "model": "opus[1m]"
+        "model": "claude-fable-5-1[1m]"
       },
       "type": "registry"
     },
@@ -135,7 +136,7 @@
     "auto_compact": {
       "threshold": "90%"
     },
-    "commit_message_instructions": "Use the Conventional Commits format with body: <type>(<scope>): <description>.",
+    "commit_message_instructions": "Use the Conventional Commits format with body and multiple lines: <type>(<scope>): <description>.",
     "sidebar_side": "left",
     "dock": "right",
     "show_turn_stats": true,
