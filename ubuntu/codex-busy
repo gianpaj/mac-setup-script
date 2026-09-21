@@ -1,0 +1,130 @@
+#!/usr/bin/python3
+"""autosuspend check: exit 0 for activity/unknown, 1 for idle."""
+
+import argparse
+import asyncio
+import json
+import os
+from pathlib import Path
+import sys
+import time
+
+SOURCE_KINDS = [
+    "cli", "vscode", "exec", "appServer", "subAgent", "subAgentReview",
+    "subAgentCompact", "subAgentThreadSpawn", "subAgentOther", "unknown",
+]
+IDLE_SECONDS = 900
+
+
+async def snapshot(socket_path):
+    # Connect to the existing daemon; never launch, resume, or subscribe to threads.
+    if not socket_path.exists():
+        return {"active": [], "updated_at": 0}
+    import websockets
+
+    async with websockets.unix_connect(
+        str(socket_path), uri="ws://localhost/", proxy=None, compression=None,
+        open_timeout=3, close_timeout=1, max_size=8 * 1024 * 1024,
+    ) as connection:
+        request_id = 0
+
+        async def rpc(method, params):
+            nonlocal request_id
+            request_id += 1
+            await connection.send(json.dumps({
+                "id": request_id, "method": method, "params": params,
+            }))
+            while True:
+                message = json.loads(await connection.recv())
+                if message.get("id") != request_id:
+                    continue
+                if "error" in message:
+                    raise RuntimeError(f"{method} failed")
+                return message["result"]
+
+        await rpc("initialize", {
+            "clientInfo": {"name": "autosuspend_monitor", "version": "1.0"},
+        })
+        await connection.send('{"method":"initialized"}')
+        active = []
+        cursor = None
+        while True:
+            page = await rpc("thread/loaded/list", {"cursor": cursor, "limit": 100})
+            for thread_id in page["data"]:
+                thread = (await rpc("thread/read", {
+                    "threadId": thread_id, "includeTurns": False,
+                }))["thread"]
+                status = thread["status"]["type"]
+                if status == "active":
+                    active.append(thread_id)
+                elif status not in ("idle", "notLoaded", "systemError"):
+                    raise RuntimeError("unknown thread status")
+            cursor = page.get("nextCursor")
+            if cursor is None:
+                break
+
+        # Loaded ephemeral threads can report the read time as updatedAt.
+        # Persisted metadata avoids making our own reads count as activity.
+        updated_at = 0
+        for archived in (False, True):
+            page = await rpc("thread/list", {
+                "limit": 1, "sortKey": "updated_at", "sortDirection": "desc",
+                "sourceKinds": SOURCE_KINDS, "useStateDbOnly": True,
+                "archived": archived,
+            })
+            for thread in page["data"]:
+                updated_at = max(updated_at, thread["updatedAt"])
+        return {"active": sorted(active), "updated_at": updated_at}
+
+
+def is_busy(current, previous, now):
+    if current["active"]:
+        return True
+    if previous is None:
+        return current["updated_at"] > now - IDLE_SECONDS
+    # Emit one busy sample per change, then let autosuspend's idle timer run.
+    # A second 15-minute busy window here would double the delay.
+    return bool(previous["active"]) or current["updated_at"] > previous["updated_at"]
+
+
+def check(socket_path, state_path, inspect=False):
+    current = asyncio.run(asyncio.wait_for(snapshot(socket_path), timeout=8))
+    try:
+        previous = json.loads(state_path.read_text())
+        if not isinstance(previous["active"], list):
+            raise ValueError("invalid active state")
+        if not isinstance(previous["updated_at"], (int, float)):
+            raise ValueError("invalid update timestamp")
+    except FileNotFoundError:
+        previous = None
+    busy = is_busy(current, previous, time.time())
+    if inspect:
+        print(json.dumps({
+            "busy": busy, "active_threads": len(current["active"]),
+            "last_update": current["updated_at"],
+        }))
+    else:
+        state_path.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
+        temporary = state_path.with_suffix(".tmp")
+        temporary.write_text(json.dumps(current))
+        os.chmod(temporary, 0o600)
+        temporary.replace(state_path)
+    return 0 if busy else 1
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--socket", type=Path, required=True)
+    parser.add_argument("--state-file", type=Path, default=Path("/run/autosuspend-codex/state.json"))
+    parser.add_argument("--inspect", action="store_true", help="report status without changing monitor state")
+    args = parser.parse_args()
+    try:
+        return check(args.socket, args.state_file, args.inspect)
+    except Exception as error:
+        # An unavailable API must not allow sleep during an unobserved turn.
+        print(f"Codex status unavailable ({type(error).__name__}); keeping awake", file=sys.stderr)
+        return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

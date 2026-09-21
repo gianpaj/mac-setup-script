@@ -2,25 +2,61 @@
 
 ## Automatic suspend
 
-[autosuspend.conf](autosuspend.conf) suspends the server after 30 minutes without
-activity detected by the configured CPU, GPU, network, connection, and job checks.
-Review the network interfaces, ports, and thresholds for your machine before installing.
-
-From the repository root:
+`install-autosuspend.sh` installs the activity checks and configuration in this directory.
+It backs up `/etc/autosuspend.conf` and restarts autosuspend to load the settings.
 
 ```sh
 sudo ./ubuntu/install-autosuspend.sh
 ```
 
-The installer enables the service at boot, installs the config at
-`/etc/autosuspend.conf`, and installs the GPU helper at
-`/usr/local/bin/autosuspend-gpu-busy`. Running it again overwrites those files.
+The configuration checks activity every 30 seconds and waits 15 idle minutes
+before suspending. CPU, GPU, network, connection, and job checks remain enabled.
+The idle timeout applies to all activity, not just Codex.
 
-Check status and logs:
+### Codex activity
+
+`codex-busy` connects to the existing app-server control socket. It checks all
+loaded threads for active turns, including turns waiting for approval or input,
+and reads persisted session update timestamps. It does not start a daemon,
+resume threads, send prompts, or keep a subscription open.
+
+A running turn blocks automatic suspend. A completed turn or new persisted
+session update resets autosuspend's idle timer once. Sleep becomes eligible
+about 15 minutes after activity stops, plus the 30-second polling granularity,
+and only if the other checks are idle. There is no second grace timer.
+Open but idle chats do not keep the server awake.
+
+Remote clients attached to the configured app-server are included. Separate
+app-server processes, standalone CLI sessions outside that daemon, and jobs on
+other machines are outside this monitor's coverage.
+
+The socket path is configured in `[check.Codex]`. The monitor stores only active
+thread IDs and the latest persisted update time under `/run/autosuspend-codex/`.
+It does not log chat content. API or state-read errors keep the server awake;
+a missing daemon socket is treated as no active Codex work.
+
+`python3-websockets` 15 or newer provides the local WebSocket transport.
+Protocol reference: [Codex App Server](https://developers.openai.com/codex/app-server).
+
+### Inspect and test
+
+Inspect the installed check without changing its remembered activity:
 
 ```sh
-systemctl status autosuspend.service
-journalctl -u autosuspend.service -f
+sudo /usr/local/bin/autosuspend-codex-busy \
+  --socket /home/gianpaj/.codex/app-server-control/app-server-control.sock \
+  --inspect
+journalctl -u autosuspend.service -n 50 --no-pager
+```
+
+Exit code 0 means busy or unavailable status; 1 means idle. Inspection never
+suspends the machine. The monitor guards autosuspend, not explicit manual sleep.
+
+Tests require the same WebSocket dependency and never call suspend:
+
+```sh
+cd ubuntu
+python3 -m unittest -v test_codex_busy.py
 ```
 
 ## Essentials
