@@ -334,6 +334,7 @@
   "languages": {
     "Markdown": {
       "show_edit_predictions": false,
+      "formatter": "prettier",
     },
     "Python": {
       "language_servers": [
