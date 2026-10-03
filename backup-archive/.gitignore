@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.bundle
+validated-bundles/
+archive-plan.json
+downloads-plan.json
+inventory.json
+fetch-results.json
+results.json
+outside-repositories.json
