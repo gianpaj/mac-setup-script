@@ -38,7 +38,7 @@ source ~/Dropbox/Mac/env.sh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
-plugins=(aws git git-auto-fetch extract colorize github colored-man-pages brew macos zsh-completions zsh-autosuggestions zsh-syntax-highlighting npm asdf copyfile virtualenv)
+plugins=(aws git git-auto-fetch extract colorize gh colored-man-pages brew macos zsh-completions zsh-autosuggestions zsh-syntax-highlighting npm asdf copyfile virtualenv)
 
 #if [[ DEFAULT_USER == 'gpalumbo' ]]; then
 #    plugins+=(adb)
@@ -237,3 +237,12 @@ export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
 eval "$(direnv hook zsh)"
 
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+# opencode
+export PATH=/Users/gianpaj_it/.opencode/bin:$PATH
+
+# sentry
+fpath=("/Users/gianpaj_it/.local/share/zsh/site-functions" $fpath)

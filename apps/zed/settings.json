@@ -7,6 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "terminal": {
+    "font_size": 13.0
+  },
+  "debugger": {
+    "button": false
+  },
   "markdown_preview": {
     "font_size": 14.0
   },
@@ -34,24 +40,54 @@
   ],
   "agent_servers": {
     "antigravity-acp": {
+      "favorite_config_option_values": {
+        "model": [
+          "claude-opus-5-5-high"
+        ]
+      },
       "default_config_options": {
+        "thinking_level": "medium",
         "mode": "yolo",
-        "model": "gemini-3.8-flash-high"
+        "model": "gemini-4-argon"
       },
       "type": "registry"
     },
     "claude-acp": {
+      "favorite_config_option_values": {
+        "model": [
+          "opus",
+          "claude-fable-5-1"
+        ],
+        "effort": [
+          "high",
+          "medium",
+          "xhigh"
+        ],
+        "mode": [
+          "auto"
+        ]
+      },
       "default_config_options": {
+        "fast": false,
+        "mode": "auto",
         "effort": "high",
-        "model": "claude-fable-5-1[1m]"
+        "model": "opus"
       },
       "type": "registry"
     },
     "cursor": {
+      "favorite_config_option_values": {
+        "model": [
+          "grok-4.6",
+          "composer-2.5",
+          "grok-4.7"
+        ]
+      },
       "default_config_options": {
+        "reasoning_effort": "xhigh",
         "effort": "xhigh",
         "fast": "false",
-        "model": "composer-2.5",
+        "model": "grok-4.7",
         "mode": "agent"
       },
       "type": "registry"
@@ -108,7 +144,12 @@
         },
         {
           "paths": [
-            "/home/gianpaj/github/gianpaj/sexyvoice/./"
+            "/home/gianpaj/github/gianpaj/livekit-avatar-demo"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gianpaj/github/gianpaj/wakebridge/./"
           ]
         }
       ]
@@ -120,6 +161,32 @@
         {
           "paths": [
             "/home/gianpaj/github/confetti-labs"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gianpaj/github/confetti-labs/holabrisa/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "farmini",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/Users/rose/entities/moveflux/projects/mikes-rolodex"
+          ]
+        },
+        {
+          "paths": [
+            "/Users/rose/entities/wyatt-tbd"
+          ]
+        },
+        {
+          "paths": [
+            "/Users/rose/entities/wyatt-tbd/projects/ip-legal-avatar-front-end"
           ]
         }
       ]
@@ -137,6 +204,9 @@
   "show_edit_predictions": true,
   "auto_update": false,
   "agent": {
+    "threads_sidebar": {
+      "position": "left"
+    },
     "sandbox_permissions": {
       "allow_all_hosts": false,
       "allow_unsandboxed": true,
@@ -148,7 +218,6 @@
       "threshold": "90%"
     },
     "commit_message_instructions": "Use the Conventional Commits format with body and multiple lines: <type>(<scope>): <description>.",
-    "sidebar_side": "left",
     "dock": "right",
     "show_turn_stats": true,
     "single_file_review": true,
@@ -186,9 +255,9 @@
       },
     },
     "default_model": {
-      "effort": "medium",
+      "effort": "high",
       "provider": "openai-subscribed",
-      "model": "gpt-6-astra",
+      "model": "gpt-6.1-sol",
       "enable_thinking": true,
     },
     "thread_summary_model": {
@@ -229,21 +298,33 @@
       },
       {
         "provider": "openai-subscribed",
-        "model": "gpt-5.6-sol",
-        "enable_thinking": true,
-        "effort": "xhigh"
-      },
-      {
-        "provider": "openai-subscribed",
         "model": "gpt-6-astra",
         "enable_thinking": true,
-        "effort": "medium"
+        "effort": "high"
       },
       {
         "provider": "google",
         "model": "gemini-3.8-flash",
         "enable_thinking": true,
         "effort": "medium"
+      },
+      {
+        "provider": "x_ai_subscribed",
+        "model": "grok-4.6",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-6.1-sol",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "x_ai_subscribed",
+        "model": "grok-4.7",
+        "enable_thinking": true,
+        "effort": "high"
       }
     ],
     "model_parameters": [],
@@ -349,6 +430,7 @@
     },
     "gutter_debounce": 100,
     "inline_blame": {
+      "show_commit_summary": false,
       "enabled": true,
       "delay_ms": 500,
     },
