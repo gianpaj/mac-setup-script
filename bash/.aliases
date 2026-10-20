@@ -38,7 +38,7 @@ alias npx="bunx"
 alias diff="diff --color=always"
 #alias diff='/usr/local/bin/diff --color -r -c'
 
-alias gitclean='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
+alias gitclean='git branch --merged | grep -Ev "^(\*|[[:space:]]*(master|main|dev)$)" | xargs -I {} git branch -d -- "{}"'
 
 alias ll='eza --long --git -a'
 alias l='eza --long --git'
