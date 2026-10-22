@@ -111,5 +111,12 @@
     "unbind": {
       "cmd-enter": "menu::SecondaryConfirm"
     }
+  },
+  {
+    "context": "AgentPanel > Markdown",
+    "bindings": {
+      "ctrl-c": "markdown::CopyAsMarkdown",
+      "cmd-c": "markdown::CopyAsMarkdown"
+    }
   }
 ]

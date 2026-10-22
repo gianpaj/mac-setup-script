@@ -70,7 +70,7 @@
       "default_config_options": {
         "fast": false,
         "mode": "auto",
-        "effort": "high",
+        "effort": "medium",
         "model": "opus"
       },
       "type": "registry"
@@ -145,6 +145,11 @@
         {
           "paths": [
             "/home/gianpaj/github/gianpaj/livekit-avatar-demo"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gianpaj/github/gianpaj/sexyvoice"
           ]
         },
         {
@@ -255,7 +260,7 @@
       },
     },
     "default_model": {
-      "effort": "high",
+      "effort": "medium",
       "provider": "openai-subscribed",
       "model": "gpt-6.1-sol",
       "enable_thinking": true,
@@ -318,7 +323,7 @@
         "provider": "openai-subscribed",
         "model": "gpt-6.1-sol",
         "enable_thinking": true,
-        "effort": "high"
+        "effort": "medium"
       },
       {
         "provider": "x_ai_subscribed",
