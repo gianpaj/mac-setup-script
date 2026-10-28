@@ -42,7 +42,13 @@ alias npx="bunx"
 alias diff="diff --color=always"
 #alias diff='/usr/local/bin/diff --color -r -c'
 
-alias gitclean='git branch --merged | grep -Ev "^(\*|[[:space:]]*(master|main|dev)$)" | xargs -I {} git branch -d -- "{}"'
+# Delete local branches merged into the current branch, skipping main/master/dev
+# and any branch checked out in a worktree.
+gitclean() {
+  git branch --merged --format='%(refname:short) %(worktreepath)' \
+    | awk '$2 == "" && $1 !~ /^(main|master|dev)$/ { print $1 }' \
+    | xargs -n1 git branch -d --
+}
 
 alias ll='eza --long --git -a'
 alias l='eza --long --git'
