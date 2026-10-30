@@ -46,7 +46,7 @@
         ]
       },
       "default_config_options": {
-        "thinking_level": "medium",
+        "thinking_level": "high",
         "mode": "yolo",
         "model": "gemini-4-argon"
       },
@@ -68,10 +68,14 @@
         ]
       },
       "default_config_options": {
+        "ultracode": false,
         "fast": false,
         "mode": "auto",
-        "effort": "medium",
+        "effort": "high",
         "model": "opus"
+      },
+      "env": {
+        "CLAUDE_CODE_DISABLE_WORKFLOWS": "1"
       },
       "type": "registry"
     },
@@ -85,9 +89,9 @@
       },
       "default_config_options": {
         "reasoning_effort": "xhigh",
-        "effort": "xhigh",
+        "effort": "high",
         "fast": "false",
-        "model": "grok-4.7",
+        "model": "claude-opus-5-5",
         "mode": "agent"
       },
       "type": "registry"
@@ -407,14 +411,6 @@
     "mcp-server-context7": {
       "enabled": true,
       "settings": {},
-    },
-    "mcp-server-supabase": {
-      "enabled": false,
-      "settings": {
-        "supabase_access_token": "sbp_e903d57eb1aea9700eb285cb7228c8a2604a92ec",
-        "read_only": true,
-        "project_ref": "bfaqdyadcpaetelvpbva",
-      },
     },
   },
   "languages": {
