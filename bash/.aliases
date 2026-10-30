@@ -45,7 +45,7 @@ alias diff="diff --color=always"
 # Delete local branches merged into the current branch, skipping main/master/dev
 # and any branch checked out in a worktree.
 gitclean() {
-  git branch --merged --format='%(refname:short) %(worktreepath)' \
+  git branch --merged HEAD --format='%(refname:short) %(worktreepath)' \
     | awk '$2 == "" && $1 !~ /^(main|master|dev)$/ { print $1 }' \
     | xargs -n1 git branch -d --
 }
