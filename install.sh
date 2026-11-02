@@ -240,6 +240,7 @@ git_email='gianpa@gmail.com'
 git_configs=(
   # do not check the status of the repo after each command
   "--add oh-my-zsh.hide-dirty 1"
+  "branch.autoSetupMerge simple"
   "branch.autoSetupRebase always"
   "color.ui auto"
   "core.autocrlf input"
@@ -247,6 +248,7 @@ git_configs=(
   "credential.helper osxkeychain"
   "init.defaultBranch master"
   "merge.ff false"
+  "push.default current"
   "pull.rebase true"
   "push.default simple"
   "rebase.autostash true"
