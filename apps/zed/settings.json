@@ -39,6 +39,17 @@
     ".claude/"
   ],
   "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "model": "opencode/deepseek-v4.1-flash-free"
+      },
+      "favorite_config_option_values": {
+        "model": [
+          "opencode/deepseek-v4.1-flash-free"
+        ]
+      },
+      "type": "registry"
+    },
     "antigravity-acp": {
       "favorite_config_option_values": {
         "model": [
@@ -48,7 +59,7 @@
       "default_config_options": {
         "thinking_level": "high",
         "mode": "yolo",
-        "model": "gemini-4-argon"
+        "model": "gemini-3.8-flash"
       },
       "type": "registry"
     },
@@ -56,7 +67,7 @@
       "favorite_config_option_values": {
         "model": [
           "opus",
-          "claude-fable-5-1"
+          "fable"
         ],
         "effort": [
           "high",
@@ -203,7 +214,7 @@
   ],
   "edit_predictions": {
     "provider": "mercury",
-    "mode": "subtle",
+    "mode": "eager",
     "disabled_globs": [
       ".env",
       "exercises/**/*.rs"
@@ -232,7 +243,7 @@
     "single_file_review": true,
     "inline_assistant_model": {
       "provider": "openai-subscribed",
-      "model": "gpt-5.6-terra",
+      "model": "gpt-6-terra",
       "enable_thinking": false,
     },
     "profiles": {},
@@ -264,7 +275,7 @@
       },
     },
     "default_model": {
-      "effort": "medium",
+      "effort": "high",
       "provider": "openai-subscribed",
       "model": "gpt-6.1-sol",
       "enable_thinking": true,
@@ -327,13 +338,18 @@
         "provider": "openai-subscribed",
         "model": "gpt-6.1-sol",
         "enable_thinking": true,
-        "effort": "medium"
+        "effort": "high"
       },
       {
         "provider": "x_ai_subscribed",
         "model": "grok-4.7",
         "enable_thinking": true,
         "effort": "high"
+      },
+      {
+        "provider": "x_ai",
+        "model": "grok-4.20-0309-reasoning",
+        "enable_thinking": false
       }
     ],
     "model_parameters": [],
