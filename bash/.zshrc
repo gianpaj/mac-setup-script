@@ -246,3 +246,7 @@ export PATH=/Users/gianpaj_it/.opencode/bin:$PATH
 
 # sentry
 fpath=("/Users/gianpaj_it/.local/share/zsh/site-functions" $fpath)
+
+# agent-device / Simlock (token lives in the macOS Keychain)
+export AGENT_DEVICE_DAEMON_AUTH_TOKEN="$(security find-generic-password -a "$USER" -s agent-device-daemon-token -w 2>/dev/null)"
+export AGENT_DEVICE_SESSION=mac
