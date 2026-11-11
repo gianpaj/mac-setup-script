@@ -47,7 +47,7 @@ alias diff="diff --color=always"
 gitclean() {
   git branch --merged HEAD --format='%(refname:short) %(worktreepath)' \
     | awk '$2 == "" && $1 !~ /^(main|master|dev)$/ { print $1 }' \
-    | xargs -n1 git branch -d --
+    | xargs -I {} git branch -d -- {}
 }
 
 alias ll='eza --long --git -a'
