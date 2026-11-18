@@ -442,6 +442,9 @@
     },
   },
   "git": {
+    "auto_fetch": {
+      "enabled": true
+    },
     "blame": {
       "show_avatar": true
     },
@@ -452,5 +455,5 @@
       "delay_ms": 500,
     },
     "hunk_style": "staged_hollow",
-  },
+  }
 }

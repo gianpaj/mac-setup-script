@@ -118,5 +118,11 @@
       "ctrl-c": "markdown::CopyAsMarkdown",
       "cmd-c": "markdown::CopyAsMarkdown"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-k": "terminal::Clear"
+    }
   }
 ]
